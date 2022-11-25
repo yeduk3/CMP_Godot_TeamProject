@@ -1,0 +1,179 @@
+{
+	"A" : {
+		"Name" : "A",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "A is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	"B" : {
+		"Name" : "B",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "B is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	"C" : {
+		"Name" : "C",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "C is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	"D" : {
+		"Name" : "D",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "D is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	"E" : {
+		"Name" : "E",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "E is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	"F" : {
+		"Name" : "F",
+		"Type" : "Ingredient",
+		"IconPath" : "Not Set",
+		"Description" : "F is sisdjflas~~~",
+		"Number_of_Ingredients" : 0,
+		"Ingredients" : {
+			
+		}
+	},
+	
+	"Vision Cure" : {
+		"Name" : "Vision Cure",
+		"Type" : "Cure",
+		"IconPath" : "Not Set",
+		"Description" : "Vision Cure is sisdjflas~~~",
+		"Number_of_Ingredients" : 3,
+		"Ingredients" : {
+			"A" : 4,
+			"B" : 2,
+			"C" : 1
+		}
+	},
+	"Hearing Cure" : {
+		"Name" : "Hearing Cure",
+		"Type" : "Cure",
+		"IconPath" : "Not Set",
+		"Description" : "Hearing Cure is sisdjflas~~~",
+		"Number_of_Ingredients" : 3,
+		"Ingredients" : {
+			"A" : 2,
+			"B" : 3,
+			"C" : 1
+		}
+	},
+	"Smell Cure" : {
+		"Name" : "Smell Cure",
+		"Type" : "Cure",
+		"IconPath" : "Not Set",
+		"Description" : "Smell Cure is sisdjflas~~~",
+		"Number_of_Ingredients" : 3,
+		"Ingredients" : {
+			"A" : 1,
+			"B" : 1,
+			"C" : 1
+		}
+	},
+	"Monsterizing Cure" : {
+		"Name" : "Monsterizing Cure",
+		"Type" : "Cure",
+		"IconPath" : "Not Set",
+		"Description" : "Monsterizing Cure is sisdjflas~~~",
+		"Number_of_Ingredients" : 3,
+		"Ingredients" : {
+			"D" : 1,
+			"E" : 1,
+			"F" : 1
+		}
+	},
+	
+	"Metal Pipe" : {
+		"Name" : "Metal Pipe",
+		"Type" : "Weapon",
+		"IconPath" : "Not Set",
+		"Description" : "Metal Pipe is sisdjflas~~~",
+		"Damage" : 10,
+		"AdditionalEffect" : {
+			"Paralyse" : "None"
+		},
+		"UsageCondition" : {
+			"Vision" : 0,
+			"Hearing" : 0,
+			"Smell" : 0
+		}
+	},
+	"Taser Gun" : {
+		"Name" : "Taser Gun",
+		"Type" : "Weapon",
+		"IconPath" : "Not Set",
+		"Description" : "Taser Gun is sisdjflas~~~",
+		"Damage" : 5,
+		"AdditionalEffect" : {
+			"Paralyse" : "Medium"
+		},
+		"UsageCondition" : {
+			"Vision" : 0,
+			"Hearing" : 0,
+			"Smell" : 0
+		}
+	},
+	"Broken Glass" : {
+		"Name" : "Broken Glass",
+		"Type" : "Weapon",
+		"IconPath" : "Not Set",
+		"Description" : "Broken Glass is sisdjflas~~~",
+		"Damage" : 3,
+		"AdditionalEffect" : {
+			"Paralyse" : "Small"
+		},
+		"UsageCondition" : {
+			"Vision" : 0,
+			"Hearing" : 0,
+			"Smell" : 0
+		}
+	},
+	"Gun" : {
+		"Name" : "Gun",
+		"Type" : "Weapon",
+		"IconPath" : "Not Set",
+		"Description" : "Gun is sisdjflas~~~",
+		"Damage" : 3,
+		"AdditionalEffect" : {
+			"Paralyse" : "None"
+		},
+		"UsageCondition" : {
+			"Vision" : 2,
+			"Hearing" : 1,
+			"Smell" : 1
+		}
+	},
+	
+	"Failure Thing" : {
+		"Name" : "Failure Thing",
+		"Type" : "Etc",
+		"IconPath" : "Not Set",
+		"Description" : "FailureThing is sisdjflas~~~"
+	}
+}
