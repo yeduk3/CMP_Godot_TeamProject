@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://YongKyu/Scripts/Inventory.gd" type="Script" id=2]
+[ext_resource path="res://YongKyu/Scenes/HotBar.tscn" type="PackedScene" id=3]
 
 [node name="Inventory" type="Control"]
 anchor_right = 1.0
@@ -11,27 +12,32 @@ script = ExtResource( 2 )
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -424.0
+margin_bottom = -100.0
 
 [node name="ItemList" type="ItemList" parent="Panel"]
-anchor_left = 0.065
-anchor_top = 0.168
-anchor_right = 0.44
-anchor_bottom = 0.848
-rect_min_size = Vector2( 384, 0 )
+visible = false
+anchor_left = 0.03
+anchor_top = 0.04
+anchor_right = 0.97
+anchor_bottom = 0.733
 items = [ "A", ExtResource( 1 ), false, "B", ExtResource( 1 ), false, "C", ExtResource( 1 ), false, "D", ExtResource( 1 ), false, "E", ExtResource( 1 ), false, "F", ExtResource( 1 ), false, "Vision Cure", ExtResource( 1 ), false, "Hearing Cure", ExtResource( 1 ), false, "Smell Cure", ExtResource( 1 ), false, "Monsterizing Cure", ExtResource( 1 ), false, "Metal Pipe", ExtResource( 1 ), false, "Taser Gun", ExtResource( 1 ), false, "Broken Glass", ExtResource( 1 ), false, "Gun", ExtResource( 1 ), false, "Failure Thing", ExtResource( 1 ), false ]
 max_columns = 5
 same_column_width = true
 icon_mode = 0
 
 [node name="DescriptionLabel" type="Label" parent="Panel"]
-anchor_left = 0.511
-anchor_top = 0.18
-anchor_right = 0.749
-anchor_bottom = 0.331
+visible = false
+anchor_left = 0.05
+anchor_top = 0.754
+anchor_right = 0.681
+anchor_bottom = 0.95
 margin_left = -0.264038
 margin_top = -1.52588e-05
 margin_right = 108.736
 margin_bottom = 14.0
 text = "Item Description"
+
+[node name="HotBar" parent="Panel" instance=ExtResource( 3 )]
 
 [connection signal="item_selected" from="Panel/ItemList" to="." method="_on_ItemList_item_selected"]

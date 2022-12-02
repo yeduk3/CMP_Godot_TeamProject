@@ -1,42 +1,36 @@
 extends Control
 
-#############
-# variables #
-#############
+signal items_changed(indexes)
 
-onready var item_list = $Panel/ItemList
-onready var description_label = $Panel/DescriptionLabel
-onready var item_JSON_path = "res://YongKyu/Scripts/ItemData.JSON"
-var item_data
+var cols = 6
+var rows = 3
+var slots = cols * rows
 
-###########
-# methods #
-###########
+# items array that contains each item's data
+# each data is Item.ItemData class
+var items = []
 
 func _ready():
-	loadItemJSON()
-
-func _on_ItemList_item_selected(index):
-	description_label.set_text("")
-	var item_name = item_list.get_item_text(index)
-	var item_description = item_data[item_name]["Description"]
-	description_label.set_text(item_name + str("\n") + item_description)
-	#print(item_description)
+	for i in range(slots):
+		items.append(null)
 	
+	set_item(1, )
 
+func set_item(index, item):
+	var previous_item = items[index]
+	items[index] = item
+	emit_signal("items_changed", [index])
+	return previous_item
 
-func loadItemJSON():
-	var file = File.new()
-	if not file.file_exists(item_JSON_path):
-		print("Error on reading ItemData.JSON file. Please check.")
-		get_tree().paused = true
-		return
-	file.open(item_JSON_path, File.READ)
-	var JSON_parsed = JSON.parse(file.get_as_text())
-	if typeof(JSON_parsed.result) != TYPE_DICTIONARY:
-		print("Unexpected result on reading ItemData.JSON file. Please check.")
-		print("Type of result is " + str(typeof(JSON_parsed.result)))
-		get_tree().paused = true
-		return
-	file.close()
-	item_data = JSON_parsed.result
+func remove_item(index):
+	var previous_item = items[index].duplicate()
+	items[index].clear()
+	emit_signal("items_changed", [index])
+	return previous_item
+
+func add_item_quantity(index, amount):
+	items[index].quantity += amount
+	if items[index].quantity <= 0:
+		remove_item(index)
+	else:
+		emit_signal("items_changed", [index])
