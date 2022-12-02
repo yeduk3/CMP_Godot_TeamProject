@@ -1,6 +1,6 @@
 extends GridContainer
 
-# will be used in hotbar
+# will be used in hotbar.gd and making.gd
 class_name SlotContainer
 
 export (PackedScene) var ItemSlot
@@ -8,7 +8,7 @@ export (PackedScene) var ItemSlot
 var slots
 
 # hotbar -> inventory
-# making -> other?
+# making -> making table
 onready var control_node = get_parent().get_parent()
 
 func display_item_slots(cols, rows):
