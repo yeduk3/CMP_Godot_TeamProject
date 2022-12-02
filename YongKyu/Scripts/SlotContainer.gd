@@ -1,6 +1,6 @@
 extends GridContainer
 
-# will be used in hotbar and making
+# will be used in hotbar
 class_name SlotContainer
 
 export (PackedScene) var ItemSlot
@@ -20,9 +20,7 @@ func display_item_slots(cols, rows):
 		item_slot.set_item(null)
 	control_node.connect("items_changed", self, "_on_Inventory_items_changed")
 
-func _on_Inventory_items_changed(indexes):
-	for index in indexes:
-		if index < slots:
-			var item_slot = get_child(index)
-			var i = Item.get_item_data()
-			item_slot.set_item(i)
+func _on_Inventory_items_changed(index):
+	if index < slots:
+		var item_slot = get_child(index)
+		item_slot.set_item(PlayerItem.items[index])

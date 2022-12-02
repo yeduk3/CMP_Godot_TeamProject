@@ -26,6 +26,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Item="*res://YongKyu/Scripts/Item.gd"
+PlayerItem="*res://YongKyu/Scripts/PlayerItem.gd"
 
 [gui]
 

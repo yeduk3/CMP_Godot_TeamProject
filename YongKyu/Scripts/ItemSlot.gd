@@ -6,7 +6,10 @@ onready var item_quantity = $ItemQuantity
 # item should be Item.ItemData class
 func set_item(item):
 	if item and item is Item.ItemData:
-		item_icon.texture = load(item.info["IconPath"])
+		var icon = load(item.info["IconPath"])
+		if not icon:
+			icon = load("res://icon.png")
+		item_icon.texture = icon
 		item_quantity.text = str(item.quantity)
 	else:
 		item_icon.texture = null

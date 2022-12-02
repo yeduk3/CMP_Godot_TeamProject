@@ -36,13 +36,13 @@ func loadItemJSON():
 	return JSON_parsed.result
 
 # initial item data
-func get_item_data(name):
+func get_new_item_data(name):
 	if not name.empty():
 		var in_list = list.get(name)
 		if in_list:
 			var item_data = ItemData.new(0)
-			item_data.item = in_list
-			print(str(item_data.item))
+			item_data.info = in_list
+			print(str(item_data.info))
 			return item_data
 	print("No Item")
 
