@@ -1,6 +1,6 @@
 extends GridContainer
 
-# will be used in hotbar.gd and making.gd
+# will be used in HotBar.gd and MixBar.gd
 class_name SlotContainer
 
 export (PackedScene) var ItemSlot
@@ -18,9 +18,12 @@ func display_item_slots(cols, rows):
 		var item_slot = ItemSlot.instance()
 		add_child(item_slot) 
 		item_slot.set_item(null)
-	control_node.connect("items_changed", self, "_on_Inventory_items_changed")
+	
+	# Inventory - HotBar / MakingTable - MixBar connection
+	control_node.connect("items_changed", self, "_on_items_changed")
 
-func _on_Inventory_items_changed(index):
+func _on_items_changed(index):
+	print(name + "Signal Received")
 	if index < slots:
 		var item_slot = get_child(index)
-		item_slot.set_item(PlayerItem.items[index])
+		item_slot.set_item(control_node.list_controlled[index])

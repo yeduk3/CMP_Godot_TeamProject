@@ -17,6 +17,7 @@ class ItemData:
 ###########
 
 func _ready():
+	print("Item Ready")
 	list = loadItemJSON()
 	if list == null:
 		get_tree().paused = true
@@ -42,7 +43,7 @@ func get_new_item_data(name):
 		if in_list:
 			var item_data = ItemData.new(0)
 			item_data.info = in_list
-			print(str("get a new item : ", item_data.info["Name"]))
+			#print(str("get a new item : ", item_data.info["Name"]))
 			return item_data
 	print("No Item")
 

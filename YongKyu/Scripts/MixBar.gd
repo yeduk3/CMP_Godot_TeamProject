@@ -1,6 +1,7 @@
 extends SlotContainer
 
 func _ready():
+	print("MixBar Ready")
 	display_item_slots(control_node.cols, control_node.rows)
 	# invisible except of triangles
 	for i in slots:

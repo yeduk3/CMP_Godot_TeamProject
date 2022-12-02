@@ -8,6 +8,7 @@ var item_in_slot
 
 # item should be Item.ItemData class
 func set_item(item):
+	print("Set item")
 	if item and item is Item.ItemData:
 		var icon = load(item.info["IconPath"])
 		if not icon:
