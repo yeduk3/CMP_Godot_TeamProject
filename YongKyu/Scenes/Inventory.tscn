@@ -27,14 +27,10 @@ same_column_width = true
 icon_mode = 0
 
 [node name="DescriptionLabel" type="Label" parent="Panel"]
-anchor_left = 0.05
-anchor_top = 0.754
-anchor_right = 0.681
-anchor_bottom = 0.95
-margin_left = -0.264038
-margin_top = -1.52588e-05
-margin_right = 108.736
-margin_bottom = 14.0
+anchor_left = 0.1
+anchor_top = 0.75
+anchor_right = 0.9
+anchor_bottom = 0.9
 text = "Item Description"
 
 [node name="HotBar" parent="Panel" instance=ExtResource( 3 )]

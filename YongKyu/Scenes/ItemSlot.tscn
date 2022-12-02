@@ -32,3 +32,5 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "0"
 align = 2
+
+[connection signal="gui_input" from="." to="." method="_on_ColorRect_gui_input"]
