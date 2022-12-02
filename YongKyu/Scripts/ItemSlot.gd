@@ -1,5 +1,7 @@
 extends ColorRect
 
+class_name ItemSlot
+
 onready var item_icon = $ItemIcon
 onready var item_quantity = $ItemQuantity
 var item_in_slot
@@ -17,10 +19,3 @@ func set_item(item):
 	else:
 		item_icon.texture = null
 		item_quantity.text = ""
-
-
-func _on_ColorRect_gui_input(event):
-	if event.is_action_pressed("click"):
-		# get desctription label
-		var desc_label = get_parent().get_parent().get_node("DescriptionLabel")
-		desc_label.text = item_in_slot.info["Description"]

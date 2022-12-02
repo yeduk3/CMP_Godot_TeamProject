@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "ColorRect",
+"class": "ItemSlot",
+"language": "GDScript",
+"path": "res://YongKyu/Scripts/ItemSlot.gd"
+}, {
 "base": "GridContainer",
 "class": "SlotContainer",
 "language": "GDScript",
 "path": "res://YongKyu/Scripts/SlotContainer.gd"
 } ]
 _global_script_class_icons={
+"ItemSlot": "",
 "SlotContainer": ""
 }
 

@@ -20,7 +20,9 @@ func _ready():
 	remove_item(1)
 	
 	add_item(Item.get_new_item_data("Vision Cure"), 2)
+	add_item(Item.get_new_item_data("Vision Cure"), -3)
 
+# find a proper place and add the item in it
 func add_item(item, amount):
 	var minimal_empty_index = -1
 	for i in slots:

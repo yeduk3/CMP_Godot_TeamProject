@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://YongKyu/Scripts/HotBar.gd" type="Script" id=1]
-[ext_resource path="res://YongKyu/Scenes/ItemSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://YongKyu/Scenes/InventorySlot.tscn" type="PackedScene" id=2]
+
 
 [node name="HotBar" type="GridContainer"]
 margin_right = 470.0
