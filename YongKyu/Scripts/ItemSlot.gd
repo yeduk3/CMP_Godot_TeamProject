@@ -10,13 +10,12 @@ var item_in_slot
 func set_item(item):
 	print("Set item")
 	if item and item is Item.ItemData:
-		var icon = load(item.info["IconPath"])
-		if not icon:
-			icon = load("res://icon.png")
-		item_icon.texture = icon
+		item_icon.texture = load(item.info["IconPath"])
 		item_quantity.text = str(item.quantity)
 		
 		item_in_slot = item
 	else:
 		item_icon.texture = null
 		item_quantity.text = ""
+		
+		item_in_slot = null

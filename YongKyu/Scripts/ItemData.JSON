@@ -2,7 +2,7 @@
 	"A" : {
 		"Name" : "A",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "A is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -12,7 +12,7 @@
 	"B" : {
 		"Name" : "B",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "B is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -22,7 +22,7 @@
 	"C" : {
 		"Name" : "C",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "C is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -32,7 +32,7 @@
 	"D" : {
 		"Name" : "D",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "D is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -42,7 +42,7 @@
 	"E" : {
 		"Name" : "E",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "E is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -52,7 +52,7 @@
 	"F" : {
 		"Name" : "F",
 		"Type" : "Ingredient",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "F is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -63,7 +63,7 @@
 	"Vision Cure" : {
 		"Name" : "Vision Cure",
 		"Type" : "Cure",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Vision Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -75,7 +75,7 @@
 	"Hearing Cure" : {
 		"Name" : "Hearing Cure",
 		"Type" : "Cure",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Hearing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -87,7 +87,7 @@
 	"Smell Cure" : {
 		"Name" : "Smell Cure",
 		"Type" : "Cure",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Smell Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -99,7 +99,7 @@
 	"Monsterizing Cure" : {
 		"Name" : "Monsterizing Cure",
 		"Type" : "Cure",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Monsterizing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -112,7 +112,7 @@
 	"Metal Pipe" : {
 		"Name" : "Metal Pipe",
 		"Type" : "Weapon",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Metal Pipe is sisdjflas~~~",
 		"Damage" : 10,
 		"AdditionalEffect" : {
@@ -127,7 +127,7 @@
 	"Taser Gun" : {
 		"Name" : "Taser Gun",
 		"Type" : "Weapon",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Taser Gun is sisdjflas~~~",
 		"Damage" : 5,
 		"AdditionalEffect" : {
@@ -142,7 +142,7 @@
 	"Broken Glass" : {
 		"Name" : "Broken Glass",
 		"Type" : "Weapon",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Broken Glass is sisdjflas~~~",
 		"Damage" : 3,
 		"AdditionalEffect" : {
@@ -157,7 +157,7 @@
 	"Gun" : {
 		"Name" : "Gun",
 		"Type" : "Weapon",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "Gun is sisdjflas~~~",
 		"Damage" : 3,
 		"AdditionalEffect" : {
@@ -173,7 +173,7 @@
 	"Failure Thing" : {
 		"Name" : "Failure Thing",
 		"Type" : "Etc",
-		"IconPath" : "Not Set",
+		"IconPath" : "Icon.png",
 		"Description" : "FailureThing is sisdjflas~~~"
 	}
 }

@@ -21,6 +21,7 @@ func display_item_slots(cols, rows):
 	
 	# Inventory - HotBar / MakingTable - MixBar connection
 	control_node.connect("items_changed", self, "_on_items_changed")
+	print(str(str(self), " and ", str(control_node), " connected"))
 
 func _on_items_changed(index):
 	print(name + "Signal Received")
