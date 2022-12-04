@@ -6,13 +6,15 @@
 [node name="Inventory" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 46.0
+margin_top = 49.0
+margin_right = -428.0
+margin_bottom = -51.0
 script = ExtResource( 2 )
 
 [node name="InventoryPanel" type="Panel" parent="."]
-margin_left = 46.0
-margin_top = 49.0
-margin_right = 596.0
-margin_bottom = 549.0
+margin_right = 550.0
+margin_bottom = 500.0
 
 [node name="HotBar" parent="InventoryPanel" instance=ExtResource( 3 )]
 
