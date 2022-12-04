@@ -1,9 +1,14 @@
 extends ItemSlot
 
+signal triggered_item_buttons(index)
+
 onready var inventory_panel_node = get_parent().get_parent()
 onready var desc_label = inventory_panel_node.get_node("DescriptionLabel")
-onready var usage_buttons = inventory_panel_node.get_node("UsageButtons")
+onready var item_buttons = inventory_panel_node.get_node("ItemButtons")
 onready var inventory_node = inventory_panel_node.get_parent()
+
+func _ready():
+	self.connect("triggered_item_buttons", inventory_node, "_on_triggered_item_buttons")
 
 func _on_InventorySlot_gui_input(event):
 	if not item_in_slot:
@@ -12,10 +17,8 @@ func _on_InventorySlot_gui_input(event):
 	if event.is_action_pressed("left_click"):
 		# show information of the item
 		desc_label.text = item_in_slot.info["Description"] 
-		usage_buttons.visible = false
+		item_buttons.visible = false
 	# right clicked,
 	elif event.is_action_pressed("right_click"):
 		# show buttons
-		print("RIGHTCLICK")
-		usage_buttons.rect_position = get_global_mouse_position() - inventory_node.rect_position
-		usage_buttons.visible = true
+		emit_signal("triggered_item_buttons", index)

@@ -3,8 +3,10 @@
 [node name="PlayerInformation" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -624.0
-margin_bottom = -100.0
+margin_left = 627.0
+margin_top = 49.0
+margin_right = -47.0
+margin_bottom = -51.0
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0

@@ -15,6 +15,7 @@ func _ready():
 	
 	print("MakingTable Ready")
 	
+	"""
 	add_item(Item.get_new_item_data("A"), 3)
 	add_item(Item.get_new_item_data("Hearing Cure"), 3)
 	add_item(Item.get_new_item_data("F"), 3)
@@ -22,3 +23,4 @@ func _ready():
 	remove_item(1)
 	
 	add_item(Item.get_new_item_data("Vision Cure"), 2)
+	"""

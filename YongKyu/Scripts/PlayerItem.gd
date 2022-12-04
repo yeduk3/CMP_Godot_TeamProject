@@ -1,3 +1,4 @@
+# Singleton
 extends Node
 
 # items array that contains each item's data

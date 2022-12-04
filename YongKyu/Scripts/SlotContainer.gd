@@ -18,6 +18,7 @@ func display_item_slots(cols, rows):
 		var item_slot = ItemSlot.instance()
 		add_child(item_slot) 
 		item_slot.set_item(null)
+		item_slot.set_index(index)
 	
 	# Inventory - HotBar / MakingTable - MixBar connection
 	control_node.connect("items_changed", self, "_on_items_changed")
