@@ -13,7 +13,7 @@ func _ready():
 	}
 	close()
 	
-	inventory.connect("ingredient_of_making", self, "_on_put_ingredient")
+	inventory.connect("put_ingredient", making_table, "_on_put_ingredient")
 
 func open_with(mode):
 	if states[mode] == 0:
@@ -44,6 +44,3 @@ func _input(event):
 		else:
 			open_with("Making")
 
-
-func _on_put_ingredient(name):
-	making_table.add_item(Item.get_new_item_data(name), 1)

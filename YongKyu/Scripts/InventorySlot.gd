@@ -5,10 +5,9 @@ signal triggered_item_buttons(index)
 onready var inventory_panel_node = get_parent().get_parent()
 onready var desc_label = inventory_panel_node.get_node("DescriptionLabel")
 onready var item_buttons = inventory_panel_node.get_node("ItemButtons")
-onready var inventory_node = inventory_panel_node.get_parent()
 
 func _ready():
-	self.connect("triggered_item_buttons", inventory_node, "_on_triggered_item_buttons")
+	self.connect("triggered_item_buttons", control_node, "_on_triggered_item_buttons")
 
 func _on_InventorySlot_gui_input(event):
 	if not item_in_slot:

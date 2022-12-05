@@ -17,7 +17,7 @@ class ItemData:
 ###########
 
 func _ready():
-	print("Item Ready")
+	#print("Item Ready")
 	list = loadItemJSON()
 	if list == null:
 		get_tree().paused = true

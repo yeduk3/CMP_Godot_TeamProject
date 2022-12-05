@@ -1,7 +1,7 @@
 extends SlotContainer
 
 func _ready():
-	print("HotBar Ready")
+	#print("HotBar Ready")
 	display_item_slots(control_node.cols, control_node.rows)
 	yield(get_tree(), "idle_frame")
 	var panel = get_parent()

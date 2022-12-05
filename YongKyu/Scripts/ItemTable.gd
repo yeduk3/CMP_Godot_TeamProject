@@ -31,7 +31,7 @@ func set_list_controlled(_list_controlled):
 #
 
 func _ready():
-	print("ItemTable Ready")
+	#print("ItemTable Ready")
 	# initial setting of player item list
 	for i in range(slots):
 		list_controlled.append(null)
@@ -39,28 +39,31 @@ func _ready():
 #
 # manage list_controlled
 #
+func get_minimal_empty_index():
+	for i in active_slots:
+		if not list_controlled[i]:
+			return i
 
 # find a proper place and add the item in it
 func add_item(item, amount):
-	var minimal_empty_index = -1
+	var minimal_empty_index = get_minimal_empty_index()
 	for i in active_slots:
-		if not list_controlled[i]:
-			if minimal_empty_index == -1:
-				minimal_empty_index = i
-		elif list_controlled[i].info["Name"] == item.info["Name"]:
+		if list_controlled[i] and list_controlled[i].info["Name"] == item.info["Name"]:
 			add_item_quantity(i, amount)
 			return
 	if minimal_empty_index > -1:
 		print(minimal_empty_index)
 		set_item(minimal_empty_index, item)
 		add_item_quantity(minimal_empty_index, amount)
+	else:
+		print("Can't")
 
 # setting the new item
 func set_item(index, item):
 	var previous_item = list_controlled[index]
 	list_controlled[index] = item
 	emit_signal("items_changed", index)
-	print("Signal Emmited")
+	#print("Signal Emmited")
 	return previous_item
 
 # remove the item

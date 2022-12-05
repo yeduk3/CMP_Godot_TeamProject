@@ -6,5 +6,11 @@ extends Node
 var items
 
 func _enter_tree():
-	print("PlayerItem Enter Tree")
+	#print("PlayerItem Enter Tree")
 	items = []
+
+func find_by_name(name):
+	for i in items.size():
+		if items[i] and items[i].info["Name"] == name:
+			return i
+	return -1
