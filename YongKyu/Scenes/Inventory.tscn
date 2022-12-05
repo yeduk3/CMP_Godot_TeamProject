@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://YongKyu/Scripts/Inventory.gd" type="Script" id=2]
+[ext_resource path="res://YongKyu/Scenes/HotBar.tscn" type="PackedScene" id=3]
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 46.0
+margin_top = 49.0
+margin_right = -428.0
+margin_bottom = -51.0
+script = ExtResource( 2 )
+
+[node name="InventoryPanel" type="Panel" parent="."]
+margin_right = 550.0
+margin_bottom = 500.0
+
+[node name="HotBar" parent="InventoryPanel" instance=ExtResource( 3 )]
+
+[node name="DescriptionLabel" type="Label" parent="InventoryPanel"]
+anchor_left = 0.1
+anchor_top = 0.75
+anchor_right = 0.9
+anchor_bottom = 0.9
+text = "Item Description"
+
+[node name="ItemButtons" type="VBoxContainer" parent="InventoryPanel"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="UseButton" type="Button" parent="InventoryPanel/ItemButtons"]
+margin_right = 54.0
+margin_bottom = 20.0
+text = "Use"
+
+[node name="MakeButton" type="Button" parent="InventoryPanel/ItemButtons"]
+margin_top = 24.0
+margin_right = 54.0
+margin_bottom = 44.0
+text = "Make"
+
+[node name="CancelButton" type="Button" parent="InventoryPanel/ItemButtons"]
+margin_top = 48.0
+margin_right = 54.0
+margin_bottom = 68.0
+text = "Cancel"
+
+[connection signal="pressed" from="InventoryPanel/ItemButtons/UseButton" to="." method="_on_UseButton_pressed"]
+[connection signal="pressed" from="InventoryPanel/ItemButtons/MakeButton" to="." method="_on_MakeButton_pressed"]
+[connection signal="button_down" from="InventoryPanel/ItemButtons/CancelButton" to="." method="_on_CancelButton_button_down"]
