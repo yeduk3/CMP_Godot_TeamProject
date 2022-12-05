@@ -3,6 +3,7 @@ extends ItemTable
 var making_items
 
 onready var mix_bar = $Panel/MixBar
+onready var texture_button = $Panel/MakingButton
 
 func _enter_tree():
 	#print("MakingTable Enter Tree")
@@ -11,20 +12,19 @@ func _enter_tree():
 	making_items = []
 	set_list_controlled(making_items)
 
-func _ready():
-	
-	#print("MakingTable Ready")
-	
-	"""
-	add_item(Item.get_new_item_data("A"), 3)
-	add_item(Item.get_new_item_data("Hearing Cure"), 3)
-	add_item(Item.get_new_item_data("F"), 3)
-	
-	remove_item(1)
-	
-	add_item(Item.get_new_item_data("Vision Cure"), 2)
-	"""
-
 func _on_put_ingredient(name, amount):
 	add_item(Item.get_new_item_data(name), amount)
-	print(str(making_items))
+	
+	# check whether the making process is possible
+	var number_of_ingredients = 0
+	for e in making_items:
+		if e:
+			number_of_ingredients += e.quantity
+	if number_of_ingredients > 1:
+		texture_button.visible = true
+	else:
+		texture_button.visible = false
+
+
+func _on_MakingButton_pressed():
+	pass
