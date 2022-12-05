@@ -2,7 +2,7 @@ extends ItemTable
 
 var making_items
 
-onready var mix_bar = $Panel/MixBar
+onready var mix_bar = $Panel/MakingBar
 onready var texture_button = $Panel/MakingButton
 
 func _enter_tree():
