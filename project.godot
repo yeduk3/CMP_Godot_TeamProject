@@ -9,19 +9,49 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "ColorRect",
+"class": "ItemSlot",
+"language": "GDScript",
+"path": "res://YongKyu/Scripts/ItemSlot.gd"
+}, {
+"base": "Control",
+"class": "ItemTable",
+"language": "GDScript",
+"path": "res://YongKyu/Scripts/ItemTable.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Eunseo/Script/PlayerMove.gd"
+}, {
+"base": "GridContainer",
+"class": "SlotContainer",
+"language": "GDScript",
+"path": "res://YongKyu/Scripts/SlotContainer.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "colorplayer",
+"language": "GDScript",
+"path": "res://Eunsu/player.gd"
 } ]
 _global_script_class_icons={
-"Player": ""
+"ItemSlot": "",
+"ItemTable": "",
+"Player": "",
+"SlotContainer": "",
+"colorplayer": ""
 }
 
 [application]
 
 config/name="CMP Godot Team2 Project"
+run/main_scene="res://KinematicBody2D.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Item="*res://YongKyu/Scripts/Item.gd"
+PlayerItem="*res://YongKyu/Scripts/PlayerItem.gd"
 
 [gui]
 
@@ -49,9 +79,29 @@ down={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+right_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+tab={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 space={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+tmpSkill={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":75,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

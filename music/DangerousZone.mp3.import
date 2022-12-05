@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DangerousZone.mp3-0116d68048262c81599f7fd7e25ab69b.mp3str"
+
+[deps]
+
+source_file="res://music/DangerousZone.mp3"
+dest_files=[ "res://.import/DangerousZone.mp3-0116d68048262c81599f7fd7e25ab69b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

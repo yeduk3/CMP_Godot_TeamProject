@@ -23,21 +23,21 @@ func _set_cooldown(currTime):
 	cooltimeVal.current = (OS.get_ticks_msec() - currTime) / 1000.0 * 28.0
 	if OS.get_ticks_msec() - currTime >= 1000:
 		isCooldown = false
-	
+
 # 매 초마다 호출
 func _process(delta):
 	if isCooldown:
 		_set_cooldown(currTime)
-	
+
 	if Input.is_action_just_pressed("tmpSkill") and not isCooldown:
-		# 스킬 키를 누르면, currTime에 누른 시점의 시간을 저장 
+		# 스킬 키를 누르면, currTime에 누른 시점의 시간을 저장
 		currTime = _get_start_time()
 		isCooldown = true
-	
+
 func _physics_process(delta):
-	
+
 	velocity = Vector2(0,0)
-	
+
 	if Input.is_action_pressed("right"):
 		velocity.x = speed
 		isRight = true
@@ -66,11 +66,8 @@ func _physics_process(delta):
 			isDown = false
 	if Input.is_action_pressed("jump"):
 		velocity.y = JUMP
-		
-	
+
+
 	velocity - velocity.normalized()*speed
-	
+
 	velocity = move_and_slide(velocity, Vector2.UP)
-
-
-

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Dialog.gd" type="Script" id=1]
-[ext_resource path="res://Text.gd" type="Script" id=2]
+[ext_resource path="res://Eunsu/Text.gd" type="Script" id=1]
+[ext_resource path="res://Eunseo/Dialog.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,7 +9,7 @@
 position = Vector2( 0, -64 )
 color = Color( 0.184314, 0.184314, 0.184314, 1 )
 polygon = PoolVector2Array( 128, 448, 128, 576, 896, 576, 896, 448 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Text" type="RichTextLabel" parent="Dialog"]
 margin_left = 160.0
@@ -21,7 +21,7 @@ bbcode_text = "
 "
 text = "
 "
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="Dialog"]
 wait_time = 0.05
