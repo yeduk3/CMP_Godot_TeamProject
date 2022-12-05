@@ -32,20 +32,20 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "colorplayer",
 "language": "GDScript",
-"path": "res://player.gd"
+"path": "res://Eunsu/player.gd"
 } ]
 _global_script_class_icons={
 "ItemSlot": "",
 "ItemTable": "",
 "Player": "",
-"SlotContainer": ""
+"SlotContainer": "",
 "colorplayer": ""
 }
 
 [application]
 
 config/name="CMP Godot Team2 Project"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Eunsu/World.tscn"
 config/icon="res://icon.png"
 
 [autoload]
