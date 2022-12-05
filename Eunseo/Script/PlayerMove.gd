@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Player
+
 var velocity = Vector2()
 export var speed = 200
 
