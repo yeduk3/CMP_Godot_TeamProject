@@ -1,6 +1,5 @@
 extends Area2D
 
-onready var player = get_node("../player")
 var Bplay = true
 signal working_window (window) 
 #
