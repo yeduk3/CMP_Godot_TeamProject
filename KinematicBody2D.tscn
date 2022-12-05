@@ -7,6 +7,7 @@
 extents = Vector2( 118, 120 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 0, 1 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

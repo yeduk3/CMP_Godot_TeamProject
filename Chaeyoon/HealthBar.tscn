@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Bar/Heart.png" type="Texture" id=1]
+[ext_resource path="res://Chaeyoon/Bar/Heart.png" type="Texture" id=1]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.909804, 0.513726, 0.72549, 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy.png-3c42e2cb6729b3a9a9e9c69edc1e4e8c.stex"
+path="res://.import/Heart.png-f7fb3dbd355b3e4161bb223c0f30ce23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bar/Enemy.png"
-dest_files=[ "res://.import/Enemy.png-3c42e2cb6729b3a9a9e9c69edc1e4e8c.stex" ]
+source_file="res://Chaeyoon/Heart.png"
+dest_files=[ "res://.import/Heart.png-f7fb3dbd355b3e4161bb223c0f30ce23.stex" ]
 
 [params]
 

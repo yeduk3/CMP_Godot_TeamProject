@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/health.png-d8726e64ae557e8bd6e9e966062f0601.stex"
+path="res://.import/Bar_over.png-490acafeaeb8fc0b8307fe3742431b82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Item/health.png"
-dest_files=[ "res://.import/health.png-d8726e64ae557e8bd6e9e966062f0601.stex" ]
+source_file="res://Chaeyoon/Bar/Bar_over.png"
+dest_files=[ "res://.import/Bar_over.png-490acafeaeb8fc0b8307fe3742431b82.stex" ]
 
 [params]
 
