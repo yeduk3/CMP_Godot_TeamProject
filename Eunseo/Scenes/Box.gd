@@ -2,7 +2,6 @@ extends StaticBody2D
 
 signal gotIt
 
-
 func _on_Area2D_body_entered(body):
 	if body is Player:
 		$Button.visible = true
