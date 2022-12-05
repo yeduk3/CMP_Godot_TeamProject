@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=6]
 [ext_resource path="res://Eunseo/Scenes/Desk.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Chaeyoon/CooltimeBar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -916,6 +918,7 @@ tile_data = PoolIntArray( 1769466, 0, 196611, 1769467, 0, 196611, 1769468, 0, 19
 [node name="player" type="KinematicBody2D" parent="."]
 collision_mask = 2
 script = ExtResource( 4 )
+speed = 200
 
 [node name="Sprite" type="Sprite" parent="player"]
 position = Vector2( 352.928, 2749.74 )
@@ -947,6 +950,19 @@ text = "abcde"
 
 [node name="Timer" type="Timer" parent="player/Camera2D/Gotcha"]
 
+[node name="HealthBarTest" type="Control" parent="player"]
+
+[node name="Health" type="Control" parent="player/HealthBarTest"]
+process_priority = 3
+script = ExtResource( 9 )
+max_amount = 28
+
+[node name="CooltimeBar" parent="player/HealthBarTest" instance=ExtResource( 8 )]
+margin_left = -29.0
+margin_top = -49.0
+margin_right = 31.0
+margin_bottom = -39.0
+
 [node name="Monster" type="TileMap" parent="."]
 position = Vector2( 298, 147 )
 scale = Vector2( 3, 3 )
@@ -971,6 +987,8 @@ position = Vector2( 103.296, 1216.11 )
 position = Vector2( 297.591, 1221.62 )
 
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
+[connection signal="changed" from="player/HealthBarTest/Health" to="player/HealthBarTest/CooltimeBar" method="set_value"]
+[connection signal="max_changed" from="player/HealthBarTest/Health" to="player/HealthBarTest/CooltimeBar" method="set_max"]
 [connection signal="gotIt" from="Box" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
 [connection signal="gotIt" from="Box2" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
 [connection signal="gotIt" from="Box3" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
