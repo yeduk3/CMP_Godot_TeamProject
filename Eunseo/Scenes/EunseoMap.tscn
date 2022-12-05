@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=111 format=2]
 
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
@@ -7,6 +7,15 @@
 [ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=6]
 [ext_resource path="res://Eunseo/Scenes/Desk.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Eunseo/Scenes/Locker.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Eunseo/Scenes/fire.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Eunseo/Images/desk_front.png" type="Texture" id=10]
+[ext_resource path="res://Eunseo/Scenes/SubjectCylinder.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Eunseo/Images/computer.png" type="Texture" id=12]
+[ext_resource path="res://Eunseo/Images/Box1.png" type="Texture" id=14]
+[ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=15]
+[ext_resource path="res://Eunseo/Images/Fence1.png" type="Texture" id=17]
+[ext_resource path="res://Eunseo/Scenes/Desk_side.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -901,6 +910,18 @@ extents = Vector2( 14.9204, 26.4514 )
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=91]
+extents = Vector2( 64.5625, 70 )
+
+[sub_resource type="RectangleShape2D" id=93]
+extents = Vector2( 19, 18 )
+
+[sub_resource type="RectangleShape2D" id=92]
+extents = Vector2( 23.5, 8.75 )
+
+[sub_resource type="RectangleShape2D" id=94]
+extents = Vector2( 19, 6.0625 )
+
 [node name="1F" type="Node2D"]
 position = Vector2( 628, -1051 )
 scale = Vector2( 0.813197, 0.906994 )
@@ -954,25 +975,208 @@ tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( 65538, 0, 0 )
 
-[node name="Box" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1122.73, 1906.3 )
+[node name="Node" type="Node" parent="."]
 
-[node name="Box2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1170.69, 1919.53 )
+[node name="Box" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 1541, 678.003 )
+scale = Vector2( 1.08185, 1.20664 )
 
-[node name="Box3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1478.12, 2092.63 )
-scale = Vector2( 1.33, 1.33 )
+[node name="Box2" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 1580, 690.002 )
+scale = Vector2( 1.08185, 1.20664 )
 
-[node name="Desk_front" parent="." instance=ExtResource( 7 )]
-position = Vector2( 103.296, 1216.11 )
+[node name="Box3" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 1830, 847.003 )
+scale = Vector2( 1.08155, 1.2063 )
 
-[node name="Desk_front2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 297.591, 1221.62 )
+[node name="Desk_front" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 749, 47 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_front2" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 850, 47 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Map2" type="Node" parent="."]
+
+[node name="Lab1" type="Node" parent="Map2"]
+
+[node name="Desk_side" parent="Map2/Lab1" instance=ExtResource( 18 )]
+position = Vector2( 697, 120 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_side2" parent="Map2/Lab1" instance=ExtResource( 18 )]
+position = Vector2( 697, 192 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="fire" parent="Map2/Lab1" instance=ExtResource( 9 )]
+position = Vector2( 679, 48 )
+
+[node name="fire2" parent="Map2/Lab1" instance=ExtResource( 9 )]
+position = Vector2( 1061, 153 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Lab2" type="Node" parent="Map2"]
+
+[node name="SubjectCylinder" type="Node" parent="Map2/Lab2"]
+
+[node name="SubjectCylinder4" parent="Map2/Lab2/SubjectCylinder" instance=ExtResource( 11 )]
+position = Vector2( 898, 713 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="SubjectCylinder5" parent="Map2/Lab2/SubjectCylinder" instance=ExtResource( 11 )]
+position = Vector2( 945, 713 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="SubjectCylinder" parent="Map2/Lab2/SubjectCylinder" instance=ExtResource( 11 )]
+position = Vector2( 917, 777 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="SubjectCylinder2" parent="Map2/Lab2/SubjectCylinder" instance=ExtResource( 11 )]
+position = Vector2( 877, 758 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="SubjectCylinder3" parent="Map2/Lab2/SubjectCylinder" instance=ExtResource( 11 )]
+position = Vector2( 959, 758 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Fence" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 862, 785 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/Fence"]
+position = Vector2( 10.5, -4.49597 )
+scale = Vector2( 1.34375, 1.34375 )
+texture = ExtResource( 17 )
+
+[node name="Sprite2" type="Sprite" parent="Map2/Lab2/Fence"]
+position = Vector2( 96.5, -4.49597 )
+rotation = 3.14159
+scale = Vector2( 1.344, -1.344 )
+texture = ExtResource( 17 )
+
+[node name="Sprite3" type="Sprite" parent="Map2/Lab2/Fence"]
+position = Vector2( 53.5, -4.49597 )
+scale = Vector2( 1.34375, 1.34375 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Fence"]
+position = Vector2( 54, -83.9999 )
+shape = SubResource( 91 )
+
+[node name="Desk_front3" parent="Map2/Lab2" instance=ExtResource( 7 )]
+position = Vector2( 912, 805 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_side3" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 1011, 660 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_side5" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 738, 791 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_side7" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 1087, 582 )
+scale = Vector2( -0.813, 0.907 )
+
+[node name="Computer" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 844, 717 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/Computer"]
+position = Vector2( 156, -12 )
+scale = Vector2( 2.38235, 2.38235 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Computer"]
+position = Vector2( 157, -13 )
+shape = SubResource( 93 )
+
+[node name="Desk_side8" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 1087, 661 )
+scale = Vector2( -0.813, 0.907 )
+
+[node name="Desk_side6" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 737, 865 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desk_side4" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 1011, 750 )
+scale = Vector2( 0.813197, 0.906994 )
+
+[node name="Desknon_front" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 868, 538 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/Desknon_front"]
+position = Vector2( -0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Desknon_front"]
+position = Vector2( 0, -13 )
+shape = SubResource( 92 )
+
+[node name="Desknon_front2" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 953, 535 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/Desknon_front2"]
+position = Vector2( 6, 4.00006 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Desknon_front2"]
+position = Vector2( 7, -9.99994 )
+shape = SubResource( 92 )
+
+[node name="NormalBox" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 1537, 780 )
+
+[node name="Sprite2" type="Sprite" parent="Map2/Lab2/NormalBox"]
+position = Vector2( 4, 17 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/NormalBox"]
+position = Vector2( -6, 3 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/NormalBox"]
+position = Vector2( -3, 2.9375 )
+shape = SubResource( 94 )
+
+[node name="NormalBox2" type="StaticBody2D" parent="Map2/Lab2"]
+position = Vector2( 1108, 882 )
+
+[node name="Sprite2" type="Sprite" parent="Map2/Lab2/NormalBox2"]
+position = Vector2( -7, -2 )
+texture = ExtResource( 14 )
+
+[node name="Sprite3" type="Sprite" parent="Map2/Lab2/NormalBox2"]
+position = Vector2( -34, -2 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Map2/Lab2/NormalBox2"]
+position = Vector2( -7, -23 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/NormalBox2"]
+position = Vector2( -20.3438, 8 )
+shape = SubResource( 94 )
+
+[node name="Desk_side10" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 823, 738 )
+scale = Vector2( -0.813, 0.907 )
+
+[node name="Desk_side11" parent="Map2/Lab2" instance=ExtResource( 18 )]
+position = Vector2( 823, 665 )
+scale = Vector2( -0.813, 0.907 )
+
+[node name="Locker" parent="." instance=ExtResource( 8 )]
+position = Vector2( 116.823, 1759.66 )
+scale = Vector2( 1, 1 )
 
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
-[connection signal="gotIt" from="Box" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
-[connection signal="gotIt" from="Box2" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
-[connection signal="gotIt" from="Box3" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
-[connection signal="gotIt" from="Desk_front" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
-[connection signal="gotIt" from="Desk_front2" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
+[connection signal="gotIt" from="Node/Box" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
+[connection signal="gotIt" from="Node/Box2" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
+[connection signal="gotIt" from="Node/Box3" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
+[connection signal="gotIt" from="Node/Desk_front" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
+[connection signal="gotIt" from="Node/Desk_front2" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
+[connection signal="gotIt" from="Map2/Lab2/Desk_front3" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
+[connection signal="gotIt" from="Locker" to="player/Camera2D/Gotcha" method="_on_Locker_gotIt"]

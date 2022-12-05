@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chicken.png-594c79319e50950b84179ec8257a13db.stex"
+path="res://.import/tile_0031.png-b88a9de196657b0ad187b150fdf337d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eunseo/Images/chicken.png"
-dest_files=[ "res://.import/chicken.png-594c79319e50950b84179ec8257a13db.stex" ]
+source_file="res://Eunseo/Images/tile_0031.png"
+dest_files=[ "res://.import/tile_0031.png-b88a9de196657b0ad187b150fdf337d9.stex" ]
 
 [params]
 

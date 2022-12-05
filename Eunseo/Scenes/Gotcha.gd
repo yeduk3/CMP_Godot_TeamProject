@@ -14,3 +14,7 @@ func _on_Box_gotIt():
 
 func _on_Desk_front_gotIt():
 	visible = true
+
+
+func _on_Locker_gotIt():
+	visible = true
