@@ -1,7 +1,6 @@
 extends Area2D
 
-onready var health = $"../player/HealthBarTest/Health"
-
+onready var health = $"../player/PlayerUI/HealthBarTest/Health"
 
 func _on_Health_item_body_entered(body):
 	# 체력 회복

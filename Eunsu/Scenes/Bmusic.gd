@@ -1,6 +1,6 @@
 extends Area2D
 
-var Bplay = true
+var Bplay = false
 signal working_window (window) 
 #
 # 함수 불러들이기 부터 시작

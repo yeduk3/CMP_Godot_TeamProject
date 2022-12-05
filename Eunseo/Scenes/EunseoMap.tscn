@@ -14,7 +14,7 @@
 [ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=12]
 [ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Eunsu/Scenes/window.tscn" type="PackedScene" id=15]
+[ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -980,51 +980,62 @@ text = "abcde"
 
 [node name="Timer" type="Timer" parent="player/Camera2D/Gotcha"]
 
-[node name="StaminaBarTest" type="Control" parent="player"]
-margin_left = -36.8914
-margin_top = -50.7169
-margin_right = -36.8914
-margin_bottom = -50.7169
+[node name="PlayerUI" type="Control" parent="player"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="Stamina" type="Control" parent="player/StaminaBarTest"]
+[node name="StaminaBarTest" type="Control" parent="player/PlayerUI"]
+margin_left = -36.8915
+margin_top = -50.717
+margin_right = -36.8915
+margin_bottom = -50.717
+
+[node name="Stamina" type="Control" parent="player/PlayerUI/StaminaBarTest"]
 process_priority = 3
 script = ExtResource( 9 )
 max_amount = 28
 
-[node name="CooltimeBar" parent="player/StaminaBarTest" instance=ExtResource( 8 )]
+[node name="CooltimeBar" parent="player/PlayerUI/StaminaBarTest" instance=ExtResource( 8 )]
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 60.0
 margin_bottom = 10.0
 
-[node name="HealthBarTest" type="Control" parent="player"]
+[node name="HealthBarTest" type="Control" parent="player/PlayerUI"]
 margin_left = -312.347
 margin_top = -160.971
 margin_right = -312.347
 margin_bottom = -160.971
 
-[node name="Health" type="Control" parent="player/HealthBarTest"]
+[node name="Health" type="Control" parent="player/PlayerUI/HealthBarTest"]
 process_priority = 3
 script = ExtResource( 9 )
 max_amount = 28
 
-[node name="HealthBar" parent="player/HealthBarTest" instance=ExtResource( 10 )]
+[node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 10 )]
 
-[node name="Music" type="Node2D" parent="."]
+[node name="Music" type="Node2D" parent="player/PlayerUI"]
+position = Vector2( 303.74, -152.151 )
 
-[node name="Bmusic" parent="Music" instance=ExtResource( 14 )]
-position = Vector2( 996, 29 )
+[node name="Bmusic" parent="player/PlayerUI/Music" instance=ExtResource( 14 )]
+position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 12 )
 
-[node name="window" parent="Music" instance=ExtResource( 15 )]
+[node name="Option" parent="player/PlayerUI" instance=ExtResource( 13 )]
+visible = false
+margin_left = -212.741
+margin_top = -114.664
+margin_right = -172.741
+margin_bottom = -74.6643
+rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="Control" parent="Music" instance=ExtResource( 13 )]
-margin_left = 110.0
-margin_top = 63.0
-margin_right = 150.0
-margin_bottom = 103.0
-rect_scale = Vector2( 0.8, 0.8 )
+[node name="IntegratedInventory" parent="player/PlayerUI" instance=ExtResource( 15 )]
+margin_left = -303.739
+margin_top = -179.714
+margin_right = -303.739
+margin_bottom = -179.714
+rect_scale = Vector2( 0.6, 0.6 )
 
 [connection signal="gotIt" from="Box" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
 [connection signal="gotIt" from="Box2" to="player/Camera2D/Gotcha" method="_on_Box_gotIt"]
@@ -1032,8 +1043,9 @@ rect_scale = Vector2( 0.8, 0.8 )
 [connection signal="gotIt" from="Desk_front" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
 [connection signal="gotIt" from="Desk_front2" to="player/Camera2D/Gotcha" method="_on_Desk_front_gotIt"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
-[connection signal="changed" from="player/StaminaBarTest/Stamina" to="player/StaminaBarTest/CooltimeBar" method="set_value"]
-[connection signal="max_changed" from="player/StaminaBarTest/Stamina" to="player/StaminaBarTest/CooltimeBar" method="set_max"]
-[connection signal="changed" from="player/HealthBarTest/Health" to="player/HealthBarTest/HealthBar" method="set_value"]
-[connection signal="max_changed" from="player/HealthBarTest/Health" to="player/HealthBarTest/HealthBar" method="set_max"]
-[connection signal="input_event" from="Music/Bmusic" to="Music/Bmusic" method="_on_Bmusic_input_event"]
+[connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
+[connection signal="max_changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_max"]
+[connection signal="changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_value"]
+[connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]
+[connection signal="input_event" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
+[connection signal="working_window" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Option" method="_on_Bmusic_working_window"]
