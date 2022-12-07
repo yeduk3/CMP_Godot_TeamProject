@@ -22,6 +22,11 @@ func _ready():
 	add_item(Item.get_new_item_data("B"), 3)
 	add_item(Item.get_new_item_data("D"), 3)
 	add_item(Item.get_new_item_data("Vision Cure"), 2)
+	
+	set_item(5, Item.get_new_item_data("B"))
+	set_item(12, Item.get_new_item_data("B"))
+	set_item(17, Item.get_new_item_data("B"))
+	
 
 #
 # buttons
@@ -29,7 +34,8 @@ func _ready():
 
 # on buttons
 func _on_triggered_item_buttons(index):
-	item_buttons.rect_position = (get_global_mouse_position() - get_global_rect().position) / (get_parent_control().rect_scale * 0.8)
+	print(str(get_global_mouse_position() - rect_global_position))
+	item_buttons.rect_global_position = get_global_mouse_position()
 	item_buttons.visible = true
 	
 	selected_item_index = index
