@@ -10,7 +10,7 @@ func _on_MakingSlot_gui_input(event):
 		return
 	# left click,
 	if event.is_action_pressed("left_click"):
-		print("Left")
+		#print("Left")
 		# increase item number
 		# check whether the ingredient input is possible
 		var index_in_player_item = PlayerItem.find_by_name(item_in_slot.info["Name"])
@@ -18,9 +18,9 @@ func _on_MakingSlot_gui_input(event):
 			return
 		# if possible,
 		var integrated_inventory = control_node.get_parent()
-		integrated_inventory.inventory.add_item_quantity_from_mts(item_in_slot.info["Name"], 1)
+		integrated_inventory.inventory.withdraw_item(item_in_slot.info["Name"], 1)
 	elif event.is_action_pressed("right_click"):
-		print("Right")
+		#print("Right")
 		# decrease item number
 		var integrated_inventory = control_node.get_parent()
-		integrated_inventory.inventory.add_item_quantity_from_mts(item_in_slot.info["Name"], -1)
+		integrated_inventory.inventory.withdraw_item(item_in_slot.info["Name"], -1)

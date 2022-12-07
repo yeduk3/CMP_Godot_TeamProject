@@ -18,15 +18,10 @@ func _ready():
 	
 	item_buttons.add_constant_override("separation", 0)
 	
-	add_item(Item.get_new_item_data("A"), 3)
-	add_item(Item.get_new_item_data("B"), 3)
-	add_item(Item.get_new_item_data("D"), 3)
-	add_item(Item.get_new_item_data("Vision Cure"), 2)
-	
-	set_item(5, Item.get_new_item_data("B"))
-	set_item(12, Item.get_new_item_data("B"))
-	set_item(17, Item.get_new_item_data("B"))
-	
+	add_item(Item.get_new_item_data("A"), 4)
+	add_item(Item.get_new_item_data("B"), 2)
+	add_item(Item.get_new_item_data("C"), 1)
+	#add_item(Item.get_new_item_data("Vision Cure"), 2)
 
 #
 # buttons
@@ -34,7 +29,6 @@ func _ready():
 
 # on buttons
 func _on_triggered_item_buttons(index):
-	print(str(get_global_mouse_position() - rect_global_position))
 	item_buttons.rect_global_position = get_global_mouse_position()
 	item_buttons.visible = true
 	
@@ -70,7 +64,7 @@ func _on_CancelButton_button_down():
 	item_buttons_off()
 
 # add item quantity from making table slot
-func add_item_quantity_from_mts(name, amount):
+func withdraw_item(name, amount):
 	selected_item_index = PlayerItem.find_by_name(name)
 	if selected_item_index == -1:
 		selected_item_index = get_minimal_empty_index()
@@ -78,3 +72,7 @@ func add_item_quantity_from_mts(name, amount):
 	_on_MakeButton_pressed(amount, name)
 	
 	item_buttons_off()
+
+# make item
+func _on_MakingTable_make_item(name):
+	add_item(Item.get_new_item_data(name), 1)

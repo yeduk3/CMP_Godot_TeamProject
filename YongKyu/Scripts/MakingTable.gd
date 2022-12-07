@@ -1,9 +1,11 @@
 extends ItemTable
 
+signal make_item(name)
+
 var making_items
 
 onready var mix_bar = $Panel/MakingBar
-onready var texture_button = $Panel/MakingButton
+onready var making_button = $Panel/MakingButton
 
 func _enter_tree():
 	#print("MakingTable Enter Tree")
@@ -12,7 +14,7 @@ func _enter_tree():
 	making_items = []
 	set_list_controlled(making_items)
 
-func _on_put_ingredient(name, amount):
+func _on_Inventory_put_ingredient(name, amount):
 	add_item(Item.get_new_item_data(name), amount)
 	
 	# check whether the making process is possible
@@ -21,13 +23,15 @@ func _on_put_ingredient(name, amount):
 		if e:
 			number_of_ingredients += e.quantity
 	if number_of_ingredients > 1:
-		texture_button.visible = true
+		making_button.visible = true
 	else:
-		texture_button.visible = false
+		making_button.visible = false
 
 
 func _on_MakingButton_pressed():
-	#pass
+	# button invisible
+	making_button.visible = false
+	
 	# find items which have the item list in
 	var found = false
 	var result = ""
@@ -42,6 +46,9 @@ func _on_MakingButton_pressed():
 		# for all items in active slots
 		for s in active_slots:
 			var cur_item = making_items[s]
+			# if there's no item in slot, continue it
+			if not cur_item:
+				continue
 			# if the item needs what player put into slots and the item's quantity is same with condition
 			if ingredients.has(cur_item.info["Name"]) and ingredients[cur_item.info["Name"]] == cur_item.quantity:
 					result = item_name_key
@@ -59,11 +66,15 @@ func _on_MakingButton_pressed():
 			result = ""
 	# end loop
 	
+	for s in active_slots:
+		set_item(s, null)
 	# if exist,
 	if found:
 		# get it
 		print(result)
+		emit_signal("make_item", result)
 	# else (nonexist)
 	else:
 		# get failure
 		print("no such item")
+		emit_signal("make_item", "Failure Thing")

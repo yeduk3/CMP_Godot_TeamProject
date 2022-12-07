@@ -43,16 +43,17 @@ func get_minimal_empty_index():
 	for i in active_slots:
 		if not list_controlled[i]:
 			return i
+	return -1
 
 # find a proper place and add the item in it
 func add_item(item, amount):
-	var minimal_empty_index = get_minimal_empty_index()
 	for i in active_slots:
 		if list_controlled[i] and list_controlled[i].info["Name"] == item.info["Name"]:
 			add_item_quantity(i, amount)
 			return
+	var minimal_empty_index = get_minimal_empty_index()
 	if minimal_empty_index > -1:
-		print(minimal_empty_index)
+		#print(minimal_empty_index)
 		set_item(minimal_empty_index, item)
 		add_item_quantity(minimal_empty_index, amount)
 	else:

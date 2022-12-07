@@ -16,4 +16,4 @@ func _ready():
 	rect_position.x = (panel.size.x - rect_size.x) / 2
 	rect_position.y = (panel.size.y - rect_size.y) / 2
 	# calculation is weird when the making table is invisible
-	print(str(panel.size.x, " - ", rect_size.x, " = 2 * ", rect_position))
+	#print(str(panel.size.x, " - ", rect_size.x, " = 2 * ", rect_position.x))
