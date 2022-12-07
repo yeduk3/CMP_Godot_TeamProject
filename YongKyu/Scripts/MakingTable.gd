@@ -27,4 +27,43 @@ func _on_put_ingredient(name, amount):
 
 
 func _on_MakingButton_pressed():
-	pass
+	#pass
+	# find items which have the item list in
+	var found = false
+	var result = ""
+	# for all items in database
+	for item_name_key in Item.list:
+		# if the item is not makable, skip it
+		if not Item.list[item_name_key].has("Ingredients"):
+			found = false
+			continue
+		
+		var ingredients = Item.list[item_name_key]["Ingredients"].duplicate()
+		# for all items in active slots
+		for s in active_slots:
+			var cur_item = making_items[s]
+			# if the item needs what player put into slots and the item's quantity is same with condition
+			if ingredients.has(cur_item.info["Name"]) and ingredients[cur_item.info["Name"]] == cur_item.quantity:
+					result = item_name_key
+					ingredients.erase(cur_item.info["Name"])
+					found = true
+			# wrong item input or wrong item's quantity input
+			else:
+				found = false
+				break
+		# if found all the item,
+		if found and ingredients.empty():
+			break
+		# else, continue the loop
+		else:
+			result = ""
+	# end loop
+	
+	# if exist,
+	if found:
+		# get it
+		print(result)
+	# else (nonexist)
+	else:
+		# get failure
+		print("no such item")
