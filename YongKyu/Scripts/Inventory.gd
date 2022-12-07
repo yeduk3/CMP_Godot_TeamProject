@@ -29,7 +29,7 @@ func _ready():
 
 # on buttons
 func _on_triggered_item_buttons(index):
-	item_buttons.rect_position = get_global_mouse_position() - rect_position
+	item_buttons.rect_position = (get_global_mouse_position() - get_global_rect().position) / (get_parent_control().rect_scale * 0.8)
 	item_buttons.visible = true
 	
 	selected_item_index = index
