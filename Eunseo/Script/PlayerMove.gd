@@ -3,8 +3,8 @@ extends KinematicBody2D
 class_name Player
 
 var velocity = Vector2()
-var isCooldown = false
-var currTime
+var dash_available = true
+onready var cooltimeVal = $PlayerUI/StaminaBarTest/Stamina
 
 export var speed = 200
 var dash_speed_delta = 100
@@ -16,24 +16,23 @@ var isUp = false
 
 func _get_start_time():
 	return OS.get_ticks_msec()
+	
+# 대시 게이지를 채운다	
+func _gauge_up():
+	if cooltimeVal.current < 28.0:
+		cooltimeVal.current += 0.3
 
-func _set_cooldown(currTime):
-	var cooltimeVal = $StaminaBarTest/Stamina
-	# 1000은 스킬 쿨타임(1초)
-	cooltimeVal.current = (OS.get_ticks_msec() - currTime) / 1000.0 * 28.0
-	if OS.get_ticks_msec() - currTime >= 1000:
-		isCooldown = false
+# 대시 게이지를 소모한다
+func _gauge_down():
+	cooltimeVal.current -= 0.3
 	
 # 매 초마다 호출
 func _process(delta):
-	if isCooldown:
-		_set_cooldown(currTime)
-	
-	if Input.is_action_just_pressed("tmpSkill") and not isCooldown:
-		# 스킬 키를 누르면, currTime에 누른 시점의 시간을 저장 
-		currTime = _get_start_time()
-		isCooldown = true
-	
+	# 대시 게이지를 끝까지 써버리면 다시 다 찰 때까지 대시를 사용할 수 없다
+	if cooltimeVal.current < 0.1:
+		dash_available = false
+	if cooltimeVal.current > 27.0:
+		dash_available = true
 
 func _physics_process(delta):
 
@@ -51,8 +50,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("down"):
 		velocity.y = speed
 		isDown = true
-	if Input.is_action_pressed("dash"):
+	if Input.is_action_pressed("dash") and dash_available:
 		#velocity.x = speed + dash_speed_delta
+		_gauge_down()
 		if isRight == true:
 			velocity.x = speed + dash_speed_delta
 			isRight = false
@@ -65,7 +65,8 @@ func _physics_process(delta):
 		if isDown == true:
 			velocity.y = speed + dash_speed_delta
 			isDown = false
-
+	else:
+		_gauge_up()
 
 	velocity - velocity.normalized()*speed
 
