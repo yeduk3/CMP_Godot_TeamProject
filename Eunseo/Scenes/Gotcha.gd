@@ -14,3 +14,23 @@ func _on_Box_gotIt():
 
 func _on_Desk_front_gotIt():
 	visible = true
+
+
+func _on_Locker_gotIt():
+	visible = true
+
+
+func _on_Flower_gotIt():
+	visible = true
+
+
+func _on_Picture_gotIt():
+	visible = true
+
+
+func _on_Machine_gotIt():
+	visible = true
+
+
+func _on_Chemical_gotIt():
+	visible = true

@@ -1,11 +1,14 @@
 extends StaticBody2D
 
+export (Array) var get_item_list
+
 signal gotIt
 
-func _on_Area2D_body_entered(body):
-	if body is Player:
-		$Button.visible = true
+var already = false
 
+func _on_Area2D_body_entered(body):
+	if body is Player && already == false:
+		$Button.visible = true
 
 func _on_Area2D_body_exited(body):
 	if body is Player:
@@ -14,5 +17,7 @@ func _on_Area2D_body_exited(body):
 func _on_Button_pressed():
 	emit_signal("gotIt")
 	$light.visible = false
-	$BoxUnopen.visible = false
-	$BoxOpen.visible = true
+	$Unopen.visible = false
+	$Open.visible = true
+	
+	already = true

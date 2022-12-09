@@ -49,6 +49,8 @@ func _physics_process(delta):
 		isUp = true
 	if Input.is_action_pressed("down"):
 		velocity.y = speed
+		
+		
 		isDown = true
 	if Input.is_action_pressed("dash") and dash_available:
 		#velocity.x = speed + dash_speed_delta
@@ -71,3 +73,16 @@ func _physics_process(delta):
 	velocity - velocity.normalized()*speed
 
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func _on_EVtoB1_body_entered(body):
+	if "Map" in body.name:
+		return
+	get_tree().change_scene("res://Eunseo/Scenes/B1F.tscn")
+
+
+func _on_EVto1_body_entered(body):
+	get_tree().change_scene("res://Eunseo/Scenes/EunseoMap.tscn")
+
+
+func _on_MediArea_body_entered(body):
+	pass
