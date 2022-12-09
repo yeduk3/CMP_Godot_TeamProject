@@ -77,11 +77,11 @@ func _physics_process(delta):
 func _on_EVtoB1_body_entered(body):
 	if "Map" in body.name:
 		return
-	get_tree().change_scene("res://Eunseo/Scenes/B1F.tscn")
+	get_tree().change_scene("res://Main/MainB1F.tscn")
 
 
 func _on_EVto1_body_entered(body):
-	get_tree().change_scene("res://Eunseo/Scenes/EunseoMap.tscn")
+	get_tree().change_scene("res://Main/Main1F.tscn")
 
 
 func _on_MediArea_body_entered(body):
