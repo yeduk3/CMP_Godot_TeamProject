@@ -16,7 +16,8 @@ func display_item_slots(cols, rows):
 	slots = cols * rows
 	for index in range(slots):
 		var item_slot = ItemSlot.instance()
-		add_child(item_slot) 
+		add_child(item_slot)
+		# needed to update if it exists
 		item_slot.set_item(null)
 		item_slot.set_index(index)
 	
