@@ -17,11 +17,6 @@ func _ready():
 	#print("Inventory Ready")
 	
 	item_buttons.add_constant_override("separation", 0)
-	
-	add_item(Item.get_new_item_data("A"), 4)
-	add_item(Item.get_new_item_data("B"), 2)
-	add_item(Item.get_new_item_data("C"), 1)
-	#add_item(Item.get_new_item_data("Vision Cure"), 2)
 
 #
 # buttons

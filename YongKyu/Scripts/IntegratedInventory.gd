@@ -56,3 +56,6 @@ func _input(event):
 			current_state = "Making"
 			open_with(current_state)
 
+func _on_get_item_from_map(list):
+	for item in list:
+		inventory.add_item(Item.get_new_item_data(item), 1)

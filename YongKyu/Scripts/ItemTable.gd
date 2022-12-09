@@ -33,8 +33,9 @@ func set_list_controlled(_list_controlled):
 func _ready():
 	#print("ItemTable Ready")
 	# initial setting of player item list
-	for i in range(slots):
-		list_controlled.append(null)
+	if list_controlled.empty():
+		for i in range(slots):
+			list_controlled.append(null)
 
 #
 # manage list_controlled
