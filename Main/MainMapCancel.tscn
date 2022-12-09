@@ -1,20 +1,20 @@
 [gd_scene load_steps=106 format=2]
 
-[ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=1]
-[ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=4]
-[ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=6]
-[ext_resource path="res://Eunseo/Scenes/Desk.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Chaeyoon/CooltimeBar.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=9]
-[ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Chaeyoon/Health_item.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Chaeyoon/CooltimeBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Eunseo/Scenes/Desk.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Chaeyoon/Health_item.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=7]
+[ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=9]
+[ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=10]
+[ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=11]
 [ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=12]
-[ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=14]
-[ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=13]
+[ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=14]
+[ext_resource path="res://icon.png" type="Texture" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -279,7 +279,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "lab tileset finished transparent.png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 13 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 960, 576 )
@@ -885,7 +885,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=2]
 0/name = "Shardsoul Slayer Sprite Sheet.png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 15 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 512, 320 )
@@ -928,32 +928,32 @@ tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( 65538, 0, 0 )
 
-[node name="Box" parent="." instance=ExtResource( 5 )]
+[node name="Box" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1122.73, 1906.3 )
 
-[node name="Box2" parent="." instance=ExtResource( 5 )]
+[node name="Box2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1170.69, 1919.53 )
 
-[node name="Box3" parent="." instance=ExtResource( 5 )]
+[node name="Box3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1478.12, 2092.63 )
 scale = Vector2( 1.33, 1.33 )
 
-[node name="Desk_front" parent="." instance=ExtResource( 7 )]
+[node name="Desk_front" parent="." instance=ExtResource( 4 )]
 position = Vector2( 103.296, 1216.11 )
 
-[node name="Desk_front2" parent="." instance=ExtResource( 7 )]
+[node name="Desk_front2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 297.591, 1221.62 )
 
-[node name="Health_item" parent="." instance=ExtResource( 11 )]
+[node name="Health_item" parent="." instance=ExtResource( 5 )]
 position = Vector2( 290.213, 2600.9 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 367.685, 2820.31 )
 collision_mask = 2
-script = ExtResource( 4 )
+script = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="player"]
-texture = ExtResource( 1 )
+texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( -2.45947, 0 )
@@ -969,7 +969,7 @@ position = Vector2( -370.144, -3463.09 )
 scale = Vector2( 1, 1.25 )
 color = Color( 0, 0, 0, 0.501961 )
 polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2852.28, 486.967, 2852.28, 486.967, 2825.82 )
-script = ExtResource( 6 )
+script = ExtResource( 9 )
 
 [node name="GotchaText" type="RichTextLabel" parent="player/Camera2D/Gotcha"]
 margin_left = 255.781
@@ -992,10 +992,10 @@ margin_bottom = -50.717
 
 [node name="Stamina" type="Control" parent="player/PlayerUI/StaminaBarTest"]
 process_priority = 3
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 max_amount = 28
 
-[node name="CooltimeBar" parent="player/PlayerUI/StaminaBarTest" instance=ExtResource( 8 )]
+[node name="CooltimeBar" parent="player/PlayerUI/StaminaBarTest" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 60.0
@@ -1009,20 +1009,20 @@ margin_bottom = -160.971
 
 [node name="Health" type="Control" parent="player/PlayerUI/HealthBarTest"]
 process_priority = 3
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 max_amount = 28
 
-[node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 10 )]
+[node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 3 )]
 
 [node name="Music" type="Node2D" parent="player/PlayerUI"]
 position = Vector2( 303.74, -152.151 )
 
-[node name="Bmusic" parent="player/PlayerUI/Music" instance=ExtResource( 14 )]
+[node name="Bmusic" parent="player/PlayerUI/Music" instance=ExtResource( 6 )]
 position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 12 )
 
-[node name="Option" parent="player/PlayerUI" instance=ExtResource( 13 )]
+[node name="Option" parent="player/PlayerUI" instance=ExtResource( 7 )]
 visible = false
 margin_left = -212.741
 margin_top = -114.664
@@ -1030,7 +1030,7 @@ margin_right = -172.741
 margin_bottom = -74.6643
 rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="IntegratedInventory" parent="player/PlayerUI" instance=ExtResource( 15 )]
+[node name="IntegratedInventory" parent="player/PlayerUI" instance=ExtResource( 8 )]
 margin_left = -303.739
 margin_top = -179.714
 margin_right = -303.739

@@ -7,6 +7,10 @@ signal gotIt
 var already = false
 
 
+func _ready():
+	var player = get_tree().current_scene.get_node("player").get_node("Camera2D").get_node("Gotcha")
+	self.connect("gotIt", player, "_on_gotIt")
+
 func _on_Area2D_body_entered(body):
 	if body is Player && already == false:
 		$Button.visible = true
