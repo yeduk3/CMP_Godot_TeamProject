@@ -2,7 +2,9 @@ extends SlotContainer
 
 func _ready():
 	#print("MixBar Ready")
-	display_item_slots(control_node.cols, control_node.rows)
+	make_item_slots(control_node.size)
+	yield(get_tree(), "idle_frame")
+	display_item_slots(control_node.size)
 	# invisible except of triangles
 	for i in slots:
 		if i != 1 and i != 6 and i != 8:
@@ -16,4 +18,5 @@ func _ready():
 	rect_position.x = (panel.size.x - rect_size.x) / 2
 	rect_position.y = (panel.size.y - rect_size.y) / 2
 	# calculation is weird when the making table is invisible
-	#print(str(panel.size.x, " - ", rect_size.x, " = 2 * ", rect_position.x))
+	print(str(panel.size.x, " - ", rect_size.x, " = 2 * ", rect_position.x))
+	print(str(panel.size.y, " - ", rect_size.y, " = 2 * ", rect_position.y))

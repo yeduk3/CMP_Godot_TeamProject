@@ -19,8 +19,6 @@ margin_right = 350.0
 margin_bottom = 500.0
 
 [node name="MakingBar" type="GridContainer" parent="Panel"]
-margin_right = 40.0
-margin_bottom = 40.0
 script = ExtResource( 2 )
 ItemSlot = ExtResource( 3 )
 

@@ -8,7 +8,17 @@ signal items_changed(indexes)
 
 var cols
 var rows
-var slots
+var slots # multiple of cols and rows
+
+class Size:
+	var cols
+	var rows
+	
+	func _init(_cols, _rows):
+		cols = _cols
+		rows = _rows
+var size # combine cols and rows
+
 var active_slots
 var list_controlled
 
@@ -19,6 +29,8 @@ func set_table_size(_cols, _rows):
 	cols = _cols
 	rows = _rows
 	slots = cols * rows
+	
+	size = Size.new(_cols, _rows)
 	
 func set_active_slots(_active_slots = slots):
 	active_slots = _active_slots

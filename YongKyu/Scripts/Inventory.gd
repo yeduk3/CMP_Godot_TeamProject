@@ -17,6 +17,9 @@ func _ready():
 	#print("Inventory Ready")
 	
 	item_buttons.add_constant_override("separation", 0)
+	
+	print("Refresh")
+	refresh_inventory()
 
 #
 # buttons
@@ -71,3 +74,7 @@ func withdraw_item(name, amount):
 # make item
 func _on_MakingTable_make_item(name):
 	add_item(Item.get_new_item_data(name), 1)
+
+
+func refresh_inventory():
+	$InventoryPanel/HotBar.display_item_slots(size)
