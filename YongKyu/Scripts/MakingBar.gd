@@ -13,10 +13,13 @@ func _ready():
 			space_node.is_active = false
 
 	# position setting
-	yield(get_tree(), "idle_frame")
-	var panel = get_parent().get_global_rect()
-	rect_position.x = (panel.size.x - rect_size.x) / 2
-	rect_position.y = (panel.size.y - rect_size.y) / 2
+	"""
+	var panel = get_parent()
+	rect_position.x = (panel.rect_size.x - rect_size.x)/2
+	rect_position.y = (panel.rect_size.y - rect_size.y) / 2
 	# calculation is weird when the making table is invisible
-	print(str(panel.size.x, " - ", rect_size.x, " = 2 * ", rect_position.x))
-	print(str(panel.size.y, " - ", rect_size.y, " = 2 * ", rect_position.y))
+	print(panel.get_parent().name)
+	print(str(panel.rect_size.x, " - ", rect_size.x, " = 2 * ", (panel.rect_size.x - rect_size.x)/2))
+	print(rect_position.x)
+	print(str(panel.rect_size.y, " - ", rect_size.y, " = 2 * ", rect_position.y))
+	"""

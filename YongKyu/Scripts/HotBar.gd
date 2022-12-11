@@ -8,3 +8,5 @@ func _ready():
 	var panel = get_parent()
 	rect_position.x = (panel.rect_size.x - rect_size.x) / 2
 	rect_position.y = rect_position.x
+	print("Inventory")
+	print(str(panel.rect_size.x, " - ", rect_size.x, " = 2 * ", rect_position.x))
