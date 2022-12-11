@@ -2280,7 +2280,7 @@ shape = SubResource( 111 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.65, 0.65 )
 
 [node name="Gotcha" type="Polygon2D" parent="player/Camera2D"]
 visible = false
@@ -2321,10 +2321,10 @@ margin_right = 60.0
 margin_bottom = 10.0
 
 [node name="HealthBarTest" type="Control" parent="player/PlayerUI"]
-margin_left = -312.347
-margin_top = -160.971
-margin_right = -312.347
-margin_bottom = -160.971
+margin_left = -322.0
+margin_top = -187.0
+margin_right = -322.0
+margin_bottom = -187.0
 
 [node name="Health" type="Control" parent="player/PlayerUI/HealthBarTest"]
 process_priority = 3
@@ -2334,7 +2334,7 @@ max_amount = 28
 [node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 22 )]
 
 [node name="Music" type="Node2D" parent="player/PlayerUI"]
-position = Vector2( 303.74, -152.151 )
+position = Vector2( 316, -177 )
 
 [node name="Bmusic" parent="player/PlayerUI/Music" instance=ExtResource( 21 )]
 position = Vector2( -11.0674, 8.82056 )
@@ -2356,6 +2356,7 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
+[connection signal="body_entered" from="Map2/EVtoB1" to="player" method="_on_EVtoB1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
 [connection signal="max_changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_max"]
