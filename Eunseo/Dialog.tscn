@@ -8,7 +8,7 @@ position = Vector2( -1.52588e-05, -1.52588e-05 )
 scale = Vector2( 0.5, 0.375 )
 color = Color( 0.184314, 0.184314, 0.184314, 1 )
 polygon = PoolVector2Array( 128, 448, 128, 510.2, 128, 576, 512, 576, 896, 576, 896, 512, 896, 448, 512, 448 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Text" type="RichTextLabel" parent="."]
 margin_left = 144.0
