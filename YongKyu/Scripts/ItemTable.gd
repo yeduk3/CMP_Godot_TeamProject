@@ -8,7 +8,17 @@ signal items_changed(indexes)
 
 var cols
 var rows
-var slots
+var slots # multiple of cols and rows
+
+class Size:
+	var cols
+	var rows
+	
+	func _init(_cols, _rows):
+		cols = _cols
+		rows = _rows
+var size # combine cols and rows
+
 var active_slots
 var list_controlled
 
@@ -19,6 +29,8 @@ func set_table_size(_cols, _rows):
 	cols = _cols
 	rows = _rows
 	slots = cols * rows
+	
+	size = Size.new(_cols, _rows)
 	
 func set_active_slots(_active_slots = slots):
 	active_slots = _active_slots
@@ -33,8 +45,9 @@ func set_list_controlled(_list_controlled):
 func _ready():
 	#print("ItemTable Ready")
 	# initial setting of player item list
-	for i in range(slots):
-		list_controlled.append(null)
+	if list_controlled.empty():
+		for i in range(slots):
+			list_controlled.append(null)
 
 #
 # manage list_controlled
