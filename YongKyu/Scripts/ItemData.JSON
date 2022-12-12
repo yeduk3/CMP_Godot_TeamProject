@@ -3,7 +3,9 @@
 		"Name" : "Rudolf’s nose",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "Rudolf’s nose is sisdjflas~~~",
+		"Description" : "Nose of Rudolph with a cold.",
+		"Condition"
+		"Conditional_Desc" : " It smells worse than I thought...",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -67,9 +69,9 @@
 		"Description" : "Vision Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"A" : 4,
-			"B" : 2,
-			"C" : 1
+			"Rudolf’s nose" : 4,
+			"Poisoned pumpkin" : 2,
+			"Unicorn’s horn" : 1
 		}
 	},
 	"Hearing Cure" : {
@@ -79,9 +81,9 @@
 		"Description" : "Hearing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"A" : 2,
-			"B" : 3,
-			"C" : 1
+			"Rudolf’s nose" : 2,
+			"Poisoned pumpkin" : 3,
+			"Unicorn’s horn" : 1
 		}
 	},
 	"Smell Cure" : {
@@ -91,9 +93,9 @@
 		"Description" : "Smell Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"A" : 1,
-			"B" : 1,
-			"C" : 1
+			"Rudolf’s nose" : 1,
+			"Poisoned pumpkin" : 1,
+			"Unicorn’s horn" : 1
 		}
 	},
 	"Monsterizing Cure" : {
@@ -103,9 +105,9 @@
 		"Description" : "Monsterizing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"D" : 1,
-			"E" : 1,
-			"F" : 1
+			"Rudolf’s nose" : 2,
+			"Dwarf’s hair" : 1,
+			"Witch’s tears" : 3
 		}
 	},
 
