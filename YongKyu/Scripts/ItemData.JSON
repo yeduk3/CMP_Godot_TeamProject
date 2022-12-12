@@ -1,36 +1,36 @@
 {
-	"A" : {
-		"Name" : "A",
+	"Rudolf’s nose" : {
+		"Name" : "Rudolf’s nose",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "A is sisdjflas~~~",
+		"Description" : "Rudolf’s nose is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"B" : {
-		"Name" : "B",
+	"Poisoned pumpkin" : {
+		"Name" : "Poisoned pumpkin",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "B is sisdjflas~~~",
+		"Description" : "Poisoned pumpkin is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"C" : {
-		"Name" : "C",
+	"Unicorn’s horn" : {
+		"Name" : "Unicorn’s horn",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "C is sisdjflas~~~",
+		"Description" : "Unicorn’s horn is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"D" : {
-		"Name" : "D",
+	"Dwarf’s hair" : {
+		"Name" : "Dwarf’s hair",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
 		"Description" : "D is sisdjflas~~~",
@@ -39,21 +39,21 @@
 			
 		}
 	},
-	"E" : {
-		"Name" : "E",
+	"Dragon’s lump" : {
+		"Name" : "Dragon’s lump",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "E is sisdjflas~~~",
+		"Description" : "Dragon’s lump is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"F" : {
-		"Name" : "F",
+	"Witch’s tears" : {
+		"Name" : "Witch’s tears",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "F is sisdjflas~~~",
+		"Description" : "Witch’s tears is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -108,7 +108,7 @@
 			"F" : 1
 		}
 	},
-	
+
 	"Metal Pipe" : {
 		"Name" : "Metal Pipe",
 		"Type" : "Weapon",
@@ -175,5 +175,34 @@
 		"Type" : "Etc",
 		"IconPath" : "Icon.png",
 		"Description" : "FailureThing is sisdjflas~~~"
-	}
+	},
+
+	"Study Note 1" : {
+		"Name" : "Study Note 1",
+		"Type" : "Study Note",
+		"IconPath" : "Icon.png",
+		"Description" : "Study Note 1 is sisdjflas~~~",
+		"Text" : "asdfjadsfasdf"
+	},
+	"Study Note 2" : {
+		"Name" : "Study Note 2",
+		"Type" : "Study Note",
+		"IconPath" : "Icon.png",
+		"Description" : "Study Note 2 is sisdjflas~~~",
+		"Text" : "asdfjadsfasdf"
+	},
+	"Study Note 3" : {
+		"Name" : "Study Note 3",
+		"Type" : "Study Note",
+		"IconPath" : "Icon.png",
+		"Description" : "Study Note 3 is sisdjflas~~~",
+		"Text" : "asdfjadsfasdf"
+	},
+	"Study Note 4" : {
+		"Name" : "Study Note 4",
+		"Type" : "Study Note",
+		"IconPath" : "Icon.png",
+		"Description" : "Study Note 4 is sisdjflas~~~",
+		"Text" : "asdfjadsfasdf"
+	},
 }
