@@ -58,6 +58,7 @@ config/icon="res://icon.png"
 
 Item="*res://YongKyu/Scripts/Item.gd"
 PlayerItem="*res://YongKyu/Scripts/PlayerItem.gd"
+SignalBus="*res://Eunseo/Dialog/SignalBus.gd"
 
 [gui]
 

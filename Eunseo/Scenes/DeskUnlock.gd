@@ -17,7 +17,4 @@ func _on_Area2D_body_exited(body):
 		$Button.visible = false
 
 func _on_Button_pressed():
-	emit_signal("gotIt")
-	$light.visible = false
-	
-	already = true
+	get_tree().change_scene("res://Eunseo/Scenes/Password.tscn")
