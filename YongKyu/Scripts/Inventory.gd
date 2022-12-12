@@ -41,7 +41,16 @@ func item_buttons_off():
 # click use button
 func _on_UseButton_pressed():
 	if selected_item_index >= 0:
-		add_item_quantity(selected_item_index, -1)
+		
+		var item_type = PlayerItem.items[selected_item_index].info["Type"]
+		if item_type == "Cure":
+			# decrease quantity
+			add_item_quantity(selected_item_index, -1)
+			# show result : used
+		#elif item_type == "Ingredient" or item_type == "Weapon" or item_type == "Etc":
+			# show result : nothing happened
+			
+		
 		
 		item_buttons_off()
 
