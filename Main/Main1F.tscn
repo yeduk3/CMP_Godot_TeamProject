@@ -2307,7 +2307,6 @@ text = "abcde"
 [node name="Timer" type="Timer" parent="player/Camera2D/Gotcha"]
 
 [node name="PlayerUI" type="Control" parent="player"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
