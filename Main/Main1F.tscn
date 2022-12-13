@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://Eunseo/Images/desk_front.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=2]
@@ -40,7 +40,6 @@
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=38]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=39]
 [ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=40]
-[ext_resource path="res://Eunseo/Dialog/Dialog.gd" type="Script" id=41]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2285,9 +2284,9 @@ current = true
 zoom = Vector2( 0.65, 0.65 )
 
 [node name="Dialog" parent="player/Camera2D" instance=ExtResource( 40 )]
-position = Vector2( 1, 96 )
+visible = false
+position = Vector2( 0, 100 )
 scale = Vector2( 0.6, 0.6 )
-script = ExtResource( 41 )
 
 [node name="Gotcha" type="Polygon2D" parent="player/Camera2D"]
 visible = false
@@ -2372,5 +2371,3 @@ rect_scale = Vector2( 0.6, 0.6 )
 [connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]
 [connection signal="input_event" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Option" method="_on_Bmusic_working_window"]
-
-[editable path="player/Camera2D/Dialog"]

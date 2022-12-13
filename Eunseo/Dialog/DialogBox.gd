@@ -1,6 +1,6 @@
 extends ColorRect
 
-var dialogPath = "res://Eunseo/Dialog/json/PrologDialog.json"
+onready var dialogPath = "res://Eunseo/Dialog/json/PrologDialog.json"
 export(float) var textSpeed = 0.05
 
 var dialog
@@ -44,7 +44,8 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
-		queue_free()
+		#queue_free()
+		visible = false
 		return
 		
 	finished = false
@@ -62,5 +63,9 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-
-
+func set_dialog(var path):
+	dialogPath = path
+	dialog = getDialog()
+	visible = true
+	phraseNum = 0
+	nextPhrase()

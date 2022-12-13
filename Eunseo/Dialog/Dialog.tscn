@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Eunseo/Dialog/DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Eunseo/Dialog/Dialog.gd" type="Script" id=2]
 
 [node name="Dialog" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="DialogBox" type="ColorRect" parent="."]
 margin_left = -450.0
@@ -29,3 +31,5 @@ scale = Vector2( 0.666667, 1.1282 )
 polygon = PoolVector2Array( 832, 544, 856, 544, 844, 557 )
 
 [node name="Timer" type="Timer" parent="DialogBox"]
+
+[connection signal="tree_exited" from="DialogBox" to="DialogBox" method="_on_DialogBox_tree_exited"]
