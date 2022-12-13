@@ -2224,7 +2224,7 @@ shape = SubResource( 96 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 26 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Study Note 1" ]
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]
 position = Vector2( 547.5, -31.6667 )
