@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://Eunseo/Images/desk_front.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=2]
@@ -39,6 +39,7 @@
 [ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=37]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=38]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=39]
+[ext_resource path="res://Main/monster_final.tscn" type="PackedScene" id=40]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2355,6 +2356,9 @@ margin_top = -179.714
 margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
+
+[node name="monster_final" parent="." instance=ExtResource( 40 )]
+position = Vector2( -34, -107 )
 
 [connection signal="body_entered" from="Map2/EVtoB1" to="player" method="_on_EVtoB1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
