@@ -4,7 +4,9 @@
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
 		"Description" : "Nose of Rudolph with a cold.",
-		"Condition"
+		"Condition" : {
+			"Smell" : 2
+		},
 		"Conditional_Desc" : " It smells worse than I thought...",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -15,7 +17,7 @@
 		"Name" : "Poisoned pumpkin",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "Poisoned pumpkin is sisdjflas~~~",
+		"Description" : "Poisoned pumpkin. You wouldn't have known that the pumpkin exposed to the laboratory would be a material.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -25,7 +27,7 @@
 		"Name" : "Unicorn’s horn",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "Unicorn’s horn is sisdjflas~~~",
+		"Description" : "The horn of the unicorn with severe wear. It smells because I didn't take care of the horn properly.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -35,7 +37,11 @@
 		"Name" : "Dwarf’s hair",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "D is sisdjflas~~~",
+		"Description" : "The blonde Dwarp's hair.",
+		"Condition" : {
+			"Smell" : 2
+		},
+		"Conditional_Desc" : " I guess he washed his hair well. It smells good.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -45,7 +51,7 @@
 		"Name" : "Dragon’s lump",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "Dragon’s lump is sisdjflas~~~",
+		"Description" : "No matter how dragon you are, you can get a lump if you don't take care of your skin. It's bigger than I thought.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -55,7 +61,7 @@
 		"Name" : "Witch’s tears",
 		"Type" : "Ingredient",
 		"IconPath" : "Icon.png",
-		"Description" : "Witch’s tears is sisdjflas~~~",
+		"Description" : "Witch's tears deep in sorrow. I guess I cried a lot. I can smell grapes from my tears It looks like it's flying.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -66,7 +72,7 @@
 		"Name" : "Vision Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "Vision Cure is sisdjflas~~~",
+		"Description" : "It cures your vision.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
 			"Rudolf’s nose" : 4,
@@ -78,7 +84,7 @@
 		"Name" : "Hearing Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "Hearing Cure is sisdjflas~~~",
+		"Description" : "It cures your hearing.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
 			"Rudolf’s nose" : 2,
@@ -90,7 +96,7 @@
 		"Name" : "Smell Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "Smell Cure is sisdjflas~~~",
+		"Description" : "It cures your smell.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
 			"Rudolf’s nose" : 1,
@@ -102,7 +108,7 @@
 		"Name" : "Monsterizing Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "Monsterizing Cure is sisdjflas~~~",
+		"Description" : "It cures the monsterized subject.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
 			"Rudolf’s nose" : 2,
@@ -160,7 +166,7 @@
 		"Name" : "Gun",
 		"Type" : "Weapon",
 		"IconPath" : "Icon.png",
-		"Description" : "Gun is sisdjflas~~~",
+		"Description" : "Gun. It looks powerful.",
 		"Damage" : 3,
 		"AdditionalEffect" : {
 			"Paralyse" : "None"
@@ -176,35 +182,91 @@
 		"Name" : "Failure Thing",
 		"Type" : "Etc",
 		"IconPath" : "Icon.png",
-		"Description" : "FailureThing is sisdjflas~~~"
+		"Description" : "It looks useless."
 	},
 
 	"Study Note 1" : {
 		"Name" : "Study Note 1",
 		"Type" : "Study Note",
 		"IconPath" : "Icon.png",
-		"Description" : "Study Note 1 is sisdjflas~~~",
-		"Text" : "asdfjadsfasdf"
+		"Description" : "Somebody's study note 1.",
+		"Text" : [
+			"March XX, 21XX",
+			"# XXth Experiment",
+			"It's been a few years since I started research here. I have to treat my daughter. It doesn't work out very well.",
+			"Still, I got an important hint from this experiment. One of the ingredients of the treatment made this time was very smelly, but four were needed. The experiment was not easy, but it was able to produce some results. The vision seems to be picking up a little. I need to prepare for the next experiment. Everything for my daughter's health...",
+			"",
+			"2",
+			"",
+			"Material used:",
+			"4 yellow ingredients",
+			"2 blue ingredients",
+			"1 piece of red material"
+		]
 	},
 	"Study Note 2" : {
 		"Name" : "Study Note 2",
 		"Type" : "Study Note",
 		"IconPath" : "Icon.png",
-		"Description" : "Study Note 2 is sisdjflas~~~",
-		"Text" : "asdfjadsfasdf"
+		"Description" : "Somebody's study note 2.",
+		"Text" : [
+			"May XX, 21XX",
+			"# XXth Experiment",
+			"This experiment also failed. It's hopeless. An experiment has just discovered the possibility of hearing recovery. But the daughter is in more and more pain. I can't wait any longer. Bad rumors spread outside and all the subjects in our lab broke the contract. If you hear any thanks from outside... There is no time to lose. Now the last experiment is me...",
+			"",
+			"5",
+			"",
+			"Material used:",
+			"2 yellow ingredients",
+			"3 blue ingredients",
+			"1 piece of red material"
+		]
 	},
 	"Study Note 3" : {
 		"Name" : "Study Note 3",
 		"Type" : "Study Note",
 		"IconPath" : "Icon.png",
-		"Description" : "Study Note 3 is sisdjflas~~~",
-		"Text" : "asdfjadsfasdf"
+		"Description" : "Somebody's study note 3.",
+		"Text" : [
+			"July XX, 21XX",
+			"# XXth Experiment",
+			"Story: Was the cure wrong in the previous experiment? My ears began to get deaf a few days ago. However, through this experiment, the sense of smell can be restored to some extent. I should hurry up and prepare for the next experiment for my daughter who is struggling more and more in pain.",
+			"",
+			"1",
+			"",
+			"Material used:",
+			"1 yellow ingredient",
+			"1 piece of blue material",
+			"1 piece of red material",
+		]
 	},
 	"Study Note 4" : {
 		"Name" : "Study Note 4",
 		"Type" : "Study Note",
 		"IconPath" : "Icon.png",
-		"Description" : "Study Note 4 is sisdjflas~~~",
-		"Text" : "asdfjadsfasdf"
+		"Description" : "Somebody's study note 4.",
+		"Text" : [
+			"October XX, 21XX",
+			"# XXth Experiment",
+			"How many experiments is this already? The supply and demand of materials is becoming difficult now. I can't spend the ingredients on treating me. You have to focus on your daughter's treatment. I'm losing my sense of smell now, and I don't know how long I can last. But the end is not far off.",
+			"",
+			"8"
+		]
+	},
+	"Study Note 5" : {
+		"Name" : "Study Note 4",
+		"Type" : "Study Note",
+		"IconPath" : "Icon.png",
+		"Description" : "Somebody's study note 4.",
+		"Text" : [
+			"December XX, 21XX",
+			"# XXth Experiment - Last Experiment",
+			"Story: My daughter doesn't even recognize me. It's getting more aggressive. Fortunately, this experiment is likely to be a success. The side effects of the drug have not been identified. But there is no time. I need to be administered. But my daughter's condition is weird right now. I think I'll have to go quickly.",
+			"",
+			"Material used:",
+			"2 yellow ingredients",
+			"1 piece of gray material",
+			"3 orange ingredients"
+		]
 	},
 }
