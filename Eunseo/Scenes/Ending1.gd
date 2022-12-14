@@ -6,10 +6,10 @@ var fade_tweeen
 var Text_tween
 var timeout = false
 
+var TimeText = 10
+
 func _ready():
 	$Dialog.isEnding1()
-	
-	timer.set_wait_time(0.3)
 
 
 
@@ -30,6 +30,10 @@ func _on_DialogBox_hide_Dialog2():
 	Text_tween = create_tween()
 	Text_tween.tween_method(self, "custom_font_override", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 1.0)
 	
+	yield(get_tree().create_timer(1.0),"timeout")
+	$Time.visible = true
+	timer.start()
+	
 func custom_font_override(color):
 	GunText_node.add_color_override("font_color", color)
 	
@@ -42,10 +46,15 @@ func _process(delta):
 		
 		$Background2.visible = true
 		
-		timer.start()
-	if timeout == true:
+		yield(get_tree().create_timer(0.3),"timeout")
 		get_tree().change_scene("res://Eunseo/Scenes/Ending2Normal.tscn")
+		
+	$Time.set_text(str(TimeText))
+	
+	if TimeText == 0:
+		get_tree().change_scene("res://Eunseo/Scenes/Ending2Bad.tscn")
 
 
 func _on_Timer_timeout():
-	timeout = true
+	TimeText -= 1
+	timer.start()
