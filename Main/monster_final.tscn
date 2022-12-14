@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://monster_final.gd" type="Script" id=1]
 [ext_resource path="res://Eunsu/Images/moster.png" type="Texture" id=2]
@@ -79,6 +79,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 19.5, 17.5 )
 
+[sub_resource type="CircleShape2D" id=16]
+radius = 34.0037
+
 [node name="monster_final" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
@@ -92,4 +95,12 @@ shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -2.5, 14.5 )
+shape = SubResource( 16 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
