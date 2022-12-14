@@ -22,6 +22,10 @@ func _on_ExitArea_body_entered(body):
 		else:
 			pass
 
+func isProlog():
+	dialog_box.set_dialog("res://Eunseo/Dialog/json/PrologDialog.json")
+	visible = true
+
 func isEnding1():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/Ending1Dialog.json")
 	visible = true
@@ -39,6 +43,11 @@ func use_Normal1():
 
 func use_Normal2():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/NormalEndingDialog2.json")
+	get_node("DialogBox").DialogNum = 1
+	visible = true
+	
+func use_Normal3():
+	dialog_box.set_dialog("res://Eunseo/Dialog/json/NormalEndingDialog3.json")
 	visible = true
 
 

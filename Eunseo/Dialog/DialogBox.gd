@@ -2,6 +2,7 @@ extends ColorRect
 
 signal hide_Dialog
 signal hide_Dialog2
+signal hide_Dialog3
 
 onready var dialogPath = " "
 export(float) var textSpeed = 0.05
@@ -53,12 +54,16 @@ func nextPhrase() -> void:
 		hide = true
 		visible = false
 		if DialogNum == 0:
+			print(DialogNum)
 			emit_signal("hide_Dialog")
 		elif DialogNum == 1:
 			emit_signal("hide_Dialog2")
 			DialogNum+= 1
+		elif DialogNum == 2:
+			emit_signal("hide_Dialog3")
 		return
 	finished = false
+	#print(DialogNum)
 	
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]

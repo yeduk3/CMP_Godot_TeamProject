@@ -27,7 +27,7 @@ margin_left = -256.5
 margin_top = -100.0
 margin_right = 256.5
 custom_fonts/font = SubResource( 1 )
-text = "Game Title"
+text = "How Dare I?"
 align = 1
 
 [node name="StartButton" type="Button" parent="ColorRect"]
