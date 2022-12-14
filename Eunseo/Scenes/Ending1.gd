@@ -52,6 +52,10 @@ func _process(delta):
 	$Time.set_text(str(TimeText))
 	
 	if TimeText == 0:
+		for item in PlayerItem.items:
+			if item.info["Name"] == "Monsterizing Cure":
+				get_tree().change_scene("res://Eunseo/Scenes/Ending2Happy.tscn")
+		# not found
 		get_tree().change_scene("res://Eunseo/Scenes/Ending2Bad.tscn")
 
 

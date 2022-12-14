@@ -2191,6 +2191,7 @@ fit_content_height = true
 [node name="Timer" type="Timer" parent="Player/Camera2D/Gotcha"]
 
 [node name="Dialog" parent="Player/Camera2D" instance=ExtResource( 46 )]
+scale = Vector2( 0.6, 0.6 )
 
 [node name="PlayerUI" type="Control" parent="Player"]
 anchor_right = 1.0
