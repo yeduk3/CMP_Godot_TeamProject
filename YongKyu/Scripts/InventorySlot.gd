@@ -16,6 +16,12 @@ func _on_InventorySlot_gui_input(event):
 	if event.is_action_pressed("left_click"):
 		# show information of the item
 		desc_label.text = item_in_slot.info["Description"] 
+		if item_in_slot.info.has("Condition"):
+			for c in item_in_slot.info["Condition"].keys():
+				if c == "Smell":
+					if item_in_slot.info["Condition"][c] <= StatManager._get_stat3():
+						desc_label.text += item_in_slot.info["Conditional_Desc"]
+				
 		item_buttons.visible = false
 	# right clicked,
 	elif event.is_action_pressed("right_click"):

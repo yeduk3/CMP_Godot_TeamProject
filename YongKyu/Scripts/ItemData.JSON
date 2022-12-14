@@ -5,7 +5,7 @@
 		"IconPath" : "res://ItemIcon/Rudolf’s nose.png",
 		"Description" : "Nose of Rudolph with a cold.",
 		"Condition" : {
-			"Smell" : 2
+			"Smell" : 60
 		},
 		"Conditional_Desc" : " It smells worse than I thought...",
 		"Number_of_Ingredients" : 0,
@@ -39,7 +39,7 @@
 		"IconPath" : "res://ItemIcon/Dwarf’s hair.png",
 		"Description" : "The blonde Dwarp's hair.",
 		"Condition" : {
-			"Smell" : 2
+			"Smell" : 60
 		},
 		"Conditional_Desc" : " I guess he washed his hair well. It smells good.",
 		"Number_of_Ingredients" : 0,

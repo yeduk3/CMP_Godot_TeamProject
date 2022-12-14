@@ -16,16 +16,5 @@ script = ExtResource( 4 )
 margin_right = -40.0
 margin_bottom = -40.0
 
-[node name="Panel2" type="Panel" parent="PlayerInformation"]
-margin_right = 357.0
-margin_bottom = 511.0
-
-[node name="Label" type="Label" parent="PlayerInformation/Panel2"]
-margin_left = 17.0
-margin_top = 17.0
-margin_right = 135.0
-margin_bottom = 31.0
-text = "Player Information"
-
 [node name="MakingTable" parent="." instance=ExtResource( 3 )]
 visible = false
