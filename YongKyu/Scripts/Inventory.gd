@@ -44,12 +44,20 @@ func item_buttons_off():
 # click use button
 func _on_UseButton_pressed():
 	if selected_item_index >= 0:
-		
-		var item_type = PlayerItem.items[selected_item_index].info["Type"]
+		var item = PlayerItem.items[selected_item_index]
+		var item_type = item.info["Type"]
 		if item_type == "Cure":
 			# decrease quantity
 			add_item_quantity(selected_item_index, -1)
 			# show result : used
+			var player_ui = get_parent().get_parent()
+			var item_name = item.info["Name"]
+			if item_name == "Vision Cure":
+				player_ui.get_node("VisionAbilityBar")._ability_up(33)
+			elif item_name == "Hearing Cure":
+				player_ui.get_node("HearingAbilityBar")._ability_up(33)
+			elif item_name == "Smell Cure":
+				player_ui.get_node("SmellAbilityBar")._ability_up(33)
 		#elif item_type == "Ingredient" or item_type == "Weapon" or item_type == "Etc":
 			# show result : nothing happened
 		elif item_type == "Study Note":

@@ -59,3 +59,7 @@ func _input(event):
 func _on_get_item_from_map(list):
 	for item in list:
 		inventory.add_item(Item.get_new_item_data(item), 1)
+
+
+func _on_MediArea_body_entered(body):
+	open_with("Making")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=2]
+[gd_scene load_steps=159 format=2]
 
 [ext_resource path="res://Eunseo/Images/desk_front.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=2]
@@ -2432,9 +2432,3 @@ navpoly = SubResource( 112 )
 [connection signal="timeout" from="Player/Camera2D/Gotcha/Timer" to="Player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="input_event" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Option" method="_on_Bmusic_working_window"]
-[connection signal="body_entered" from="Map2/Lab2/Computer/Area2D" to="player/Camera2D/Dialog" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Map2/Lobby/MainGate" to="player/Camera2D/Dialog" method="_on_MainGate_body_entered"]
-[connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_max"]
-[connection signal="changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]

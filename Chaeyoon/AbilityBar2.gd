@@ -1,4 +1,4 @@
-extends Node
+extends ProgressBar
 
 onready var player_stat_manager = get_node("/root/StatManager")
 

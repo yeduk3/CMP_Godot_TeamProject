@@ -18,8 +18,6 @@ func _ready():
 		$Unopen.visible = false
 		$Open.visible = true
 		$Button.visible = false
-		
-		already = true
 
 func _on_Area2D_body_entered(body):
 	if body is Player && isOpened == false:
@@ -32,7 +30,5 @@ func _on_Button_pressed():
 	$Unopen.visible = false
 	$Open.visible = true
 	$Button.visible = false
-	
-	already = true
 	
 	PlacedItem.unplace_by_index(placed_index)

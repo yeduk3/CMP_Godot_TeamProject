@@ -17,8 +17,6 @@ func _ready():
 	if not PlacedItem.is_placed(placed_index):
 		$light.visible = false
 		$Button.visible = false
-		
-		already = true
 
 func _on_Area2D_body_entered(body):
 	if body is Player && isOpened == false:
@@ -29,7 +27,5 @@ func _on_Button_pressed():
 	emit_signal("get_item_from_map", get_item_list)
 	$light.visible = false
 	$Button.visible = false
-	
-	already = true
 	
 	PlacedItem.unplace_by_index(placed_index)

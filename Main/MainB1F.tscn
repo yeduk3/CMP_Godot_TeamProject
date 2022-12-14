@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=2]
+[gd_scene load_steps=174 format=2]
 
 [ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
@@ -44,7 +44,7 @@
 [ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=42]
 [ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=43]
 [ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=44]
-[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Main/Stamina.gd" type="Script" id=45]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2156,7 +2156,7 @@ position = Vector2( -1.5, 4.5 )
 shape = SubResource( 118 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 2150, 303 )
+position = Vector2( 2144, 358 )
 collision_mask = 6
 script = ExtResource( 1 )
 
@@ -2171,25 +2171,21 @@ shape = SubResource( 141 )
 current = true
 zoom = Vector2( 0.65, 0.65 )
 
-[node name="Dialog" parent="Player/Camera2D" instance=ExtResource( 39 )]
-visible = false
-position = Vector2( 0, 100 )
-scale = Vector2( 0.6, 0.6 )
-
 [node name="Gotcha" type="Polygon2D" parent="Player/Camera2D"]
 visible = false
 position = Vector2( -370.144, -3463.09 )
 scale = Vector2( 1, 1.25 )
 color = Color( 0, 0, 0, 0.501961 )
-polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2852.28, 486.967, 2852.28, 486.967, 2825.82 )
+polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
 script = ExtResource( 4 )
 
 [node name="GotchaText" type="RichTextLabel" parent="Player/Camera2D/Gotcha"]
-margin_left = 255.781
-margin_top = 2829.57
-margin_right = 471.781
-margin_bottom = 2847.57
+margin_left = 256.0
+margin_top = 2830.0
+margin_right = 472.0
+margin_bottom = 2888.0
 text = "abcde"
+fit_content_height = true
 
 [node name="Timer" type="Timer" parent="Player/Camera2D/Gotcha"]
 
@@ -2205,7 +2201,7 @@ margin_bottom = -50.717
 
 [node name="Stamina" type="Control" parent="Player/PlayerUI/StaminaBarTest"]
 process_priority = 3
-script = ExtResource( 37 )
+script = ExtResource( 45 )
 
 [node name="CooltimeBar" parent="Player/PlayerUI/StaminaBarTest" instance=ExtResource( 36 )]
 margin_left = 0.0
@@ -2233,13 +2229,26 @@ position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 38 )
 
-[node name="Option" parent="Player/PlayerUI" instance=ExtResource( 33 )]
-visible = false
-margin_left = -212.741
-margin_top = -114.664
-margin_right = -172.741
-margin_bottom = -74.6643
-rect_scale = Vector2( 0.4, 0.4 )
+[node name="VisionAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 39 )]
+margin_left = -265.0
+margin_top = -100.0
+margin_right = -145.0
+margin_bottom = -80.0
+script = ExtResource( 42 )
+
+[node name="HearingAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 41 )]
+margin_left = -265.0
+margin_top = -70.0
+margin_right = -145.0
+margin_bottom = -50.0
+script = ExtResource( 43 )
+
+[node name="SmellAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 40 )]
+margin_left = -265.0
+margin_top = -40.0
+margin_right = -145.0
+margin_bottom = -20.0
+script = ExtResource( 44 )
 
 [node name="IntegratedInventory" parent="Player/PlayerUI" instance=ExtResource( 34 )]
 margin_left = -303.739
@@ -2248,33 +2257,16 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
-[node name="AbilityBar1" parent="Player/PlayerUI" instance=ExtResource( 39 )]
-margin_left = -265.0
-margin_top = -100.0
-margin_right = -145.0
-margin_bottom = -80.0
-script = ExtResource( 42 )
+[node name="Option" parent="Player/PlayerUI" instance=ExtResource( 33 )]
+visible = false
+margin_left = -212.741
+margin_top = -114.664
+margin_right = -172.741
+margin_bottom = -74.6643
+rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="AbilityBar2" parent="Player/PlayerUI" instance=ExtResource( 41 )]
-margin_left = -265.0
-margin_top = -70.0
-margin_right = -145.0
-margin_bottom = -50.0
-script = ExtResource( 43 )
-
-[node name="AbilityBar3" parent="Player/PlayerUI" instance=ExtResource( 40 )]
-margin_left = -265.0
-margin_top = -40.0
-margin_right = -145.0
-margin_bottom = -20.0
-script = ExtResource( 44 )
-
+[connection signal="body_entered" from="Map2/Medicine/MediMaker/MediArea" to="Player/PlayerUI/IntegratedInventory" method="_on_MediArea_body_entered"]
 [connection signal="body_entered" from="Map2/EVto1" to="Player" method="_on_EVto1_body_entered"]
 [connection signal="timeout" from="Player/Camera2D/Gotcha/Timer" to="Player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="input_event" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Option" method="_on_Bmusic_working_window"]
-[connection signal="body_entered" from="Map2/Exit/ExitArea" to="player/Camera2D/Dialog" method="_on_ExitArea_body_entered"]
-[connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_max"]
-[connection signal="changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]
