@@ -2313,14 +2313,14 @@ visible = false
 position = Vector2( -370.144, -3463.09 )
 scale = Vector2( 1, 1.25 )
 color = Color( 0, 0, 0, 0.501961 )
-polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2852.28, 486.967, 2852.28, 486.967, 2825.82 )
+polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
 script = ExtResource( 34 )
 
 [node name="GotchaText" type="RichTextLabel" parent="player/Camera2D/Gotcha"]
-margin_left = 255.781
-margin_top = 2829.57
-margin_right = 471.781
-margin_bottom = 2847.57
+margin_left = 256.0
+margin_top = 2830.0
+margin_right = 472.0
+margin_bottom = 2887.0
 text = "abcde"
 
 [node name="Timer" type="Timer" parent="player/Camera2D/Gotcha"]

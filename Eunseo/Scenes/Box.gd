@@ -3,7 +3,7 @@ extends StaticBody2D
 export (Array) var get_item_list
 export (int) var placed_index
 
-signal gotIt
+signal gotIt(list)
 signal get_item_from_map(list)
 
 var already = false
@@ -26,7 +26,7 @@ func _on_Area2D_body_entered(body):
 		$Button.visible = true
 
 func _on_Button_pressed():
-	emit_signal("gotIt")
+	emit_signal("gotIt", get_item_list)
 	emit_signal("get_item_from_map", get_item_list)
 	$light.visible = false
 	$Unopen.visible = false
