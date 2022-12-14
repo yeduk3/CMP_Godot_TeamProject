@@ -16,10 +16,10 @@ func _process(delta):
 		
 	if player.position > position:
 		sprite.flip_h = false
-		sprite.play("run")
+		#sprite.play("run")
 	elif player.position < position:
 		sprite.flip_h = true
-		sprite.play("run")
+		#sprite.play("run")
 	else:
 		sprite.stop()
 		
