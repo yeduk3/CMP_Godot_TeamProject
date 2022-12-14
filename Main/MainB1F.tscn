@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=2]
+[gd_scene load_steps=168 format=2]
 
 [ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
@@ -1047,9 +1047,6 @@ extents = Vector2( 16, 14 )
 
 [sub_resource type="RectangleShape2D" id=140]
 extents = Vector2( 72.5, 12 )
-
-[sub_resource type="RectangleShape2D" id=142]
-extents = Vector2( 100, 117 )
 
 [sub_resource type="RectangleShape2D" id=122]
 extents = Vector2( 16.5, 5.5 )
@@ -2118,13 +2115,6 @@ position = Vector2( 2793, 473 )
 scale = Vector2( 0.813197, 0.906994 )
 get_item_list = [ "B" ]
 
-[node name="B1FCameraLimit" type="Area2D" parent="Map2/Hall"]
-position = Vector2( 2150, 352 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Hall/B1FCameraLimit"]
-position = Vector2( 1, 1 )
-shape = SubResource( 142 )
-
 [node name="Exit" type="Node2D" parent="Map2"]
 
 [node name="Exit" type="Sprite" parent="Map2/Exit"]
@@ -2241,8 +2231,6 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
-[connection signal="body_entered" from="Map2/Hall/B1FCameraLimit" to="player" method="_on_B1FCameraLimit_body_entered"]
-[connection signal="body_exited" from="Map2/Hall/B1FCameraLimit" to="player" method="_on_B1FCameraLimit_body_exited"]
 [connection signal="body_entered" from="Map2/Exit/ExitArea" to="player/Camera2D/Dialog" method="_on_ExitArea_body_entered"]
 [connection signal="body_entered" from="Map2/EVto1" to="player" method="_on_EVto1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]

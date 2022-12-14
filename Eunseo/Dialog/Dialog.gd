@@ -23,3 +23,11 @@ func _on_ExitArea_body_entered(body):
 			visible = true
 		else:
 			pass
+
+func isEnding1():
+	dialog_box.set_dialog("res://Eunseo/Dialog/json/Ending1Dialog.json")
+	visible = true
+
+func use_MeetMonsterDialog():
+	dialog_box.set_dialog("res://Eunseo/Dialog/json/MeetMonsterDialog.json")
+	visible = true

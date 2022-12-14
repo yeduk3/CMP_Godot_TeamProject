@@ -1,5 +1,7 @@
 extends ColorRect
 
+signal hide_Dialog
+
 onready var dialogPath = "res://Eunseo/Dialog/json/PrologDialog.json"
 export(float) var textSpeed = 0.05
 
@@ -44,7 +46,9 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
+		emit_signal("hide_Dialog")
 		visible = false
+		print("Hide Dialog")
 		return
 		
 	finished = false
@@ -58,7 +62,7 @@ func nextPhrase() -> void:
 		
 		$Timer.start()
 		yield($Timer, "timeout")
-		
+	print("Out")
 	finished = true
 	phraseNum += 1
 	return
@@ -66,6 +70,7 @@ func nextPhrase() -> void:
 func set_dialog(var path):
 	dialogPath = path
 	dialog = getDialog()
+	hide = false
 	visible = true
 	phraseNum = 0
 	nextPhrase()

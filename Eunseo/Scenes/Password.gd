@@ -20,7 +20,7 @@ func _process(delta):
 		next = 5
 		
 	if timeout == true:
-		get_tree().change_scene("res://Main/MainB1F.tscn")
+		get_tree().change_scene("res://Eunseo/Scenes/Ending1.tscn")
 
 func _on_Timer_timeout():
 	timer.stop()

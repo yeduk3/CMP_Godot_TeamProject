@@ -34,11 +34,6 @@ func _process(delta):
 		dash_available = false
 	if cooltimeVal.current > 27.0:
 		dash_available = true
-	
-	if Limit == true:
-		$Camera2D.limit_top = 250
-	else:
-		$Camera2D.limit_top = -10000000
 
 func _physics_process(delta):
 
@@ -92,11 +87,3 @@ func _on_EVto1_body_entered(body):
 
 func _on_MediArea_body_entered(body):
 	pass
-
-
-func _on_B1FCameraLimit_body_entered(body):
-	Limit = true
-
-
-func _on_B1FCameraLimit_body_exited(body):
-	Limit = false
