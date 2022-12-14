@@ -49,6 +49,7 @@ margin_bottom = 68.0
 text = "Cancel"
 
 [node name="StudyNotePanel" type="Panel" parent="InventoryPanel"]
+visible = false
 margin_left = 76.0
 margin_top = 4.0
 margin_right = 876.0
