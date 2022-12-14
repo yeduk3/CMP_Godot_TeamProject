@@ -5,6 +5,9 @@ signal put_ingredient(name, amount)
 onready var item_buttons = $InventoryPanel/ItemButtons
 onready var selected_item_index = -1
 
+onready var study_note_panel = $InventoryPanel/StudyNotePanel
+
+
 func _enter_tree():
 	#print("Inventory Enter Tree")
 	# setting table
@@ -41,27 +44,30 @@ func item_buttons_off():
 # click use button
 func _on_UseButton_pressed():
 	if selected_item_index >= 0:
-		var item = PlayerItem.items[selected_item_index]
-		var item_type = item.info["Type"]
+		
+		var item_type = PlayerItem.items[selected_item_index].info["Type"]
 		if item_type == "Cure":
 			# decrease quantity
 			add_item_quantity(selected_item_index, -1)
-			# show result : usedd
-			var player_ui = get_parent().get_parent()
-			var item_name = item.info["Name"]
-			if item_name == "Vision Cure":
-				player_ui.get_node("VisionAbilityBar")._ability_up(33)
-			elif item_name == "Hearing Cure":
-				player_ui.get_node("HearingAbilityBar")._ability_up(33)
-			elif item_name == "Smell Cure":
-				player_ui.get_node("SmellAbilityBar")._ability_up(33)
-
+			# show result : used
 		#elif item_type == "Ingredient" or item_type == "Weapon" or item_type == "Etc":
 			# show result : nothing happened
+		elif item_type == "Study Note":
+			study_note_panel.get_node("TextLabel").text = ""
+			var texts = PlayerItem.items[selected_item_index].info["Text"]
+			for text in texts:
+				study_note_panel.get_node("TextLabel").text += text + "\n"
+			study_note_panel.visible = true
 			
 		
 		
 		item_buttons_off()
+
+# click study note panel
+func _on_StudyNotePanel_gui_input(event):
+	if event.is_action_pressed("left_click"):
+		study_note_panel.visible = false
+
 
 # click make button
 func _on_MakeButton_pressed(amount = 1, name = ""):

@@ -38,4 +38,11 @@ margin_right = 32.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 4 )
 
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 17.0
+margin_top = 17.0
+margin_right = 100.0
+margin_bottom = 31.0
+text = "Making Table"
+
 [connection signal="pressed" from="Panel/MakingButton" to="." method="_on_MakingButton_pressed"]

@@ -45,7 +45,6 @@
 [ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=43]
 [ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=44]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
@@ -1167,6 +1166,7 @@ shape = SubResource( 117 )
 [node name="Box2" parent="Map2/Storage" instance=ExtResource( 6 )]
 position = Vector2( 392, 735 )
 get_item_list = [ "Rudolf’s nose", "Poisoned pumpkin" ]
+placed_index = 21
 
 [node name="NormalBox2" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 335, 745 )
@@ -1249,10 +1249,12 @@ shape = SubResource( 126 )
 [node name="Box" parent="Map2/Storage" instance=ExtResource( 6 )]
 position = Vector2( 269, 906 )
 get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Unicorn’s horn" ]
+placed_index = 22
 
 [node name="Flower" parent="Map2/Storage" instance=ExtResource( 17 )]
 position = Vector2( 933, 573 )
 get_item_list = [ "Unicorn’s horn" ]
+placed_index = 23
 
 [node name="Flower6" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 937, 667 )
@@ -1295,6 +1297,7 @@ shape = SubResource( 127 )
 [node name="Desk_front" parent="Map2/MachineRoom" instance=ExtResource( 11 )]
 position = Vector2( 437, 511 )
 get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
+placed_index = 24
 
 [node name="chair" type="Sprite" parent="Map2/MachineRoom/Desk_front"]
 position = Vector2( 2.00001, 10 )
@@ -1468,6 +1471,7 @@ shape = SubResource( 120 )
 [node name="Chemical" parent="Map2/MediStorage" instance=ExtResource( 8 )]
 position = Vector2( 1475, 1378 )
 get_item_list = [ "Rudolf’s nose", "Unicorn’s horn" ]
+placed_index = 25
 
 [node name="Chemical7" type="StaticBody2D" parent="Map2/MediStorage"]
 position = Vector2( 1669, 1461 )
@@ -1498,11 +1502,14 @@ shape = SubResource( 119 )
 
 [node name="Chemical3" parent="Map2/MediStorage" instance=ExtResource( 8 )]
 position = Vector2( 1833, 1458 )
-get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
+placed_index = 26
 
 [node name="Desk_front" parent="Map2/MediStorage" instance=ExtResource( 11 )]
 position = Vector2( 1540, 1473 )
 scale = Vector2( 1.00213, 1 )
+get_item_list = [ "Rudolf’s nose" ]
+placed_index = 32
 
 [node name="ChairBack" type="Sprite" parent="Map2/MediStorage/Desk_front"]
 position = Vector2( 2, 12 )
@@ -1582,6 +1589,7 @@ texture = ExtResource( 22 )
 [node name="Picture" parent="Map2/Lounge" instance=ExtResource( 19 )]
 position = Vector2( 3051, 50 )
 get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 27
 
 [node name="DaughterRoom" type="Node2D" parent="Map2"]
 
@@ -1729,6 +1737,7 @@ texture = ExtResource( 5 )
 [node name="Box4" parent="Map2/WasteRoom/NormalBox" instance=ExtResource( 6 )]
 position = Vector2( -241, -101 )
 get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 28
 
 [node name="Sprite17" type="Sprite" parent="Map2/WasteRoom/NormalBox"]
 position = Vector2( -270, -99 )
@@ -1993,6 +2002,7 @@ shape = SubResource( 137 )
 [node name="Box5" parent="Map2/WasteRoom" instance=ExtResource( 6 )]
 position = Vector2( 3773, 1173 )
 get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 29
 
 [node name="Radiation" type="Node2D" parent="Map2"]
 
@@ -2023,6 +2033,7 @@ shape = SubResource( 130 )
 [node name="Desk_front" parent="Map2/Radiation" instance=ExtResource( 11 )]
 position = Vector2( 3193, 1010 )
 get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose", "Poisoned pumpkin" ]
+placed_index = 30
 
 [node name="fire" parent="Map2/Radiation" instance=ExtResource( 28 )]
 position = Vector2( 3593, 937 )
@@ -2120,6 +2131,7 @@ shape = SubResource( 140 )
 position = Vector2( 2793, 473 )
 scale = Vector2( 0.813197, 0.906994 )
 get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 31
 
 [node name="Exit" type="Node2D" parent="Map2"]
 
