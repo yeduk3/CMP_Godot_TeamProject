@@ -1007,11 +1007,11 @@ scale = Vector2( 1, -1 )
 
 [node name="Desk_front2" parent="Map2/Lab1" instance=ExtResource( 28 )]
 position = Vector2( -55.8334, -76 )
-get_item_list = [ "D" ]
+get_item_list = [ "Dwarf’s hair" ]
 
 [node name="Desk_front3" parent="Map2/Lab1" instance=ExtResource( 28 )]
 position = Vector2( 44.1666, -75 )
-get_item_list = [ "F" ]
+get_item_list = [ "Witch’s tears" ]
 
 [node name="Lab2" type="Node2D" parent="Map2"]
 position = Vector2( 601.667, 520.833 )
@@ -1135,16 +1135,16 @@ scale = Vector2( 0.813, -0.907 )
 [node name="Locker" parent="Map2/Lab2" instance=ExtResource( 31 )]
 position = Vector2( -37.3333, -120.833 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "A", "B", "C" ]
+get_item_list = [ "Rudolf’s nose", "Poisoned pumpkin", "Unicorn’s horn" ]
 
 [node name="Locker2" parent="Map2/Lab2" instance=ExtResource( 31 )]
 position = Vector2( -358.333, -23.5 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "B", "B", "C" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Unicorn’s horn" ]
 
 [node name="Desk_front" parent="Map2/Lab2" instance=ExtResource( 28 )]
 position = Vector2( 154, 104 )
-get_item_list = [ "A", "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose" ]
 
 [node name="fire4" parent="Map2/Lab2" instance=ExtResource( 27 )]
 position = Vector2( -38.3333, -96.8333 )
@@ -1236,7 +1236,7 @@ shape = SubResource( 99 )
 
 [node name="Desk_front2" parent="Map2/Lab3" instance=ExtResource( 28 )]
 position = Vector2( 259.667, 103.167 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
 
 [node name="ChairBack" type="Sprite" parent="Map2/Lab3/Desk_front2"]
 position = Vector2( 2, 15 )
@@ -1317,7 +1317,7 @@ texture = ExtResource( 6 )
 
 [node name="Flower2" parent="Map2/Office" instance=ExtResource( 30 )]
 position = Vector2( 58.0002, 72.6668 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
 
 [node name="Flower4" type="StaticBody2D" parent="Map2/Office"]
 position = Vector2( 98.0001, 82.6666 )
@@ -1358,7 +1358,7 @@ shape = SubResource( 96 )
 [node name="Picture3" parent="Map2/Office" instance=ExtResource( 26 )]
 position = Vector2( -6.66656, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "F" ]
+get_item_list = [ "Witch’s tears" ]
 
 [node name="Picture" type="StaticBody2D" parent="Map2/Office"]
 position = Vector2( 29.3334, -104 )
@@ -1449,11 +1449,11 @@ shape = SubResource( 106 )
 
 [node name="Flower2" parent="Map2/Lounge" instance=ExtResource( 30 )]
 position = Vector2( -125.833, -56.8333 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
 
 [node name="Flower3" parent="Map2/Lounge" instance=ExtResource( 30 )]
 position = Vector2( -127.5, 26.6667 )
-get_item_list = [ "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
 
 [node name="SanitizingRoom" type="Node2D" parent="Map2"]
 position = Vector2( 1290.83, 141.667 )
@@ -1496,11 +1496,11 @@ shape = SubResource( 104 )
 
 [node name="Chemical" parent="Map2/SanitizingRoom" instance=ExtResource( 33 )]
 position = Vector2( 74.0001, -172.167 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
 
 [node name="Chemical4" parent="Map2/SanitizingRoom" instance=ExtResource( 33 )]
 position = Vector2( -130, -172.167 )
-get_item_list = [ "E" ]
+get_item_list = [ "Dragon’s lump" ]
 
 [node name="Chemical6" type="StaticBody2D" parent="Map2/SanitizingRoom"]
 position = Vector2( 151, -170.167 )
@@ -1574,7 +1574,7 @@ shape = SubResource( 105 )
 
 [node name="Desk_front3" parent="Map2/SanitizingRoom" instance=ExtResource( 28 )]
 position = Vector2( 95, -9.16663 )
-get_item_list = [ "B", "B", "B" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Poisoned pumpkin" ]
 
 [node name="ChairBack" type="Sprite" parent="Map2/SanitizingRoom/Desk_front3"]
 position = Vector2( 2, 15 )
@@ -1584,7 +1584,7 @@ texture = ExtResource( 5 )
 [node name="Locker3" parent="Map2/SanitizingRoom" instance=ExtResource( 31 )]
 position = Vector2( 106.667, 225 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "C" ]
+get_item_list = [ "Unicorn’s horn" ]
 
 [node name="Cafeteria" type="Node2D" parent="Map2"]
 position = Vector2( 185.833, 1019.17 )
@@ -1761,12 +1761,12 @@ shape = SubResource( 95 )
 
 [node name="Flower" parent="Map2/Cafeteria" instance=ExtResource( 30 )]
 position = Vector2( 180.333, -150.5 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="Picture" parent="Map2/Cafeteria" instance=ExtResource( 26 )]
 position = Vector2( -69.1666, -169.167 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "C" ]
+get_item_list = [ "Unicorn’s horn" ]
 
 [node name="fire3" parent="Map2/Cafeteria" instance=ExtResource( 27 )]
 position = Vector2( -205, 164.167 )
@@ -1777,12 +1777,12 @@ position = Vector2( 1826.67, 225 )
 [node name="Box" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( -119.333, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "A", "D", "F" ]
+get_item_list = [ "Rudolf’s nose", "Dwarf’s hair", "Witch’s tears" ]
 
 [node name="Box2" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( -133.333, -91 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
 
 [node name="NormalBox2" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 118.167, -94.9999 )
@@ -2199,14 +2199,14 @@ shape = SubResource( 102 )
 [node name="Box3" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( 13.3334, 35.0001 )
 scale = Vector2( 1.08155, 1.2063 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="Lobby" type="Node2D" parent="Map2"]
 position = Vector2( 995, 973.333 )
 
 [node name="Flower3" parent="Map2/Lobby" instance=ExtResource( 30 )]
 position = Vector2( -380.833, -81.6667 )
-get_item_list = [ "C", "C" ]
+get_item_list = [ "Unicorn’s horn", "Unicorn’s horn" ]
 
 [node name="Flower2" type="StaticBody2D" parent="Map2/Lobby"]
 position = Vector2( -84.1667, -75.8333 )
@@ -2223,7 +2223,7 @@ shape = SubResource( 96 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 26 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "B", "B" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]
 position = Vector2( 547.5, -31.6667 )
