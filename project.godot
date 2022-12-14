@@ -52,6 +52,7 @@ config/icon="res://icon.png"
 
 Item="*res://YongKyu/Scripts/Item.gd"
 PlayerItem="*res://YongKyu/Scripts/PlayerItem.gd"
+StatManager="*res://Chaeyoon/StatManager.tscn"
 
 [gui]
 
@@ -112,8 +113,9 @@ dash={
 
 [layer_names]
 
-2d_physics/layer_1="player"
+2d_physics/layer_1="Player"
 2d_physics/layer_2="wall"
+2d_physics/layer_3="monster_final"
 
 [physics]
 
