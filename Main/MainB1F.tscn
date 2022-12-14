@@ -3,35 +3,35 @@
 [ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=3]
-[ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Gotcha.gd" type="Script" id=4]
 [ext_resource path="res://Eunseo/Images/Box1.png" type="Texture" id=5]
-[ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Eunseo/Images/MediLight.png" type="Texture" id=7]
-[ext_resource path="res://Eunseo/Scenes/Chemical.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Chemical.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Eunseo/Images/StoreUnopen.png" type="Texture" id=9]
 [ext_resource path="res://Eunseo/Images/chairBack.png" type="Texture" id=10]
-[ext_resource path="res://Eunseo/Scenes/Computer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Eunseo/Images/MediComputer.png" type="Texture" id=12]
 [ext_resource path="res://Eunseo/Images/Exit.png" type="Texture" id=13]
 [ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Eunseo/Images/Box3.png" type="Texture" id=15]
 [ext_resource path="res://Eunseo/Images/flower.png" type="Texture" id=16]
-[ext_resource path="res://Eunseo/Scenes/Flower.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Flower.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Eunseo/Images/bed.png" type="Texture" id=18]
-[ext_resource path="res://Eunseo/Scenes/Picture.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Eunseo/Scenes/Desk_side.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Picture.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Desk_side.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Eunseo/Images/table.png" type="Texture" id=21]
 [ext_resource path="res://Eunseo/Images/Machine.png" type="Texture" id=22]
 [ext_resource path="res://Eunseo/Images/Barbed-wireFence.png" type="Texture" id=23]
-[ext_resource path="res://Eunseo/Scenes/DeskUnlock.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/DeskUnlock.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Eunseo/Images/machine1.png" type="Texture" id=25]
 [ext_resource path="res://Eunseo/Images/machine3.png" type="Texture" id=26]
 [ext_resource path="res://Eunseo/Images/machine4.png" type="Texture" id=27]
-[ext_resource path="res://Eunseo/Scenes/fire.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Eunseo/Images/lab_table.png" type="Texture" id=29]
 [ext_resource path="res://Eunseo/Images/lab_computer.png" type="Texture" id=30]
 [ext_resource path="res://Eunseo/Images/Locker4.png" type="Texture" id=31]
-[ext_resource path="res://Eunseo/Scenes/Locker.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Scenes/Locker.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=33]
 [ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=35]
@@ -44,6 +44,7 @@
 [ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=42]
 [ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=43]
 [ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=44]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1165,7 +1166,7 @@ shape = SubResource( 117 )
 
 [node name="Box2" parent="Map2/Storage" instance=ExtResource( 6 )]
 position = Vector2( 392, 735 )
-get_item_list = [ "A", "B" ]
+get_item_list = [ "Rudolf’s nose", "Poisoned pumpkin" ]
 
 [node name="NormalBox2" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 335, 745 )
@@ -1247,11 +1248,11 @@ shape = SubResource( 126 )
 
 [node name="Box" parent="Map2/Storage" instance=ExtResource( 6 )]
 position = Vector2( 269, 906 )
-get_item_list = [ "B", "B", "C" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Unicorn’s horn" ]
 
 [node name="Flower" parent="Map2/Storage" instance=ExtResource( 17 )]
 position = Vector2( 933, 573 )
-get_item_list = [ "C" ]
+get_item_list = [ "Unicorn’s horn" ]
 
 [node name="Flower6" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 937, 667 )
@@ -1293,7 +1294,7 @@ shape = SubResource( 127 )
 
 [node name="Desk_front" parent="Map2/MachineRoom" instance=ExtResource( 11 )]
 position = Vector2( 437, 511 )
-get_item_list = [ "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
 
 [node name="chair" type="Sprite" parent="Map2/MachineRoom/Desk_front"]
 position = Vector2( 2.00001, 10 )
@@ -1466,7 +1467,7 @@ shape = SubResource( 120 )
 
 [node name="Chemical" parent="Map2/MediStorage" instance=ExtResource( 8 )]
 position = Vector2( 1475, 1378 )
-get_item_list = [ "A", "C" ]
+get_item_list = [ "Rudolf’s nose", "Unicorn’s horn" ]
 
 [node name="Chemical7" type="StaticBody2D" parent="Map2/MediStorage"]
 position = Vector2( 1669, 1461 )
@@ -1497,7 +1498,7 @@ shape = SubResource( 119 )
 
 [node name="Chemical3" parent="Map2/MediStorage" instance=ExtResource( 8 )]
 position = Vector2( 1833, 1458 )
-get_item_list = [ "A", "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose" ]
 
 [node name="Desk_front" parent="Map2/MediStorage" instance=ExtResource( 11 )]
 position = Vector2( 1540, 1473 )
@@ -1580,7 +1581,7 @@ texture = ExtResource( 22 )
 
 [node name="Picture" parent="Map2/Lounge" instance=ExtResource( 19 )]
 position = Vector2( 3051, 50 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="DaughterRoom" type="Node2D" parent="Map2"]
 
@@ -1727,7 +1728,7 @@ texture = ExtResource( 5 )
 
 [node name="Box4" parent="Map2/WasteRoom/NormalBox" instance=ExtResource( 6 )]
 position = Vector2( -241, -101 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="Sprite17" type="Sprite" parent="Map2/WasteRoom/NormalBox"]
 position = Vector2( -270, -99 )
@@ -1991,7 +1992,7 @@ shape = SubResource( 137 )
 
 [node name="Box5" parent="Map2/WasteRoom" instance=ExtResource( 6 )]
 position = Vector2( 3773, 1173 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="Radiation" type="Node2D" parent="Map2"]
 
@@ -2021,7 +2022,7 @@ shape = SubResource( 130 )
 
 [node name="Desk_front" parent="Map2/Radiation" instance=ExtResource( 11 )]
 position = Vector2( 3193, 1010 )
-get_item_list = [ "A", "A", "A", "B" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose", "Poisoned pumpkin" ]
 
 [node name="fire" parent="Map2/Radiation" instance=ExtResource( 28 )]
 position = Vector2( 3593, 937 )
@@ -2118,7 +2119,7 @@ shape = SubResource( 140 )
 [node name="Locker" parent="Map2/Hall" instance=ExtResource( 32 )]
 position = Vector2( 2793, 473 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
 
 [node name="Exit" type="Node2D" parent="Map2"]
 
