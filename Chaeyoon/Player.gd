@@ -12,6 +12,8 @@ var isLeft = false
 var isDown = false
 var isUp = false
 
+onready var monster = get_node("../monster_final")
+
 var blur1 = false
 var blur2 = false
 var blur3 = false
@@ -37,6 +39,8 @@ func _process(delta):
 		# 스킬 키를 누르면, currTime에 누른 시점의 시간을 저장
 		currTime = _get_start_time()
 		isCooldown = true
+	
+		
 
 func _physics_process(delta):
 

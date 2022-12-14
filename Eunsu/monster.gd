@@ -7,10 +7,10 @@ onready var player = get_node("../player")
 func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		sprite.flip_h = false
-		sprite.play("run")
+		sprite.play("attack")
 	elif Input.is_action_pressed("ui_left"):
 		sprite.flip_h = true
-		sprite.play("run")
+		sprite.play("attack")
 	else:
 		sprite.stop()
 		
