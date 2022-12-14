@@ -12,6 +12,10 @@ var isLeft = false
 var isDown = false
 var isUp = false
 
+var blur1 = false
+var blur2 = false
+var blur3 = false
+
 export var speed = 500
 
 func _get_start_time():

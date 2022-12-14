@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=2]
+[gd_scene load_steps=151 format=2]
 
 [ext_resource path="res://Eunseo/Images/desk_front.png" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=2]
@@ -39,7 +39,7 @@
 [ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=37]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=38]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=39]
-[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Main/monster_final.tscn" type="PackedScene" id=40]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -962,14 +962,19 @@ extents = Vector2( 10.875, 4.375 )
 [sub_resource type="RectangleShape2D" id=109]
 extents = Vector2( 8.875, 7.79999 )
 
-[sub_resource type="RectangleShape2D" id=112]
-extents = Vector2( 8.75, 20.4167 )
+[sub_resource type="RectangleShape2D" id=110]
+extents = Vector2( 8.5, 21 )
 
 [sub_resource type="RectangleShape2D" id=107]
 extents = Vector2( 81.5, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 14.9204, 26.4514 )
+
+[sub_resource type="NavigationPolygon" id=112]
+vertices = PoolVector2Array( 177, -307, 393, -305, 395, -239, 318, -240, -191, -256, 172, -503, -193, -359, -188, -460, -644, -906, -514, -908, -510, -528, -640, -582, -942, -248, -941, -577, -804, -576, -801, -560, -920, -248, -463, -361, -464, -203, -920, -206, -742, -562, -742, -582, -464, -528, -460, -462, -188, -498, -990, -887, -991, -923, -943, -923, -946, -889, -943, -1013, -943, -1052, -861, -1050, -862, -1013, -857, -884, -856, -832, -943, -832, -944, -986, -990, -987, -989, -1013, -758, -1011, -759, -882, -756, -973, -504, -970, -505, -906, -760, -901, -642, -987, -645, -1010, -560, -1009, -490, -979, -561, -1053, -255, -1048, -255, -942, -490, -946, -202, -944, -245, -942, -245, -1108, -217, -1103, 196, -993, -178, -1126, -184, -1206, -105, -1208, -99, -1140, 104, -1141, 103, -1205, 195, -1205, 196, -1110, 242, -994, 244, -788, -201, -789, 194, -1083, 246, -1108, 246, -1083, -217, -1120, -150, -509, -152, -526, -136, -526, 162, -511, -138, -544, -95, -546, 95, -541, -95, -782, 96, -783, 162, -541, 521, -297, 540, -161, 544, -81, 451, -86, 448, -161, 480, -294, 402, -232, 400, -310, 479, -309, 354, -161, 356, -232, 521, -311, 646, -310, 643, -160, 176, -512, 164, -511, 166, -523, 194, -523, 195, -506, 179, -431, 923, -435, 918, -505, 750, -917, 748, -1015, 794, -1013, 794, -896, 752, -828, 922, -723, 1001, -725, 1001, -705, 755, -708, 901, -736, 257, -825, 255, -913, 922, -736, 811, -820, 898, -819, 810, -894, 997, -894, 999, -822, 904, -827, 904, -898, 998, -891, 997, -896, 1104, -899, 1091, -890, 1103, -1014, 1145, -1013, 1147, -708, 1092, -818, 1006, -710, 1005, -816, 946, -1015, 1099, -1013, 1101, -979, 800, -983, 800, -1016, 947, -1172, 944, -1014, 854, -1017, 852, -1170, 1219, -1207, 1221, -1173, 816, -1175, 816, -1248, 1105, -1248, 1351, -1382, 1101, -1384, 1103, -1431, 1144, -1431, 1103, -1313, 1268, -1314, 1272, -1277, 1255, -1239, 1160, -1478, 1218, -1481, 1222, -1445, 1157, -1455, 1144, -1454, 1499, -1444, 1380, -1355, 1355, -1354, 1499, -1239, 1380, -1312, 1321, -1278, 1325, -1311, 1250, -1211, -198, -1493, -246, -1488, -247, -1664, -221, -1666, -173, -1665, -294, -1663, -297, -1696, -276, -1696, -252, -1679, -1, -1600, -2, -1526, -101, -1485, -175, -1678, -147, -1681, -104, -1663, 197, -1211, 102, -1208, 101, -1528, 196, -1406, 750, -1614, 750, -1633, 845, -1636, 847, -1254, 753, -1252, 752, -1370, -148, -1720, -130, -1720, -128, -1696, -101, -1211, -199, -1210, 162, -1572, 195, -1573, 197, -1484, 653, -1605, 453, -1604, 453, -1613, 503, -1615, 505, -1630, 549, -1632, 554, -1643, 695, -1643, 695, -1615, 655, -1524, 452, -1370, 452, -1408, 553, -1484, -221, -1679, -28, -1696, -28, -1722, -3, -1722, -37, -1687, -36, -1677, -276, -1717, -254, -1718, -2, -1489, 161, -1598, -55, -1664, -55, -1676, -118, -1678, -105, -1678, 554, -1520, -118, -1694 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15, 16 ), PoolIntArray( 17, 18, 19, 16, 15, 20 ), PoolIntArray( 17, 20, 21, 11, 10 ), PoolIntArray( 17, 10, 22, 23 ), PoolIntArray( 6, 17, 23, 7 ), PoolIntArray( 5, 7, 24 ), PoolIntArray( 25, 26, 27, 28 ), PoolIntArray( 29, 30, 31, 32 ), PoolIntArray( 33, 34, 35, 28, 27, 32 ), PoolIntArray( 36, 37, 38, 29 ), PoolIntArray( 39, 40, 33, 32 ), PoolIntArray( 32, 27, 36, 29 ), PoolIntArray( 41, 42, 43, 44 ), PoolIntArray( 45, 46, 47, 48 ), PoolIntArray( 48, 47, 49, 50, 51 ), PoolIntArray( 48, 51, 52 ), PoolIntArray( 53, 54, 55, 56, 57 ), PoolIntArray( 58, 59, 60, 61 ), PoolIntArray( 62, 63, 64, 65 ), PoolIntArray( 57, 66, 67, 68, 53 ), PoolIntArray( 69, 57, 56 ), PoolIntArray( 65, 70, 71, 69, 56 ), PoolIntArray( 61, 62, 65, 56, 58 ), PoolIntArray( 58, 56, 72 ), PoolIntArray( 73, 74, 75, 76 ), PoolIntArray( 76, 75, 77, 78, 79 ), PoolIntArray( 80, 81, 79, 78 ), PoolIntArray( 76, 79, 82 ), PoolIntArray( 83, 84, 85, 86, 87, 88 ), PoolIntArray( 89, 90, 91, 88, 87 ), PoolIntArray( 87, 92, 93, 89 ), PoolIntArray( 83, 94, 95, 96, 84 ), PoolIntArray( 97, 98, 99, 100 ), PoolIntArray( 97, 100, 101, 102 ), PoolIntArray( 103, 102, 101, 104 ), PoolIntArray( 105, 106, 107, 108, 109 ), PoolIntArray( 110, 111, 112, 113 ), PoolIntArray( 110, 113, 109, 114 ), PoolIntArray( 115, 116, 105, 109 ), PoolIntArray( 114, 117, 110 ), PoolIntArray( 118, 119, 114 ), PoolIntArray( 118, 114, 109 ), PoolIntArray( 118, 109, 108, 120 ), PoolIntArray( 121, 122, 123, 124 ), PoolIntArray( 125, 126, 127, 128 ), PoolIntArray( 127, 129, 130, 131 ), PoolIntArray( 128, 127, 131, 132 ), PoolIntArray( 132, 131, 133, 134 ), PoolIntArray( 135, 136, 137, 138, 139 ), PoolIntArray( 140, 141, 142, 143 ), PoolIntArray( 144, 145, 146, 147, 148 ), PoolIntArray( 149, 150, 151, 152 ), PoolIntArray( 144, 148, 153, 154, 155, 156 ), PoolIntArray( 157, 158, 159, 160 ), PoolIntArray( 149, 152, 161, 160, 159 ), PoolIntArray( 149, 159, 162 ), PoolIntArray( 163, 164, 149, 162 ), PoolIntArray( 163, 162, 165, 166 ), PoolIntArray( 166, 165, 156, 167 ), PoolIntArray( 167, 168, 166 ), PoolIntArray( 155, 167, 156 ), PoolIntArray( 144, 156, 169 ), PoolIntArray( 170, 171, 172, 173, 174 ), PoolIntArray( 172, 175, 176, 177, 178 ), PoolIntArray( 179, 180, 181, 174, 182, 183, 184 ), PoolIntArray( 185, 186, 187, 188 ), PoolIntArray( 189, 190, 191, 192, 193, 194 ), PoolIntArray( 183, 195, 196, 197 ), PoolIntArray( 181, 198, 199, 170, 174 ), PoolIntArray( 187, 200, 201, 202, 188 ), PoolIntArray( 203, 204, 205, 206 ), PoolIntArray( 203, 206, 207, 208 ), PoolIntArray( 203, 208, 209, 210, 211 ), PoolIntArray( 212, 194, 213, 214, 215 ), PoolIntArray( 178, 216, 173, 172 ), PoolIntArray( 217, 218, 219, 179 ), PoolIntArray( 220, 217, 179, 221 ), PoolIntArray( 222, 223, 178, 177 ), PoolIntArray( 203, 211, 189, 194, 212 ), PoolIntArray( 180, 224, 181 ), PoolIntArray( 179, 225, 200, 187, 180 ), PoolIntArray( 226, 227, 221, 179 ), PoolIntArray( 228, 229, 184 ), PoolIntArray( 215, 230, 212 ), PoolIntArray( 202, 215, 214, 188 ), PoolIntArray( 197, 231, 228, 183 ), PoolIntArray( 184, 226, 179 ), PoolIntArray( 184, 183, 228 ) ]
+outlines = [ PoolVector2Array( -941, -577, -942, -248, -920, -248, -920, -206, -464, -203, -463, -361, -193, -359, -191, -256, 318, -240, 395, -239, 393, -305, 177, -307, 172, -503, -188, -498, -188, -460, -460, -462, -464, -528, -510, -528, -514, -908, -644, -906, -640, -582, -742, -582, -742, -562, -801, -560, -804, -576 ), PoolVector2Array( -943, -1052, -943, -1013, -989, -1013, -990, -987, -944, -986, -943, -923, -991, -923, -990, -887, -946, -889, -943, -832, -856, -832, -857, -884, -759, -882, -758, -1011, -862, -1013, -861, -1050 ), PoolVector2Array( -756, -973, -504, -970, -505, -906, -760, -901 ), PoolVector2Array( -561, -1053, -560, -1009, -645, -1010, -642, -987, -490, -979, -490, -946, -255, -942, -255, -1048 ), PoolVector2Array( -245, -1108, -245, -942, -202, -944, -201, -789, 244, -788, 242, -994, 196, -993, 194, -1083, 246, -1083, 246, -1108, 196, -1110, 195, -1205, 103, -1205, 104, -1141, -99, -1140, -105, -1208, -184, -1206, -178, -1126, -217, -1120, -217, -1103 ), PoolVector2Array( -95, -782, -95, -546, -138, -544, -136, -526, -152, -526, -150, -509, 162, -511, 162, -541, 95, -541, 96, -783 ), PoolVector2Array( 400, -310, 402, -232, 356, -232, 354, -161, 448, -161, 451, -86, 544, -81, 540, -161, 643, -160, 646, -310, 521, -311, 521, -297, 480, -294, 479, -309 ), PoolVector2Array( 166, -523, 194, -523, 195, -506, 918, -505, 923, -435, 179, -431, 176, -512, 164, -511 ), PoolVector2Array( 255, -913, 257, -825, 752, -828, 755, -708, 1001, -705, 1001, -725, 922, -723, 922, -736, 901, -736, 898, -819, 811, -820, 810, -894, 794, -896, 794, -1013, 748, -1015, 750, -917 ), PoolVector2Array( 904, -898, 904, -827, 999, -822, 997, -894 ), PoolVector2Array( 1005, -816, 1006, -710, 1147, -708, 1145, -1013, 1103, -1014, 1104, -899, 997, -896, 998, -891, 1091, -890, 1092, -818 ), PoolVector2Array( 800, -1016, 800, -983, 1101, -979, 1099, -1013, 946, -1015 ), PoolVector2Array( 852, -1170, 854, -1017, 944, -1014, 947, -1172 ), PoolVector2Array( 1103, -1431, 1144, -1431, 1144, -1454, 1157, -1455, 1160, -1478, 1218, -1481, 1222, -1445, 1499, -1444, 1499, -1239, 1255, -1239, 1250, -1211, 1219, -1207, 1221, -1173, 816, -1175, 816, -1248, 1105, -1248, 1103, -1313, 1268, -1314, 1272, -1277, 1321, -1278, 1325, -1311, 1380, -1312, 1380, -1355, 1355, -1354, 1351, -1382, 1101, -1384 ), PoolVector2Array( 847, -1254, 753, -1252, 752, -1370, 452, -1370, 452, -1408, 196, -1406, 197, -1211, 102, -1208, 101, -1528, -2, -1526, -2, -1489, -101, -1485, -101, -1211, -199, -1210, -198, -1493, -246, -1488, -247, -1664, -294, -1663, -297, -1696, -276, -1696, -276, -1717, -254, -1718, -252, -1679, -221, -1679, -221, -1666, -173, -1665, -175, -1678, -147, -1681, -148, -1720, -130, -1720, -128, -1696, -118, -1694, -118, -1678, -105, -1678, -104, -1663, -55, -1664, -55, -1676, -36, -1677, -37, -1687, -28, -1696, -28, -1722, -3, -1722, -1, -1600, 161, -1598, 162, -1572, 195, -1573, 197, -1484, 553, -1484, 554, -1520, 655, -1524, 653, -1605, 453, -1604, 453, -1613, 503, -1615, 505, -1630, 549, -1632, 554, -1643, 695, -1643, 695, -1615, 750, -1614, 750, -1633, 845, -1636 ) ]
 
 [node name="1F" type="Node2D"]
 position = Vector2( -1, 0 )
@@ -2254,11 +2259,11 @@ position = Vector2( 0.168945, 56.8 )
 shape = SubResource( 109 )
 
 [node name="MainGate" type="Area2D" parent="Map2/Lobby"]
-position = Vector2( 545.833, -6.66635 )
+position = Vector2( 554.5, -2.66666 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lobby/MainGate"]
-position = Vector2( 1.66669, 1.66669 )
-shape = SubResource( 112 )
+position = Vector2( -5.33331, -2.33331 )
+shape = SubResource( 110 )
 
 [node name="EVtoB1" type="Area2D" parent="Map2"]
 position = Vector2( 762.5, 1360 )
@@ -2282,11 +2287,6 @@ shape = SubResource( 111 )
 [node name="Camera2D" type="Camera2D" parent="player"]
 current = true
 zoom = Vector2( 0.65, 0.65 )
-
-[node name="Dialog" parent="player/Camera2D" instance=ExtResource( 40 )]
-visible = false
-position = Vector2( 0, 100 )
-scale = Vector2( 0.6, 0.6 )
 
 [node name="Gotcha" type="Polygon2D" parent="player/Camera2D"]
 visible = false
@@ -2362,7 +2362,15 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
-[connection signal="body_entered" from="Map2/Lobby/MainGate" to="player/Camera2D/Dialog" method="_on_MainGate_body_entered"]
+[node name="monster_final" parent="." instance=ExtResource( 40 )]
+position = Vector2( -34, -107 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+edge_connection_margin = 10.0
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 112 )
+
 [connection signal="body_entered" from="Map2/EVtoB1" to="player" method="_on_EVtoB1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]

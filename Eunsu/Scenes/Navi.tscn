@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main/Main1F.tscn" type="PackedScene" id=2]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+[node name="Navi" type="Node2D"]
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigation2D"]
+
+[node name="1F" parent="Navigation2D" instance=ExtResource( 2 )]
+position = Vector2( 305, 737 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 1 )
