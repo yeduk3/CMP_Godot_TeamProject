@@ -2238,6 +2238,7 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
+[connection signal="body_entered" from="Map2/Medicine/MediMaker/MediArea" to="player/PlayerUI/IntegratedInventory" method="_on_MediArea_body_entered"]
 [connection signal="body_entered" from="Map2/EVto1" to="player" method="_on_EVto1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]

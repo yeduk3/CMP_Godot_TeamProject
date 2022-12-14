@@ -18,11 +18,13 @@ func _ready():
 
 func open_with(mode):
 	if states[mode] == 0:
+		print("Open Inventory with Player Info")
 		inventory.visible = true
 		player_information.visible = true
 		making_table.visible = false
 		visible = true
 	elif states[mode] == 1:
+		print("Open Inventory with Making Table")
 		inventory.visible = true
 		player_information.visible = false
 		making_table.visible = true
@@ -53,9 +55,13 @@ func _input(event):
 		if visible:
 			close()
 		else:
-			current_state = "Making"
+			current_state = "PlayerInfo"
 			open_with(current_state)
 
 func _on_get_item_from_map(list):
 	for item in list:
 		inventory.add_item(Item.get_new_item_data(item), 1)
+
+
+func _on_MediArea_body_entered(body):
+	open_with("Making")
