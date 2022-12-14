@@ -14,12 +14,6 @@ func _on_MainGate_body_entered(body):
 		visible = true
 
 
-func _on_Area2D_body_entered(body):
-	if body is Player:
-		dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog.json")
-		visible = true
-
-
 func _on_ExitArea_body_entered(body):
 	if body is Player:
 		if have_key == false:
@@ -46,3 +40,9 @@ func use_Normal1():
 func use_Normal2():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/NormalEndingDialog2.json")
 	visible = true
+
+
+func _on_VideoArea_body_entered(body):
+	if body is Player:
+		dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog.json")
+		visible = true
