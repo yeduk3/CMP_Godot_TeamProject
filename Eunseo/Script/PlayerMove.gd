@@ -13,6 +13,7 @@ var isRight = false
 var isLeft = false
 var isDown = false
 var isUp = false
+var Limit = false
 
 func _get_start_time():
 	return OS.get_ticks_msec()

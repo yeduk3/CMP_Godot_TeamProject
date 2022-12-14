@@ -6,7 +6,7 @@ export (int) var placed_index
 signal gotIt(list)
 signal get_item_from_map(list)
 
-var already = false
+var isOpened = false
 
 func _ready():
 	var player = get_tree().current_scene.get_node("Player")
@@ -22,7 +22,7 @@ func _ready():
 		already = true
 
 func _on_Area2D_body_entered(body):
-	if body is Player && already == false:
+	if body is Player && isOpened == false:
 		$Button.visible = true
 
 func _on_Button_pressed():
