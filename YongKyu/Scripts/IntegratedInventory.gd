@@ -53,7 +53,7 @@ func _input(event):
 		if visible:
 			close()
 		else:
-			current_state = "Making"
+			current_state = "PlayerInfo"
 			open_with(current_state)
 
 func _on_get_item_from_map(list):
