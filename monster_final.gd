@@ -15,11 +15,11 @@ onready var player = get_node("../../player")
 func _ready():
    $Timer2.connect("timeout", self, "update_pathfinding")
    update_pathfinding()
-   
+
 func update_pathfinding():
    print("Path Update")
    agent.set_target_location(player.global_position)
-   
+
 func _physics_process(delta):
 	if agent.is_navigation_finished():
 		return
@@ -27,19 +27,19 @@ func _physics_process(delta):
 	# get direction to the next location from the navigation agent
 	var direction = global_position.direction_to(agent.get_next_location())
 	print(str("NextPOs: ", direction))
-   
+
 	# Set velocity toward the next location and move
 	velocity = direction.normalized() * speed
 	move_and_slide(velocity)
 
 func _process(delta):
-   
+
 	if attackk == true:
-		sprite.play("attack")   
+		sprite.play("attack")
    #else:
-   #   sprite.play("walk")   
-	  
-	  
+   #   sprite.play("walk")
+
+
 	if player.position > position:
 		sprite.flip_h = false
 		sprite.play("walk")
@@ -49,7 +49,7 @@ func _process(delta):
 	else:
 		#sprite.stop()
 		sprite.play("attack")
-   
+
 		"""
    if player:
 	  var direction = (player.position - position).normalized()
@@ -57,7 +57,7 @@ func _process(delta):
 	  for i in get_slide_count():
 		 var collision = get_slide_collision(i)
 		 """
-   
+
 	var ran = randi()
 	if ran%200==0:
 		Dash()
@@ -70,14 +70,37 @@ func _on_Timer_timeout():
    speed = 50
 
 
-
 func _on_Area2D_body_entered(body):
-   print("entered")
-   play = body
-   attackk = true
+	if "Map" in body.name:
+		return
+	print("entered")
+	# 3초 무적이면 3000, 5초 무적이면 5000......
+	if time_hit + 5000 > Time.get_ticks_msec():
+		print('super')
+	else:
+		var health = $"../Player/PlayerUI/HealthBarTest/Health"
+		health._health_down(10)
+		time_hit = Time.get_ticks_msec()
+		print('hit')
+		_unbeatable_timer()
+
 
 
 func _on_Area2D_body_exited(body):
-   print("exited")
-   play = null
-   attackk = false
+	print("exited")
+	play = null
+
+func _unbeatable_timer():
+	var health = $"../Player/PlayerUI/HealthBarTest/Health"
+	while count > 0:
+		health._health_down(0)
+		count -= 1
+		#print(count)
+		$"../Player".set_collision_mask_bit(2, false)
+		set_collision_mask_bit(0, false)
+		#print("mask: " + str(collision_mask))
+		yield(get_tree().create_timer(1.0), "timeout")
+	count = 3
+	set_collision_mask_bit(0, true)
+	$"../Player".set_collision_mask_bit(2, true)
+	#print("Unbeatable Timer off")

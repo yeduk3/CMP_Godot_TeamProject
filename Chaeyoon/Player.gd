@@ -39,8 +39,8 @@ func _process(delta):
 		# 스킬 키를 누르면, currTime에 누른 시점의 시간을 저장
 		currTime = _get_start_time()
 		isCooldown = true
-	
-		
+
+
 
 func _physics_process(delta):
 
@@ -61,7 +61,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("dash"):
 		#velocity.x = speed + 500
 		if isRight == true:
-			velocity.x = speed + 500
+			velocity.x = (speed + 500)
 			isRight = false
 		if isLeft == true:
 			velocity.x = - (speed + 500)
@@ -70,7 +70,7 @@ func _physics_process(delta):
 			velocity.y = - (speed + 500)
 			isUp = false
 		if isDown == true:
-			velocity.y = speed + 500
+			velocity.y = (speed + 500)
 			isDown = false
 	if Input.is_action_pressed("jump"):
 		velocity.y = JUMP

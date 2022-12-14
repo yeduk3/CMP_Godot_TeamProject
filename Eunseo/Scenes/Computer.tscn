@@ -5,6 +5,8 @@
 [ext_resource path="res://Eunseo/Images/light.png" type="Texture" id=3]
 [ext_resource path="res://Eunseo/Images/lab_table.png" type="Texture" id=4]
 
+
+
 [sub_resource type="RectangleShape2D" id=91]
 extents = Vector2( 37.5, 11.875 )
 
@@ -47,5 +49,4 @@ margin_bottom = -46.0
 text = "Open"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

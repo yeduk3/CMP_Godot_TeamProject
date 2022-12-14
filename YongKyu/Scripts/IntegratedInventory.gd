@@ -53,9 +53,13 @@ func _input(event):
 		if visible:
 			close()
 		else:
-			current_state = "Making"
+			current_state = "PlayerInfo"
 			open_with(current_state)
 
 func _on_get_item_from_map(list):
 	for item in list:
 		inventory.add_item(Item.get_new_item_data(item), 1)
+
+
+func _on_MediArea_body_entered(body):
+	open_with("Making")

@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-export (Array) var get_item_list
-
 signal gotIt
 
 var already = false

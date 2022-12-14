@@ -40,6 +40,14 @@
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=38]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=39]
 [ext_resource path="res://Main/monster_final.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Eunseo/Stamina.gd" type="Script" id=41]
+[ext_resource path="res://Chaeyoon/AbilityBar1.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Chaeyoon/AbilityBar2.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Chaeyoon/AbilityBar3.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=45]
+[ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=46]
+[ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=47]
+[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=48]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -914,6 +922,9 @@ extents = Vector2( 64.5625, 70 )
 [sub_resource type="RectangleShape2D" id=93]
 extents = Vector2( 19, 18 )
 
+[sub_resource type="RectangleShape2D" id=113]
+extents = Vector2( 5.83334, 12.9167 )
+
 [sub_resource type="RectangleShape2D" id=92]
 extents = Vector2( 23.5, 8.75 )
 
@@ -1087,11 +1098,12 @@ position = Vector2( -125.833, -85 )
 
 [node name="Desk_front2" parent="Map2/Lab1" instance=ExtResource( 28 )]
 position = Vector2( -55.8334, -76 )
-get_item_list = [ "D" ]
+get_item_list = [ "Dwarf’s hair" ]
 
 [node name="Desk_front3" parent="Map2/Lab1" instance=ExtResource( 28 )]
 position = Vector2( 44.1666, -75 )
-get_item_list = [ "F" ]
+get_item_list = [ "Dragon’s lump" ]
+placed_index = 1
 
 [node name="Lab2" type="Node2D" parent="Map2"]
 position = Vector2( 601.667, 520.833 )
@@ -1167,6 +1179,12 @@ texture = ExtResource( 14 )
 position = Vector2( 157, -13 )
 shape = SubResource( 93 )
 
+[node name="VideoArea" type="Area2D" parent="Map2/Lab2/Computer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Computer/VideoArea"]
+position = Vector2( 182.333, -9.08301 )
+shape = SubResource( 113 )
+
 [node name="Desk_side8" parent="Map2/Lab2" instance=ExtResource( 24 )]
 position = Vector2( 338.333, -24.1666 )
 rotation = -3.14159
@@ -1215,16 +1233,19 @@ scale = Vector2( 0.813, -0.907 )
 [node name="Locker" parent="Map2/Lab2" instance=ExtResource( 31 )]
 position = Vector2( -37.3333, -120.833 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "A", "B", "C" ]
+get_item_list = [ "Rudolf’s nose", "Poisoned pumpkin", "Unicorn’s horn" ]
+placed_index = 2
 
 [node name="Locker2" parent="Map2/Lab2" instance=ExtResource( 31 )]
 position = Vector2( -358.333, -23.5 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "B", "B", "C" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Unicorn’s horn" ]
+placed_index = 3
 
 [node name="Desk_front" parent="Map2/Lab2" instance=ExtResource( 28 )]
 position = Vector2( 154, 104 )
-get_item_list = [ "A", "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Rudolf’s nose" ]
+placed_index = 4
 
 [node name="fire4" parent="Map2/Lab2" instance=ExtResource( 27 )]
 position = Vector2( -38.3333, -96.8333 )
@@ -1316,7 +1337,8 @@ shape = SubResource( 99 )
 
 [node name="Desk_front2" parent="Map2/Lab3" instance=ExtResource( 28 )]
 position = Vector2( 259.667, 103.167 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
+placed_index = 5
 
 [node name="ChairBack" type="Sprite" parent="Map2/Lab3/Desk_front2"]
 position = Vector2( 2, 15 )
@@ -1397,7 +1419,8 @@ texture = ExtResource( 6 )
 
 [node name="Flower2" parent="Map2/Office" instance=ExtResource( 30 )]
 position = Vector2( 58.0002, 72.6668 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
+placed_index = 6
 
 [node name="Flower4" type="StaticBody2D" parent="Map2/Office"]
 position = Vector2( 98.0001, 82.6666 )
@@ -1438,7 +1461,8 @@ shape = SubResource( 96 )
 [node name="Picture3" parent="Map2/Office" instance=ExtResource( 26 )]
 position = Vector2( -6.66656, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "F" ]
+get_item_list = [ "Dragon’s lump" ]
+placed_index = 7
 
 [node name="Picture" type="StaticBody2D" parent="Map2/Office"]
 position = Vector2( 29.3334, -104 )
@@ -1529,11 +1553,13 @@ shape = SubResource( 106 )
 
 [node name="Flower2" parent="Map2/Lounge" instance=ExtResource( 30 )]
 position = Vector2( -125.833, -56.8333 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
+placed_index = 8
 
 [node name="Flower3" parent="Map2/Lounge" instance=ExtResource( 30 )]
 position = Vector2( -127.5, 26.6667 )
-get_item_list = [ "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
+placed_index = 9
 
 [node name="SanitizingRoom" type="Node2D" parent="Map2"]
 position = Vector2( 1290.83, 141.667 )
@@ -1576,11 +1602,13 @@ shape = SubResource( 104 )
 
 [node name="Chemical" parent="Map2/SanitizingRoom" instance=ExtResource( 33 )]
 position = Vector2( 74.0001, -172.167 )
-get_item_list = [ "A" ]
+get_item_list = [ "Rudolf’s nose" ]
+placed_index = 10
 
 [node name="Chemical4" parent="Map2/SanitizingRoom" instance=ExtResource( 33 )]
 position = Vector2( -130, -172.167 )
-get_item_list = [ "E" ]
+get_item_list = [ "Dragon’s lump" ]
+placed_index = 11
 
 [node name="Chemical6" type="StaticBody2D" parent="Map2/SanitizingRoom"]
 position = Vector2( 151, -170.167 )
@@ -1654,7 +1682,8 @@ shape = SubResource( 105 )
 
 [node name="Desk_front3" parent="Map2/SanitizingRoom" instance=ExtResource( 28 )]
 position = Vector2( 95, -9.16663 )
-get_item_list = [ "B", "B", "B" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Poisoned pumpkin" ]
+placed_index = 12
 
 [node name="ChairBack" type="Sprite" parent="Map2/SanitizingRoom/Desk_front3"]
 position = Vector2( 2, 15 )
@@ -1664,7 +1693,8 @@ texture = ExtResource( 5 )
 [node name="Locker3" parent="Map2/SanitizingRoom" instance=ExtResource( 31 )]
 position = Vector2( 106.667, 225 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "C" ]
+get_item_list = [ "Unicorn’s horn" ]
+placed_index = 13
 
 [node name="Cafeteria" type="Node2D" parent="Map2"]
 position = Vector2( 185.833, 1019.17 )
@@ -1730,12 +1760,14 @@ shape = SubResource( 95 )
 
 [node name="Flower" parent="Map2/Cafeteria" instance=ExtResource( 30 )]
 position = Vector2( 180.333, -150.5 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 14
 
 [node name="Picture" parent="Map2/Cafeteria" instance=ExtResource( 26 )]
 position = Vector2( -69.1666, -169.167 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "C" ]
+get_item_list = [ "Unicorn’s horn" ]
+placed_index = 15
 
 [node name="Storage" type="Node2D" parent="Map2"]
 position = Vector2( 1826.67, 225 )
@@ -1743,12 +1775,14 @@ position = Vector2( 1826.67, 225 )
 [node name="Box" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( -119.333, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "A", "D", "F" ]
+get_item_list = [ "Rudolf’s nose", "Dwarf’s hair", "Dragon’s lump" ]
+placed_index = 16
 
 [node name="Box2" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( -133.333, -91 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "A", "A" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
+placed_index = 17
 
 [node name="NormalBox2" type="StaticBody2D" parent="Map2/Storage"]
 position = Vector2( 118.167, -94.9999 )
@@ -2165,14 +2199,16 @@ shape = SubResource( 102 )
 [node name="Box3" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( 13.3334, 35.0001 )
 scale = Vector2( 1.08155, 1.2063 )
-get_item_list = [ "B" ]
+get_item_list = [ "Poisoned pumpkin" ]
+placed_index = 18
 
 [node name="Lobby" type="Node2D" parent="Map2"]
 position = Vector2( 995, 973.333 )
 
 [node name="Flower3" parent="Map2/Lobby" instance=ExtResource( 30 )]
 position = Vector2( -380.833, -81.6667 )
-get_item_list = [ "C", "C" ]
+get_item_list = [ "Unicorn’s horn", "Unicorn’s horn" ]
+placed_index = 19
 
 [node name="Flower2" type="StaticBody2D" parent="Map2/Lobby"]
 position = Vector2( -84.1667, -75.8333 )
@@ -2189,7 +2225,8 @@ shape = SubResource( 96 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 26 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "B", "B" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
+placed_index = 20
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]
 position = Vector2( 547.5, -31.6667 )
@@ -2233,83 +2270,114 @@ position = Vector2( 762.5, 1360 )
 position = Vector2( -0.5, -1.5 )
 shape = SubResource( 107 )
 
-[node name="player" type="KinematicBody2D" parent="."]
+[node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 20, -87 )
-collision_mask = 2
+collision_mask = 6
 script = ExtResource( 36 )
 
-[node name="Sprite" type="Sprite" parent="player"]
+[node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 39 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -2.45947, 0 )
 shape = SubResource( 111 )
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 zoom = Vector2( 0.65, 0.65 )
 
-[node name="Gotcha" type="Polygon2D" parent="player/Camera2D"]
+[node name="Dialog" parent="Player/Camera2D" instance=ExtResource( 48 )]
+visible = false
+position = Vector2( 0, 100 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Gotcha" type="Polygon2D" parent="Player/Camera2D"]
 visible = false
 position = Vector2( -370.144, -3463.09 )
 scale = Vector2( 1, 1.25 )
 color = Color( 0, 0, 0, 0.501961 )
-polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2852.28, 486.967, 2852.28, 486.967, 2825.82 )
+polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
 script = ExtResource( 34 )
 
-[node name="GotchaText" type="RichTextLabel" parent="player/Camera2D/Gotcha"]
-margin_left = 255.781
-margin_top = 2829.57
-margin_right = 471.781
-margin_bottom = 2847.57
+[node name="GotchaText" type="RichTextLabel" parent="Player/Camera2D/Gotcha"]
+margin_left = 256.0
+margin_top = 2830.0
+margin_right = 472.0
+margin_bottom = 2888.0
 text = "abcde"
+fit_content_height = true
 
-[node name="Timer" type="Timer" parent="player/Camera2D/Gotcha"]
+[node name="Timer" type="Timer" parent="Player/Camera2D/Gotcha"]
 
-[node name="PlayerUI" type="Control" parent="player"]
-visible = false
+[node name="PlayerUI" type="Control" parent="Player"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="StaminaBarTest" type="Control" parent="player/PlayerUI"]
+[node name="StaminaBarTest" type="Control" parent="Player/PlayerUI"]
 margin_left = -36.8915
 margin_top = -50.717
 margin_right = -36.8915
 margin_bottom = -50.717
 
-[node name="Stamina" type="Control" parent="player/PlayerUI/StaminaBarTest"]
+[node name="Stamina" type="Control" parent="Player/PlayerUI/StaminaBarTest"]
 process_priority = 3
-script = ExtResource( 35 )
-max_amount = 28
+script = ExtResource( 41 )
 
-[node name="CooltimeBar" parent="player/PlayerUI/StaminaBarTest" instance=ExtResource( 32 )]
+[node name="CooltimeBar" parent="Player/PlayerUI/StaminaBarTest" instance=ExtResource( 32 )]
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 60.0
 margin_bottom = 10.0
 
-[node name="HealthBarTest" type="Control" parent="player/PlayerUI"]
+[node name="HealthBarTest" type="Control" parent="Player/PlayerUI"]
 margin_left = -322.0
 margin_top = -187.0
 margin_right = -322.0
 margin_bottom = -187.0
 
-[node name="Health" type="Control" parent="player/PlayerUI/HealthBarTest"]
+[node name="Health" type="Control" parent="Player/PlayerUI/HealthBarTest"]
 process_priority = 3
 script = ExtResource( 35 )
-max_amount = 28
 
-[node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 22 )]
+[node name="HealthBar" parent="Player/PlayerUI/HealthBarTest" instance=ExtResource( 22 )]
 
-[node name="Music" type="Node2D" parent="player/PlayerUI"]
+[node name="Music" type="Node2D" parent="Player/PlayerUI"]
 position = Vector2( 316, -177 )
 
-[node name="Bmusic" parent="player/PlayerUI/Music" instance=ExtResource( 21 )]
+[node name="Bmusic" parent="Player/PlayerUI/Music" instance=ExtResource( 21 )]
 position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 37 )
 
-[node name="Option" parent="player/PlayerUI" instance=ExtResource( 23 )]
+[node name="VisionAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 42 )]
+margin_left = -265.0
+margin_top = -100.0
+margin_right = -145.0
+margin_bottom = -80.0
+script = ExtResource( 45 )
+
+[node name="HearingAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 43 )]
+margin_left = -265.0
+margin_top = -70.0
+margin_right = -145.0
+margin_bottom = -50.0
+script = ExtResource( 46 )
+
+[node name="SmellAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 44 )]
+margin_left = -265.0
+margin_top = -40.0
+margin_right = -145.0
+margin_bottom = -20.0
+script = ExtResource( 47 )
+
+[node name="IntegratedInventory" parent="Player/PlayerUI" instance=ExtResource( 20 )]
+margin_left = -303.739
+margin_top = -179.714
+margin_right = -303.739
+margin_bottom = -179.714
+rect_scale = Vector2( 0.6, 0.6 )
+
+[node name="Option" parent="Player/PlayerUI" instance=ExtResource( 23 )]
 visible = false
 margin_left = -212.741
 margin_top = -114.664
@@ -2317,14 +2385,11 @@ margin_right = -172.741
 margin_bottom = -74.6643
 rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="IntegratedInventory" parent="player/PlayerUI" instance=ExtResource( 20 )]
-margin_left = -303.739
-margin_top = -179.714
-margin_right = -303.739
-margin_bottom = -179.714
-rect_scale = Vector2( 0.6, 0.6 )
+[node name="monster_final" parent="." instance=ExtResource( 40 )]
+position = Vector2( -38, -321 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
+
 edge_connection_margin = 10.0
 
 [node name="monster_final" parent="Navigation2D" instance=ExtResource( 40 )]
@@ -2381,6 +2446,11 @@ navpoly = SubResource( 121 )
 [node name="NavigationPolygonInstance17" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 129 )
 
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 112 )
+visible = false
+edge_connection_margin = 10.0
+
 [connection signal="body_entered" from="Map2/EVtoB1" to="player" method="_on_EVtoB1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
 [connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
@@ -2389,3 +2459,9 @@ navpoly = SubResource( 129 )
 [connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]
 [connection signal="input_event" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Option" method="_on_Bmusic_working_window"]
+[connection signal="body_entered" from="Map2/Lab2/Computer/VideoArea" to="Player/Camera2D/Dialog" method="_on_VideoArea_body_entered"]
+[connection signal="body_entered" from="Map2/Lobby/MainGate" to="Player/Camera2D/Dialog" method="_on_MainGate_body_entered"]
+[connection signal="body_entered" from="Map2/EVtoB1" to="Player" method="_on_EVtoB1_body_entered"]
+[connection signal="timeout" from="Player/Camera2D/Gotcha/Timer" to="Player/Camera2D/Gotcha" method="_on_Timer_timeout"]
+[connection signal="input_event" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
+[connection signal="working_window" from="Player/PlayerUI/Music/Bmusic" to="Player/PlayerUI/Option" method="_on_Bmusic_working_window"]
