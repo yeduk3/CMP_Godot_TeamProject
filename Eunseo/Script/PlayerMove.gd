@@ -49,20 +49,20 @@ func _physics_process(delta):
 		$Sprite.flip_h = true
 		isLeft = true
 		# 아이템 먹었을때 넣어
-		var test = $PlayerUI/AbilityBar1
-		test._ability_up(1)
+		#var test = $PlayerUI/AbilityBar1
+		#test._ability_up(1)
 		
 	if Input.is_action_pressed("up"):
 		velocity.y = -speed
 		isUp = true
-		var test = $PlayerUI/AbilityBar2
-		test._ability_up(1)
+		#var test = $PlayerUI/AbilityBar2
+		#test._ability_up(1)
 		
 	if Input.is_action_pressed("down"):
 		velocity.y = speed
 		isDown = true
-		var test = $PlayerUI/AbilityBar3
-		test._ability_up(1)
+		#var test = $PlayerUI/AbilityBar3
+		#test._ability_up(1)
 		
 		
 	if Input.is_action_pressed("dash") and dash_available:

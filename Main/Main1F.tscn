@@ -2352,13 +2352,26 @@ position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 37 )
 
-[node name="Option" parent="Player/PlayerUI" instance=ExtResource( 23 )]
-visible = false
-margin_left = -212.741
-margin_top = -114.664
-margin_right = -172.741
-margin_bottom = -74.6643
-rect_scale = Vector2( 0.4, 0.4 )
+[node name="VisionAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 42 )]
+margin_left = -265.0
+margin_top = -100.0
+margin_right = -145.0
+margin_bottom = -80.0
+script = ExtResource( 45 )
+
+[node name="HearingAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 43 )]
+margin_left = -265.0
+margin_top = -70.0
+margin_right = -145.0
+margin_bottom = -50.0
+script = ExtResource( 46 )
+
+[node name="SmellAbilityBar" parent="Player/PlayerUI" instance=ExtResource( 44 )]
+margin_left = -265.0
+margin_top = -40.0
+margin_right = -145.0
+margin_bottom = -20.0
+script = ExtResource( 47 )
 
 [node name="IntegratedInventory" parent="Player/PlayerUI" instance=ExtResource( 20 )]
 margin_left = -303.739
@@ -2367,26 +2380,13 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
-[node name="AbilityBar1" parent="Player/PlayerUI" instance=ExtResource( 42 )]
-margin_left = -265.0
-margin_top = -100.0
-margin_right = -145.0
-margin_bottom = -80.0
-script = ExtResource( 45 )
-
-[node name="AbilityBar2" parent="Player/PlayerUI" instance=ExtResource( 43 )]
-margin_left = -265.0
-margin_top = -70.0
-margin_right = -145.0
-margin_bottom = -50.0
-script = ExtResource( 46 )
-
-[node name="AbilityBar3" parent="Player/PlayerUI" instance=ExtResource( 44 )]
-margin_left = -265.0
-margin_top = -40.0
-margin_right = -145.0
-margin_bottom = -20.0
-script = ExtResource( 47 )
+[node name="Option" parent="Player/PlayerUI" instance=ExtResource( 23 )]
+visible = false
+margin_left = -212.741
+margin_top = -114.664
+margin_right = -172.741
+margin_bottom = -74.6643
+rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="monster_final" parent="." instance=ExtResource( 40 )]
 position = Vector2( -38, -321 )
