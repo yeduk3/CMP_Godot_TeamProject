@@ -24,7 +24,6 @@ anchor_top = 0.75
 anchor_right = 0.9
 anchor_bottom = 0.9
 text = "Item Description"
-autowrap = true
 
 [node name="ItemButtons" type="VBoxContainer" parent="InventoryPanel"]
 visible = false
@@ -48,21 +47,6 @@ margin_right = 54.0
 margin_bottom = 68.0
 text = "Cancel"
 
-[node name="StudyNotePanel" type="Panel" parent="InventoryPanel"]
-visible = false
-margin_left = 76.0
-margin_top = 4.0
-margin_right = 876.0
-margin_bottom = 504.0
-
-[node name="TextLabel" type="Label" parent="InventoryPanel/StudyNotePanel"]
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 700.0
-margin_bottom = 400.0
-autowrap = true
-
 [connection signal="pressed" from="InventoryPanel/ItemButtons/UseButton" to="." method="_on_UseButton_pressed"]
 [connection signal="pressed" from="InventoryPanel/ItemButtons/MakeButton" to="." method="_on_MakeButton_pressed"]
 [connection signal="button_down" from="InventoryPanel/ItemButtons/CancelButton" to="." method="_on_CancelButton_button_down"]
-[connection signal="gui_input" from="InventoryPanel/StudyNotePanel" to="." method="_on_StudyNotePanel_gui_input"]
