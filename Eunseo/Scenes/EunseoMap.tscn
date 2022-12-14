@@ -34,6 +34,8 @@
 [ext_resource path="res://Dialog.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Eunseo/Images/rock.png" type="Texture" id=33]
 
+
+
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 

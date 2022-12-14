@@ -1,20 +1,27 @@
 extends ColorRect
 
-onready var dialogPath = "res://Eunseo/Dialog/json/PrologDialog.json"
+signal hide_Dialog
+signal hide_Dialog2
+
+onready var dialogPath = " "
 export(float) var textSpeed = 0.05
 
 var dialog
 export var isProlog = false
+var already_gone = false
 var hide = false
+var DialogNum = 0
 
 var phraseNum = 0
 var finished = false
 
+var timeout = false
+
 func _ready():
 	$Timer.wait_time = textSpeed
-	dialog = getDialog()
-	assert(dialog, "Dialog not found")
-	nextPhrase()
+	#dialog = getDialog()
+	#assert(dialog, "Dialog not found")
+	#nextPhrase()
 	
 func _process(delta):
 	$Next.visible = finished
@@ -44,12 +51,16 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
-		#queue_free()
 		visible = false
+		if DialogNum == 0:
+			emit_signal("hide_Dialog")
+		elif DialogNum == 1:
+			emit_signal("hide_Dialog2")
+			DialogNum+= 1
 		return
-		
 	finished = false
 	
+	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	$Text.visible_characters = 0
 	
@@ -58,7 +69,6 @@ func nextPhrase() -> void:
 		
 		$Timer.start()
 		yield($Timer, "timeout")
-		
 	finished = true
 	phraseNum += 1
 	return
@@ -66,6 +76,7 @@ func nextPhrase() -> void:
 func set_dialog(var path):
 	dialogPath = path
 	dialog = getDialog()
+	hide = false
 	visible = true
 	phraseNum = 0
 	nextPhrase()
