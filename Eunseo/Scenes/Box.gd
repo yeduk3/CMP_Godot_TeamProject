@@ -5,7 +5,7 @@ export (Array) var get_item_list
 signal gotIt
 signal get_item_from_map(list)
 
-var already = false
+var isOpened = false
 
 func _ready():
 	var player = get_tree().current_scene.get_node("player")
@@ -13,7 +13,7 @@ func _ready():
 	self.connect("get_item_from_map", player.get_node("PlayerUI").get_node("IntegratedInventory"), "_on_get_item_from_map")
 
 func _on_Area2D_body_entered(body):
-	if body is Player && already == false:
+	if body is Player && isOpened == false:
 		$Button.visible = true
 
 func _on_Button_pressed():
@@ -24,4 +24,4 @@ func _on_Button_pressed():
 	$Open.visible = true
 	$Button.visible = false
 	
-	already = true
+	isOpened = true

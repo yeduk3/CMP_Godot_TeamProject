@@ -44,12 +44,12 @@ func getDialog() -> Array:
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
-		#queue_free()
 		visible = false
 		return
 		
 	finished = false
 	
+	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	$Text.visible_characters = 0
 	
