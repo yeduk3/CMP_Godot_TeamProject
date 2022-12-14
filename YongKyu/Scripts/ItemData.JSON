@@ -2,7 +2,7 @@
 	"Rudolf’s nose" : {
 		"Name" : "Rudolf’s nose",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Rudolf’s nose.png",
 		"Description" : "Nose of Rudolph with a cold.",
 		"Condition" : {
 			"Smell" : 2
@@ -16,7 +16,7 @@
 	"Poisoned pumpkin" : {
 		"Name" : "Poisoned pumpkin",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Poisoned pumpkin.png",
 		"Description" : "Poisoned pumpkin. You wouldn't have known that the pumpkin exposed to the laboratory would be a material.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -26,7 +26,7 @@
 	"Unicorn’s horn" : {
 		"Name" : "Unicorn’s horn",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Unicorn’s horn.png",
 		"Description" : "The horn of the unicorn with severe wear. It smells because I didn't take care of the horn properly.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -36,7 +36,7 @@
 	"Dwarf’s hair" : {
 		"Name" : "Dwarf’s hair",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Dwarf’s hair.png",
 		"Description" : "The blonde Dwarp's hair.",
 		"Condition" : {
 			"Smell" : 2
@@ -50,7 +50,7 @@
 	"Dragon’s lump" : {
 		"Name" : "Dragon’s lump",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Dragon’s lump.png",
 		"Description" : "No matter how dragon you are, you can get a lump if you don't take care of your skin. It's bigger than I thought.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
@@ -60,7 +60,7 @@
 	"Witch’s tears" : {
 		"Name" : "Witch’s tears",
 		"Type" : "Ingredient",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Witch’s tears.png",
 		"Description" : "Witch's tears deep in sorrow. I guess I cried a lot. I can smell grapes from my tears It looks like it's flying.",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
