@@ -31,3 +31,5 @@ scale = Vector2( 0.666667, 1.1282 )
 polygon = PoolVector2Array( 832, 544, 856, 544, 844, 557 )
 
 [node name="Timer" type="Timer" parent="DialogBox"]
+
+[connection signal="tree_exited" from="DialogBox" to="DialogBox" method="_on_DialogBox_tree_exited"]

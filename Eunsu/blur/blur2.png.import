@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Poisoned pumpkin.png-3414fcfc8fe07dfcef494696bb95c773.stex"
+path="res://.import/blur2.png-c8064623e52f6dad255f19483b11f080.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ItemIcon/Poisoned pumpkin.png"
-dest_files=[ "res://.import/Poisoned pumpkin.png-3414fcfc8fe07dfcef494696bb95c773.stex" ]
+source_file="res://Eunsu/blur/blur2.png"
+dest_files=[ "res://.import/blur2.png-c8064623e52f6dad255f19483b11f080.stex" ]
 
 [params]
 

@@ -1,67 +1,59 @@
 {
-	"Rudolf’s nose" : {
-		"Name" : "Rudolf’s nose",
+	"A" : {
+		"Name" : "A",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Rudolf’s nose.png",
-		"Description" : "Nose of Rudolph with a cold.",
-		"Condition" : {
-			"Smell" : 2
-		},
-		"Conditional_Desc" : " It smells worse than I thought...",
+		"IconPath" : "Icon.png",
+		"Description" : "A is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"Poisoned pumpkin" : {
-		"Name" : "Poisoned pumpkin",
+	"B" : {
+		"Name" : "B",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Poisoned pumpkin.png",
-		"Description" : "Poisoned pumpkin. You wouldn't have known that the pumpkin exposed to the laboratory would be a material.",
+		"IconPath" : "Icon.png",
+		"Description" : "B is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"Unicorn’s horn" : {
-		"Name" : "Unicorn’s horn",
+	"C" : {
+		"Name" : "C",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Unicorn’s horn.png",
-		"Description" : "The horn of the unicorn with severe wear. It smells because I didn't take care of the horn properly.",
+		"IconPath" : "Icon.png",
+		"Description" : "C is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"Dwarf’s hair" : {
-		"Name" : "Dwarf’s hair",
+	"D" : {
+		"Name" : "D",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Dwarf’s hair.png",
-		"Description" : "The blonde Dwarp's hair.",
-		"Condition" : {
-			"Smell" : 2
-		},
-		"Conditional_Desc" : " I guess he washed his hair well. It smells good.",
+		"IconPath" : "Icon.png",
+		"Description" : "D is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"Dragon’s lump" : {
-		"Name" : "Dragon’s lump",
+	"E" : {
+		"Name" : "E",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Dragon’s lump.png",
-		"Description" : "No matter how dragon you are, you can get a lump if you don't take care of your skin. It's bigger than I thought.",
+		"IconPath" : "Icon.png",
+		"Description" : "E is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
 		}
 	},
-	"Witch’s tears" : {
-		"Name" : "Witch’s tears",
+	"F" : {
+		"Name" : "F",
 		"Type" : "Ingredient",
-		"IconPath" : "res://ItemIcon/Witch’s tears.png",
-		"Description" : "Witch's tears deep in sorrow. I guess I cried a lot. I can smell grapes from my tears It looks like it's flying.",
+		"IconPath" : "Icon.png",
+		"Description" : "F is sisdjflas~~~",
 		"Number_of_Ingredients" : 0,
 		"Ingredients" : {
 			
@@ -72,51 +64,51 @@
 		"Name" : "Vision Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "It cures your vision.",
+		"Description" : "Vision Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"Rudolf’s nose" : 4,
-			"Poisoned pumpkin" : 2,
-			"Unicorn’s horn" : 1
+			"A" : 4,
+			"B" : 2,
+			"C" : 1
 		}
 	},
 	"Hearing Cure" : {
 		"Name" : "Hearing Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "It cures your hearing.",
+		"Description" : "Hearing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"Rudolf’s nose" : 2,
-			"Poisoned pumpkin" : 3,
-			"Unicorn’s horn" : 1
+			"A" : 2,
+			"B" : 3,
+			"C" : 1
 		}
 	},
 	"Smell Cure" : {
 		"Name" : "Smell Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "It cures your smell.",
+		"Description" : "Smell Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"Rudolf’s nose" : 1,
-			"Poisoned pumpkin" : 1,
-			"Unicorn’s horn" : 1
+			"A" : 1,
+			"B" : 1,
+			"C" : 1
 		}
 	},
 	"Monsterizing Cure" : {
 		"Name" : "Monsterizing Cure",
 		"Type" : "Cure",
 		"IconPath" : "Icon.png",
-		"Description" : "It cures the monsterized subject.",
+		"Description" : "Monsterizing Cure is sisdjflas~~~",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
-			"Rudolf’s nose" : 2,
-			"Dwarf’s hair" : 1,
-			"Witch’s tears" : 3
+			"D" : 1,
+			"E" : 1,
+			"F" : 1
 		}
 	},
-
+	
 	"Metal Pipe" : {
 		"Name" : "Metal Pipe",
 		"Type" : "Weapon",
@@ -166,7 +158,7 @@
 		"Name" : "Gun",
 		"Type" : "Weapon",
 		"IconPath" : "Icon.png",
-		"Description" : "Gun. It looks powerful.",
+		"Description" : "Gun is sisdjflas~~~",
 		"Damage" : 3,
 		"AdditionalEffect" : {
 			"Paralyse" : "None"
@@ -182,91 +174,6 @@
 		"Name" : "Failure Thing",
 		"Type" : "Etc",
 		"IconPath" : "Icon.png",
-		"Description" : "It looks useless."
-	},
-
-	"Study Note 1" : {
-		"Name" : "Study Note 1",
-		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 1.",
-		"Text" : [
-			"March XX, 21XX",
-			"# XXth Experiment",
-			"It's been a few years since I started research here. I have to treat my daughter. It doesn't work out very well.",
-			"Still, I got an important hint from this experiment. One of the ingredients of the treatment made this time was very smelly, but four were needed. The experiment was not easy, but it was able to produce some results. The vision seems to be picking up a little. I need to prepare for the next experiment. Everything for my daughter's health...",
-			"",
-			"2",
-			"",
-			"Material used:",
-			"4 yellow ingredients",
-			"2 blue ingredients",
-			"1 piece of red material"
-		]
-	},
-	"Study Note 2" : {
-		"Name" : "Study Note 2",
-		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 2.",
-		"Text" : [
-			"May XX, 21XX",
-			"# XXth Experiment",
-			"This experiment also failed. It's hopeless. An experiment has just discovered the possibility of hearing recovery. But the daughter is in more and more pain. I can't wait any longer. Bad rumors spread outside and all the subjects in our lab broke the contract. If you hear any thanks from outside... There is no time to lose. Now the last experiment is me...",
-			"",
-			"5",
-			"",
-			"Material used:",
-			"2 yellow ingredients",
-			"3 blue ingredients",
-			"1 piece of red material"
-		]
-	},
-	"Study Note 3" : {
-		"Name" : "Study Note 3",
-		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 3.",
-		"Text" : [
-			"July XX, 21XX",
-			"# XXth Experiment",
-			"Story: Was the cure wrong in the previous experiment? My ears began to get deaf a few days ago. However, through this experiment, the sense of smell can be restored to some extent. I should hurry up and prepare for the next experiment for my daughter who is struggling more and more in pain.",
-			"",
-			"1",
-			"",
-			"Material used:",
-			"1 yellow ingredient",
-			"1 piece of blue material",
-			"1 piece of red material",
-		]
-	},
-	"Study Note 4" : {
-		"Name" : "Study Note 4",
-		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 4.",
-		"Text" : [
-			"October XX, 21XX",
-			"# XXth Experiment",
-			"How many experiments is this already? The supply and demand of materials is becoming difficult now. I can't spend the ingredients on treating me. You have to focus on your daughter's treatment. I'm losing my sense of smell now, and I don't know how long I can last. But the end is not far off.",
-			"",
-			"8"
-		]
-	},
-	"Study Note 5" : {
-		"Name" : "Study Note 4",
-		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 4.",
-		"Text" : [
-			"December XX, 21XX",
-			"# XXth Experiment - Last Experiment",
-			"Story: My daughter doesn't even recognize me. It's getting more aggressive. Fortunately, this experiment is likely to be a success. The side effects of the drug have not been identified. But there is no time. I need to be administered. But my daughter's condition is weird right now. I think I'll have to go quickly.",
-			"",
-			"Material used:",
-			"2 yellow ingredients",
-			"1 piece of gray material",
-			"3 orange ingredients"
-		]
-	},
+		"Description" : "FailureThing is sisdjflas~~~"
+	}
 }

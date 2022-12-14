@@ -12,6 +12,10 @@ var isLeft = false
 var isDown = false
 var isUp = false
 
+var blur1 = false
+var blur2 = false
+var blur3 = false
+
 export var speed = 500
 
 func _get_start_time():
@@ -53,7 +57,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("dash"):
 		#velocity.x = speed + 500
 		if isRight == true:
-			velocity.x = speed + 500
+			velocity.x = (speed + 500)
 			isRight = false
 		if isLeft == true:
 			velocity.x = - (speed + 500)
@@ -62,7 +66,7 @@ func _physics_process(delta):
 			velocity.y = - (speed + 500)
 			isUp = false
 		if isDown == true:
-			velocity.y = speed + 500
+			velocity.y = (speed + 500)
 			isDown = false
 	if Input.is_action_pressed("jump"):
 		velocity.y = JUMP
@@ -71,3 +75,4 @@ func _physics_process(delta):
 	velocity - velocity.normalized()*speed
 
 	velocity = move_and_slide(velocity, Vector2.UP)
+
