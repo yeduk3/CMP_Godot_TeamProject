@@ -23,6 +23,9 @@ func _ready():
 	
 	print("Refresh")
 	refresh_inventory()
+	
+	if EndingManager.has_studynote5():
+		add_item("Study Note 5", 1)
 
 #
 # buttons

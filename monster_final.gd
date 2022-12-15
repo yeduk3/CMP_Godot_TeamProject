@@ -16,6 +16,9 @@ var timer = Timer.new()
 var time_hit = 0
 
 func _ready():
+	if not EndingManager.is_monster_exist():
+		queue_free()
+	
 	$Timer2.connect("timeout", self, "update_pathfinding")
 	update_pathfinding()
 

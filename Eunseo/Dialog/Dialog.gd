@@ -3,8 +3,6 @@ extends Node2D
 onready var dialog_box = $DialogBox
 onready var timer = $DialogBox/Timer
 
-var have_key = false
-
 var timeout = false
 
 var stat = StatManager
@@ -18,11 +16,11 @@ func _on_MainGate_body_entered(body):
 
 func _on_ExitArea_body_entered(body):
 	if body is Player:
-		if have_key == false:
+		if not EndingManager.has_card_key():
 			dialog_box.set_dialog("res://Eunseo/Dialog/json/ExitDialogNOKEY.json")
 			visible = true
 		else:
-			pass
+			get_tree().change_scene("res://Eunseo/Scenes/Ending2Normal_Exit.tscn")
 
 func isProlog():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/PrologDialog.json")

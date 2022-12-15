@@ -60,6 +60,7 @@ Item="*res://YongKyu/Scripts/Item.gd"
 PlayerItem="*res://YongKyu/Scripts/PlayerItem.gd"
 StatManager="*res://Chaeyoon/StatManager.tscn"
 PlacedItem="*res://YongKyu/Scripts/PlacedItem.gd"
+EndingManager="*res://Eunseo/Script/EndingManager.gd"
 
 [gui]
 

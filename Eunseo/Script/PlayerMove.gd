@@ -15,6 +15,11 @@ var isDown = false
 var isUp = false
 var Limit = false
 
+func _ready():
+	if EndingManager.is_desk_spawn() and get_tree().current_scene.name == "B1F":
+		position = EndingManager.get_desk_position()
+		EndingManager.done_desk_spawn()
+
 func _get_start_time():
 	return OS.get_ticks_msec()
 	

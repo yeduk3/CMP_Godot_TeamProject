@@ -46,4 +46,8 @@ func _on_DialogBox_hide_Dialog3():
 	fade_tween.tween_property(fade_node, "color", Color(0, 0, 0, 1), 1.5)
 	
 	yield(get_tree().create_timer(1.5),"timeout")
+	
+	EndingManager.destroy_monster()
+	EndingManager.set_desk_spawn()
+	EndingManager.set_card_key()
 	get_tree().change_scene("res://Main/MainB1F.tscn")

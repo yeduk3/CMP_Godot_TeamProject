@@ -254,10 +254,10 @@
 		]
 	},
 	"Study Note 5" : {
-		"Name" : "Study Note 4",
+		"Name" : "Study Note 5",
 		"Type" : "Study Note",
 		"IconPath" : "Icon.png",
-		"Description" : "Somebody's study note 4.",
+		"Description" : "Somebody's study note 5.",
 		"Text" : [
 			"December XX, 21XX",
 			"# XXth Experiment - Last Experiment",

@@ -42,3 +42,10 @@ func _health_down(var value):
 	health_bar.value = health_bar.value - value
 	player_stat_manager._set_health(health_bar.value)
 	
+	if health_bar.value <= 0:
+		#get_tree().paused = true
+		$"../../GameOver".visible = true
+		
+		#yield(get_tree().create_timer(3.0), "timeout")
+		get_tree().change_scene("res://Eunseo/Scenes/Ending2Bad.tscn")
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=1]
 [ext_resource path="res://YongKyu/Asset/Blur/Blur2.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=18]
 [ext_resource path="res://YongKyu/Asset/Blur/Blur3.png" type="Texture" id=19]
 [ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Eunseo/Fonts/Planes_ValMore.ttf" type="DynamicFontData" id=21]
 
 [sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 14.9204, 26.4514 )
@@ -138,6 +139,10 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="DynamicFont" id=120]
+size = 180
+font_data = ExtResource( 21 )
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 17 )
@@ -250,6 +255,17 @@ margin_top = -114.664
 margin_right = -172.741
 margin_bottom = -74.6643
 rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="GameOver" type="Label" parent="PlayerUI"]
+visible = false
+margin_left = -3.05176e-05
+margin_top = 222.0
+margin_right = 1058.0
+margin_bottom = 422.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 120 )
+text = "Game Over"
+align = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
