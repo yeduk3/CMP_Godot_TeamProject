@@ -53,11 +53,11 @@ func _on_UseButton_pressed():
 			var player_ui = get_parent().get_parent()
 			var item_name = item.info["Name"]
 			if item_name == "Vision Cure":
-				player_ui.get_node("VisionAbilityBar")._ability_up(33)
+				player_ui.get_node("VisionAbilityBar")._ability_up(1)
 			elif item_name == "Hearing Cure":
-				player_ui.get_node("HearingAbilityBar")._ability_up(33)
+				player_ui.get_node("HearingAbilityBar")._ability_up(1)
 			elif item_name == "Smell Cure":
-				player_ui.get_node("SmellAbilityBar")._ability_up(33)
+				player_ui.get_node("SmellAbilityBar")._ability_up(1)
 		#elif item_type == "Ingredient" or item_type == "Weapon" or item_type == "Etc":
 			# show result : nothing happened
 		elif item_type == "Study Note":
@@ -79,6 +79,10 @@ func _on_StudyNotePanel_gui_input(event):
 
 # click make button
 func _on_MakeButton_pressed(amount = 1, name = ""):
+	var mode = get_parent().current_state
+	if mode != "Making":
+		item_buttons_off()
+		return
 	if selected_item_index >= 0:
 		if PlayerItem.items[selected_item_index]:
 			if PlayerItem.items[selected_item_index].quantity > 0:
