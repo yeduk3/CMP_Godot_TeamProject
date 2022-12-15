@@ -55,10 +55,13 @@ func _process(delta):
 		print("Attackakakakak")
 		damage = true
 		# if player is in area
+		
 		if play:
 			var health = $"../../Player/PlayerUI/HealthBarTest/Health"
 			health._health_down(10)
-	
+			$msound.play()
+		else:
+			$msound.stop()
 
 
 
