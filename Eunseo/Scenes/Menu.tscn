@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Eunseo/Fonts/Planes_ValMore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Eunseo/Scenes/StartButton.gd" type="Script" id=2]
+[ext_resource path="res://Eunseo/Scenes/CreditButton.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -9,6 +10,10 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
 font_data = ExtResource( 1 )
 
 [node name="Menu" type="Node2D"]
@@ -43,4 +48,37 @@ custom_fonts/font = SubResource( 2 )
 text = "START"
 script = ExtResource( 2 )
 
+[node name="CreditButton" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = 101.0
+margin_right = 67.0
+margin_bottom = 147.0
+custom_fonts/font = SubResource( 2 )
+text = "Credit"
+script = ExtResource( 3 )
+
+[node name="Credit" type="ColorRect" parent="ColorRect"]
+visible = false
+margin_left = 193.0
+margin_top = 29.0
+margin_right = 839.0
+margin_bottom = 571.0
+
+[node name="creditText" type="Label" parent="ColorRect/Credit"]
+margin_left = 42.0
+margin_top = 153.0
+margin_right = 604.0
+margin_bottom = 366.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "202127178 Lee Yongkyu
+202127238 Yang Eunseo
+202127243 Nam Eunsu
+202127252 Um Chaeyoon"
+
 [connection signal="pressed" from="ColorRect/StartButton" to="ColorRect/StartButton" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ColorRect/CreditButton" to="ColorRect/CreditButton" method="_on_CreditButton_pressed"]
