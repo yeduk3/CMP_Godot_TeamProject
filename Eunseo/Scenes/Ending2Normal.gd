@@ -45,4 +45,5 @@ func _on_DialogBox_hide_Dialog3():
 	var fade_node = get_node("Fade")
 	fade_tween.tween_property(fade_node, "color", Color(0, 0, 0, 1), 1.5)
 	
+	yield(get_tree().create_timer(1.5),"timeout")
 	get_tree().change_scene("res://Main/MainB1F.tscn")

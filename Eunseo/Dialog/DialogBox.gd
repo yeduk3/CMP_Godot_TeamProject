@@ -18,6 +18,8 @@ var finished = false
 
 var timeout = false
 
+var active_dialog = false
+
 func _ready():
 	$Timer.wait_time = textSpeed
 	#dialog = getDialog()
@@ -26,7 +28,7 @@ func _ready():
 	
 func _process(delta):
 	$Next.visible = finished
-	if Input.is_action_just_released("space"):
+	if active_dialog and Input.is_action_just_released("space"):
 		if finished:
 			nextPhrase()
 		else:
@@ -53,6 +55,7 @@ func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
 		visible = false
+		active_dialog = false
 		if DialogNum == 0:
 			print(DialogNum)
 			emit_signal("hide_Dialog")
@@ -85,3 +88,4 @@ func set_dialog(var path):
 	visible = true
 	phraseNum = 0
 	nextPhrase()
+	active_dialog = true

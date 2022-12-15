@@ -55,3 +55,7 @@ func _on_VideoArea_body_entered(body):
 	if body is Player:
 		dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog.json")
 		visible = true
+		
+func use_Happy():
+	dialog_box.set_dialog("res://Eunseo/Dialog/json/HappyEndingDialog.json")
+	visible = true

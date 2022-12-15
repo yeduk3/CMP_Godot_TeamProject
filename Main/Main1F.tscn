@@ -1027,7 +1027,7 @@ get_item_list = [ "Dwarf’s hair" ]
 
 [node name="Desk_front3" parent="Map2/Lab1" instance=ExtResource( 28 )]
 position = Vector2( 44.1666, -75 )
-get_item_list = [ "Dragon’s lump" ]
+get_item_list = [ "Witch’s tears" ]
 placed_index = 1
 
 [node name="Lab2" type="Node2D" parent="Map2"]
@@ -1386,7 +1386,7 @@ shape = SubResource( 96 )
 [node name="Picture3" parent="Map2/Office" instance=ExtResource( 26 )]
 position = Vector2( -6.66656, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Dragon’s lump" ]
+get_item_list = [ "Witch’s tears" ]
 placed_index = 7
 
 [node name="Picture" type="StaticBody2D" parent="Map2/Office"]
@@ -1814,7 +1814,7 @@ position = Vector2( 1826.67, 225 )
 [node name="Box" parent="Map2/Storage" instance=ExtResource( 29 )]
 position = Vector2( -119.333, -110 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Rudolf’s nose", "Dwarf’s hair", "Dragon’s lump" ]
+get_item_list = [ "Rudolf’s nose", "Dwarf’s hair", "Witch’s tears" ]
 placed_index = 16
 
 [node name="Box2" parent="Map2/Storage" instance=ExtResource( 29 )]
@@ -2264,7 +2264,7 @@ shape = SubResource( 96 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 26 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Monsterizing Cure" ]
 placed_index = 20
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]

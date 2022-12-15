@@ -70,6 +70,21 @@ text = "If you want to use the gun,
 Press the ENTER."
 align = 1
 
+[node name="CureText" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = 231.0
+margin_right = 1017.0
+margin_bottom = 434.0
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "If you want to use the cure,
+Click the Left Mouse."
+align = 1
+
 [node name="Fade" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
@@ -108,7 +123,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 step = 1.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="GunTimer" type="Timer" parent="."]
+
+[node name="CureTimer" type="Timer" parent="."]
 
 [node name="Background2" type="ColorRect" parent="."]
 visible = false
@@ -129,6 +146,7 @@ align = 1
 
 [connection signal="hide_Dialog" from="Dialog/DialogBox" to="." method="_on_DialogBox_hide_Dialog"]
 [connection signal="hide_Dialog2" from="Dialog/DialogBox" to="." method="_on_DialogBox_hide_Dialog2"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
+[connection signal="timeout" from="CureTimer" to="." method="_on_CureTimer_timeout"]
 
 [editable path="Dialog"]
