@@ -1,9 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=1]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur2.png" type="Texture" id=2]
 [ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=3]
 [ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=4]
 [ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=5]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur1.png" type="Texture" id=6]
 [ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Chaeyoon/AbilityBar3.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=9]
@@ -16,6 +18,7 @@
 [ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=16]
 [ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=17]
 [ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=18]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur3.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 14.9204, 26.4514 )
@@ -169,6 +172,23 @@ text = "abcde"
 [node name="PlayerUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="Blur" type="Node2D" parent="PlayerUI"]
+scale = Vector2( 0.11, 0.11 )
+
+[node name="Blur0" type="Sprite" parent="PlayerUI/Blur"]
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 6 )
+
+[node name="Blur1" type="Sprite" parent="PlayerUI/Blur"]
+visible = false
+position = Vector2( -155, 47 )
+texture = ExtResource( 2 )
+
+[node name="Blur2" type="Sprite" parent="PlayerUI/Blur"]
+visible = false
+position = Vector2( -155, 47 )
+texture = ExtResource( 19 )
 
 [node name="StaminaBarTest" type="Control" parent="PlayerUI"]
 margin_left = -36.8915

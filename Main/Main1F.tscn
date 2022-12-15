@@ -2196,7 +2196,7 @@ shape = SubResource( 96 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 28 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Vision Cure", "Vision Cure", "Vision Cure" ]
 placed_index = 20
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]
@@ -2240,9 +2240,6 @@ position = Vector2( 762.5, 1360 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/EVtoB1"]
 position = Vector2( -0.5, -1.5 )
 shape = SubResource( 107 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 36, -93 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 edge_connection_margin = 10.0
@@ -2300,5 +2297,8 @@ navpoly = SubResource( 121 )
 
 [node name="NavigationPolygonInstance17" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 129 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 36, -93 )
 
 [connection signal="body_entered" from="Map2/EVtoB1" to="Player" method="_on_EVtoB1_body_entered"]
