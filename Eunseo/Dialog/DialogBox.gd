@@ -2,6 +2,7 @@ extends ColorRect
 
 signal hide_Dialog
 signal hide_Dialog2
+signal hide_Dialog3
 
 onready var dialogPath = " "
 export(float) var textSpeed = 0.05
@@ -17,6 +18,8 @@ var finished = false
 
 var timeout = false
 
+var active_dialog = false
+
 func _ready():
 	$Timer.wait_time = textSpeed
 	#dialog = getDialog()
@@ -25,7 +28,7 @@ func _ready():
 	
 func _process(delta):
 	$Next.visible = finished
-	if Input.is_action_just_released("space"):
+	if active_dialog and Input.is_action_just_released("space"):
 		if finished:
 			nextPhrase()
 		else:
@@ -52,13 +55,18 @@ func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		hide = true
 		visible = false
+		active_dialog = false
 		if DialogNum == 0:
+			print(DialogNum)
 			emit_signal("hide_Dialog")
 		elif DialogNum == 1:
 			emit_signal("hide_Dialog2")
 			DialogNum+= 1
+		elif DialogNum == 2:
+			emit_signal("hide_Dialog3")
 		return
 	finished = false
+	#print(DialogNum)
 	
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
@@ -80,3 +88,4 @@ func set_dialog(var path):
 	visible = true
 	phraseNum = 0
 	nextPhrase()
+	active_dialog = true

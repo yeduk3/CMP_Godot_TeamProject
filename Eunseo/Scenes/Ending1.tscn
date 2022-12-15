@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Eunseo/Images/DadDaugther.jpg" type="Texture" id=1]
 [ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 70
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
 font_data = ExtResource( 7 )
 
 [node name="Ending1" type="Node2D"]
@@ -66,6 +70,21 @@ text = "If you want to use the gun,
 Press the ENTER."
 align = 1
 
+[node name="CureText" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = 231.0
+margin_right = 1017.0
+margin_bottom = 434.0
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "If you want to use the cure,
+Click the Left Mouse."
+align = 1
+
 [node name="Fade" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
@@ -104,7 +123,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 step = 1.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="GunTimer" type="Timer" parent="."]
+
+[node name="CureTimer" type="Timer" parent="."]
 
 [node name="Background2" type="ColorRect" parent="."]
 visible = false
@@ -114,8 +135,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Time" type="Label" parent="."]
+visible = false
+margin_left = 428.0
+margin_right = 630.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+
 [connection signal="hide_Dialog" from="Dialog/DialogBox" to="." method="_on_DialogBox_hide_Dialog"]
 [connection signal="hide_Dialog2" from="Dialog/DialogBox" to="." method="_on_DialogBox_hide_Dialog2"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
+[connection signal="timeout" from="CureTimer" to="." method="_on_CureTimer_timeout"]
 
 [editable path="Dialog"]
