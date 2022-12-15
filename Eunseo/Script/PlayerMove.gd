@@ -26,7 +26,6 @@ func _gauge_up():
 
 # 대시 게이지를 소모한다
 func _gauge_down():
-	#print('a')
 	cooltimeVal.value -= 1.0
 	
 # 매 초마다 호출

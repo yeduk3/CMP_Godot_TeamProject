@@ -33,8 +33,8 @@ func _process(delta):
 			nextPhrase()
 		else:
 			$Text.visible_characters = len($Text.text)
-	if isProlog == true && hide == true:
-		get_tree().change_scene("res://Main/Main1F.tscn")
+	#if isProlog == true && hide == true:
+	#	get_tree().change_scene("res://Main/Main1F.tscn")
 	
 func getDialog() -> Array:
 	var f = File.new()
@@ -52,13 +52,17 @@ func getDialog() -> Array:
 		return []
 		
 func nextPhrase() -> void:
+	print(str("Cur Phrase Num: ", phraseNum))
 	if phraseNum >= len(dialog):
+		print("End dialog")
 		hide = true
 		visible = false
 		active_dialog = false
 		if DialogNum == 0:
-			print(DialogNum)
+			# 1. dialog가 끝나면 여기서 hide_Dialog라는 신호를 보냅니다
 			emit_signal("hide_Dialog")
+			DialogNum += 1
+			finished = false
 		elif DialogNum == 1:
 			emit_signal("hide_Dialog2")
 			DialogNum+= 1
@@ -87,5 +91,6 @@ func set_dialog(var path):
 	hide = false
 	visible = true
 	phraseNum = 0
+	print(str("Dialog length: ",len(dialog)))
 	nextPhrase()
 	active_dialog = true
