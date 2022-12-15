@@ -1,5 +1,7 @@
 extends Node2D
 
+var ending_tween
+
 func _ready():
 	"""
 	#sprite_tween = create_tween()
@@ -29,3 +31,16 @@ func _on_StudyNotePanel_gui_input(event):
 	if event.is_action_pressed("left_click"):
 		$StudyNotePanel.visible = false
 		EndingManager.set_studynote5()
+		
+		
+		yield(get_tree().create_timer(2),"timeout")
+		
+		ending_tween = create_tween()
+		var ending_node = get_node("EndingBackground")
+		ending_tween.tween_property(ending_node, "color", Color(0, 0, 0, 1), 2)
+		
+		yield(get_tree().create_timer(3),"timeout")
+		$EndingBackground/EndingText.visible = true
+
+		yield(get_tree().create_timer(5),"timeout")
+		get_tree().change_scene("res://Eunseo/Scenes/Menu.tscn")

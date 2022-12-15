@@ -9,6 +9,9 @@ var studynote5 = false
 
 func destroy_monster():
 	monster_exist = false
+	
+func instance_monster():
+	monster_exist = true
 
 func is_monster_exist():
 	return monster_exist
@@ -27,6 +30,9 @@ func get_desk_position():
 	
 func set_card_key():
 	card_key = true
+
+func drop_cacrd_key():
+	card_key = false
 	
 func has_card_key():
 	return card_key

@@ -19,12 +19,12 @@ func _ready():
 func open_with(mode):
 	if states[mode] == 0:
 		inventory.visible = true
-		player_information.visible = true
+		#player_information.visible = true
 		making_table.visible = false
 		visible = true
 	elif states[mode] == 1:
 		inventory.visible = true
-		player_information.visible = false
+		#player_information.visible = false
 		making_table.visible = true
 		visible = true
 	else:
@@ -32,7 +32,7 @@ func open_with(mode):
 
 func close():
 	inventory.visible = false
-	player_information.visible = false
+	#player_information.visible = false
 	making_table.visible = false
 	visible = false
 	

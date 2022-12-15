@@ -2294,7 +2294,7 @@ shape = SubResource( 107 )
 edge_connection_margin = 10.0
 
 [node name="monster_final" parent="Navigation2D" instance=ExtResource( 40 )]
-position = Vector2( -38, -321 )
+position = Vector2( -215, -436 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 112 )

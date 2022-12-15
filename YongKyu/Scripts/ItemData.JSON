@@ -181,14 +181,14 @@
 	"Failure Thing" : {
 		"Name" : "Failure Thing",
 		"Type" : "Etc",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Failure Thing.png",
 		"Description" : "It looks useless."
 	},
 
 	"Study Note 1" : {
 		"Name" : "Study Note 1",
 		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Study Note.png",
 		"Description" : "Somebody's study note 1.",
 		"Text" : [
 			"March XX, 21XX",
@@ -207,7 +207,7 @@
 	"Study Note 2" : {
 		"Name" : "Study Note 2",
 		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Study Note.png",
 		"Description" : "Somebody's study note 2.",
 		"Text" : [
 			"May XX, 21XX",
@@ -225,7 +225,7 @@
 	"Study Note 3" : {
 		"Name" : "Study Note 3",
 		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Study Note.png",
 		"Description" : "Somebody's study note 3.",
 		"Text" : [
 			"July XX, 21XX",
@@ -243,7 +243,7 @@
 	"Study Note 4" : {
 		"Name" : "Study Note 4",
 		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Study Note.png",
 		"Description" : "Somebody's study note 4.",
 		"Text" : [
 			"October XX, 21XX",
@@ -256,7 +256,7 @@
 	"Study Note 5" : {
 		"Name" : "Study Note 5",
 		"Type" : "Study Note",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Study Note.png",
 		"Description" : "Somebody's study note 5.",
 		"Text" : [
 			"December XX, 21XX",
