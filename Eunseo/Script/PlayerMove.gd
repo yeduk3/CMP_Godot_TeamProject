@@ -99,3 +99,15 @@ func _on_EVto1_body_entered(body):
 
 func _on_MediArea_body_entered(body):
 	$PlayerUI/IntegratedInventory._on_MediArea_body_entered(body)
+
+
+func _on_VideoArea_body_entered(body):
+	$Camera2D/Dialog._on_VideoArea_body_entered(body)
+
+
+func _on_MainGate_body_entered(body):
+	$Camera2D/Dialog._on_MainGate_body_entered(body)
+
+
+func _on_ExitArea_body_entered(body):
+	$Camera2D/Dialog._on_ExitArea_body_entered(body)

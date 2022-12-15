@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=1]
 [ext_resource path="res://YongKyu/Asset/Blur/Blur2.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=17]
 [ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=18]
 [ext_resource path="res://YongKyu/Asset/Blur/Blur3.png" type="Texture" id=19]
+[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 14.9204, 26.4514 )
@@ -148,27 +149,6 @@ texture = ExtResource( 5 )
 position = Vector2( -2.45947, 0 )
 shape = SubResource( 111 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.65, 0.65 )
-
-[node name="Gotcha" type="Polygon2D" parent="Camera2D"]
-visible = false
-position = Vector2( -370.144, -3463.09 )
-scale = Vector2( 1, 1.25 )
-color = Color( 0, 0, 0, 0.501961 )
-polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
-script = ExtResource( 4 )
-
-[node name="GotchaText" type="RichTextLabel" parent="Camera2D/Gotcha"]
-margin_left = 256.0
-margin_top = 2830.0
-margin_right = 472.0
-margin_bottom = 2889.0
-text = "abcde"
-
-[node name="Timer" type="Timer" parent="Camera2D/Gotcha"]
-
 [node name="PlayerUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -271,6 +251,32 @@ margin_right = -172.741
 margin_bottom = -74.6643
 rect_scale = Vector2( 0.4, 0.4 )
 
-[connection signal="timeout" from="Camera2D/Gotcha/Timer" to="Camera2D/Gotcha" method="_on_Timer_timeout"]
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.65, 0.65 )
+
+[node name="Gotcha" type="Polygon2D" parent="Camera2D"]
+visible = false
+position = Vector2( -370.144, -3463.09 )
+scale = Vector2( 1, 1.25 )
+color = Color( 0, 0, 0, 0.501961 )
+polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
+script = ExtResource( 4 )
+
+[node name="GotchaText" type="RichTextLabel" parent="Camera2D/Gotcha"]
+margin_left = 256.0
+margin_top = 2830.0
+margin_right = 472.0
+margin_bottom = 2889.0
+text = "abcde"
+
+[node name="Timer" type="Timer" parent="Camera2D/Gotcha"]
+
+[node name="Dialog" parent="Camera2D" instance=ExtResource( 20 )]
+visible = false
+position = Vector2( 0, 103 )
+scale = Vector2( 0.6, 0.6 )
+
 [connection signal="input_event" from="PlayerUI/Music/Bmusic" to="PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="PlayerUI/Music/Bmusic" to="PlayerUI/Option" method="_on_Bmusic_working_window"]
+[connection signal="timeout" from="Camera2D/Gotcha/Timer" to="Camera2D/Gotcha" method="_on_Timer_timeout"]

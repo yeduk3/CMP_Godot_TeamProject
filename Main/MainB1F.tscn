@@ -2185,9 +2185,6 @@ position = Vector2( 2152, 237 )
 position = Vector2( -1.5, 4.5 )
 shape = SubResource( 118 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2143, 358 )
-
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="monster_final" parent="Navigation2D" instance=ExtResource( 39 )]
@@ -2225,5 +2222,9 @@ navpoly = SubResource( 150 )
 [node name="NavigationPolygonInstance10" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 151 )
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2143, 358 )
+
 [connection signal="body_entered" from="Map2/Medicine/MediMaker/MediArea" to="Player" method="_on_MediArea_body_entered"]
+[connection signal="body_entered" from="Map2/Exit/ExitArea" to="Player" method="_on_ExitArea_body_entered"]
 [connection signal="body_entered" from="Map2/EVto1" to="Player" method="_on_EVto1_body_entered"]

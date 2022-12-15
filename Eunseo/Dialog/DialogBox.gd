@@ -33,8 +33,8 @@ func _process(delta):
 			nextPhrase()
 		else:
 			$Text.visible_characters = len($Text.text)
-	#if isProlog == true && hide == true:
-	#	get_tree().change_scene("res://Main/Main1F.tscn")
+	if isProlog == true && hide == true:
+		get_tree().change_scene("res://Main/Main1F.tscn")
 	
 func getDialog() -> Array:
 	var f = File.new()
