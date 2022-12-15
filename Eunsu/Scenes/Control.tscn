@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://music/DangerousZone.mp3" type="AudioStream" id=1]
+[ext_resource path="res://music/background sound.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Eunsu/Control.gd" type="Script" id=2]
 [ext_resource path="res://Eunsu/Scenes/Label.gd" type="Script" id=3]
 
@@ -36,6 +36,7 @@ value = -10.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+volume_db = 1.0
 autoplay = true
 bus = "BGM"
 

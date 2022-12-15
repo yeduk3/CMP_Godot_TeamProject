@@ -27,13 +27,9 @@ shape = SubResource( 1 )
 [node name="Health" type="Control" parent="Player/HealthBarTest"]
 process_priority = 3
 script = ExtResource( 8 )
-max_amount = 28
 
 [node name="CooltimeBar" parent="Player/HealthBarTest" instance=ExtResource( 3 )]
 margin_left = -29.0
 margin_top = -49.0
 margin_right = 31.0
 margin_bottom = -39.0
-
-[connection signal="changed" from="Player/HealthBarTest/Health" to="Player/HealthBarTest/CooltimeBar" method="set_value"]
-[connection signal="max_changed" from="Player/HealthBarTest/Health" to="Player/HealthBarTest/CooltimeBar" method="set_max"]
