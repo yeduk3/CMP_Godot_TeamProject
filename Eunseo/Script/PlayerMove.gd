@@ -26,7 +26,7 @@ func _gauge_up():
 
 # 대시 게이지를 소모한다
 func _gauge_down():
-	print('a')
+	#print('a')
 	cooltimeVal.value -= 1.0
 	
 # 매 초마다 호출
@@ -99,4 +99,4 @@ func _on_EVto1_body_entered(body):
 
 
 func _on_MediArea_body_entered(body):
-	pass
+	$PlayerUI/IntegratedInventory._on_MediArea_body_entered(body)

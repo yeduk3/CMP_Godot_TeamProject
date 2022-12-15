@@ -2280,7 +2280,6 @@ margin_bottom = -50.717
 [node name="Stamina" type="Control" parent="player/PlayerUI/StaminaBarTest"]
 process_priority = 3
 script = ExtResource( 34 )
-max_amount = 28
 
 [node name="CooltimeBar" parent="player/PlayerUI/StaminaBarTest" instance=ExtResource( 4 )]
 margin_left = 0.0
@@ -2297,7 +2296,6 @@ margin_bottom = -187.0
 [node name="Health" type="Control" parent="player/PlayerUI/HealthBarTest"]
 process_priority = 3
 script = ExtResource( 34 )
-max_amount = 28
 
 [node name="HealthBar" parent="player/PlayerUI/HealthBarTest" instance=ExtResource( 10 )]
 
@@ -2383,9 +2381,5 @@ navpoly = SubResource( 129 )
 
 [connection signal="body_entered" from="Map2/EVtoB1" to="player" method="_on_EVtoB1_body_entered"]
 [connection signal="timeout" from="player/Camera2D/Gotcha/Timer" to="player/Camera2D/Gotcha" method="_on_Timer_timeout"]
-[connection signal="changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/StaminaBarTest/Stamina" to="player/PlayerUI/StaminaBarTest/CooltimeBar" method="set_max"]
-[connection signal="changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_value"]
-[connection signal="max_changed" from="player/PlayerUI/HealthBarTest/Health" to="player/PlayerUI/HealthBarTest/HealthBar" method="set_max"]
 [connection signal="input_event" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Music/Bmusic" method="_on_Bmusic_input_event"]
 [connection signal="working_window" from="player/PlayerUI/Music/Bmusic" to="player/PlayerUI/Option" method="_on_Bmusic_working_window"]

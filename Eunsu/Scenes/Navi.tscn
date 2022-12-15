@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Main/monster_final.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Main/Main1F2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main/Main1F.tscn" type="PackedScene" id=2]
+
 
 
 [sub_resource type="NavigationPolygon" id=1]

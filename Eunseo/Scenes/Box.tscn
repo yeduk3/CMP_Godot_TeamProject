@@ -5,8 +5,6 @@
 [ext_resource path="res://Eunseo/Images/light.png" type="Texture" id=3]
 [ext_resource path="res://Eunseo/Images/Box5.png" type="Texture" id=4]
 
-
-
 [sub_resource type="RectangleShape2D" id=93]
 extents = Vector2( 14.3959, 3.87249 )
 

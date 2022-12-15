@@ -20,7 +20,7 @@ func _ready():
    update_pathfinding()
 
 func update_pathfinding():
-   print("Path Update")
+   #print("Path Update")
    agent.set_target_location(player.global_position)
 
 func _physics_process(delta):
@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 	# get direction to the next location from the navigation agent
 	var direction = global_position.direction_to(agent.get_next_location())
-	print(str("NextPOs: ", direction))
+	#print(str("NextPOs: ", direction))
 
 	# Set velocity toward the next location and move
 	velocity = direction.normalized() * speed
@@ -66,13 +66,6 @@ func Dash():
 func _on_Timer_timeout():
 	speed = 50
 
-func _physics_process(delta):
-	motion = Vector2.ZERO
-	if play:
-		motion = position.direction_to(play.position*speed)
-	motion = move_and_slide(motion)
-
-
 func _on_Area2D_body_entered(body):
 	if "Map" in body.name:
 		return
@@ -81,7 +74,7 @@ func _on_Area2D_body_entered(body):
 	if time_hit + 5000 > Time.get_ticks_msec():
 		print('super')
 	else:
-		var health = $"../Player/PlayerUI/HealthBarTest/Health"
+		var health = $"../../Player/PlayerUI/HealthBarTest/Health"
 		health._health_down(10)
 		time_hit = Time.get_ticks_msec()
 		print('hit')
@@ -94,16 +87,16 @@ func _on_Area2D_body_exited(body):
 	play = null
 
 func _unbeatable_timer():
-	var health = $"../Player/PlayerUI/HealthBarTest/Health"
+	var health = $"../../Player/PlayerUI/HealthBarTest/Health"
 	while count > 0:
 		health._health_down(0)
 		count -= 1
 		#print(count)
-		$"../Player".set_collision_mask_bit(2, false)
+		$"../../Player".set_collision_mask_bit(2, false)
 		set_collision_mask_bit(0, false)
 		#print("mask: " + str(collision_mask))
 		yield(get_tree().create_timer(1.0), "timeout")
 	count = 3
 	set_collision_mask_bit(0, true)
-	$"../Player".set_collision_mask_bit(2, true)
+	$"../../Player".set_collision_mask_bit(2, true)
 	#print("Unbeatable Timer off")
