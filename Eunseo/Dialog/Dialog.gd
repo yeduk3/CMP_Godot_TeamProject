@@ -10,8 +10,6 @@ var timeout = false
 var stat = StatManager
 var prevscene
 
-onready var video_rect = $"../../../VIdeo"
-
 func _on_MainGate_body_entered(body):
 	if body is Player:
 		dialog_box.set_dialog("res://Eunseo/Dialog/json/MainGateDialog.json")
@@ -55,23 +53,24 @@ func use_Normal3():
 
 
 func _on_VideoArea_body_entered(body):
+	$DialogBox.DialogNum = 0
 	if body is Player:
 		dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog1.json")
 		visible = true
 		var testNode = get_node("DialogBox")
 		# 2. 그 신호를 여기서 받은 다음 self 노드의 _test_func 함수를 호출
-		testNode.connect("hide_Dialog", self, "_test_func")
+		if not testNode.is_connected("hide_Dialog", self, "_test_func"):
+			testNode.connect("hide_Dialog", self, "_test_func")
+		if not testNode.is_connected("hide_Dialog2", self, "_second_test_func"):
+			testNode.connect("hide_Dialog2", self, "_second_test_func")
 
 func use_Happy():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/HappyEndingDialog.json")
 	visible = true
 		
 func _test_func():
-	#print("bbbb")
-	prevscene = get_tree().current_scene.filename
-	print(prevscene)
 	
-	if stat._get_stat2() == 0: # 60으로 맞추기 
+	if stat._get_stat2() >= 2: # 60으로 맞추기 
 		dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog3.json")
 		visible = true
 	else:
@@ -79,20 +78,21 @@ func _test_func():
 		visible = true
 	#get_tree().change_scene("res://VIdeo.tscn")	
 
-func _back_to_scene():
-	print("Back to scene")
-	# get_tree().change_scene(prevscene)
-	#get_tree().change_scene("res://Main/Main1F.tscn")
-
+func _second_test_func():
+	$DialogBox.DialogNum = 0
+	print("Received Second DIalog admfklajsdf")
+"""
 func use_Video2():
 	#print('kkkk')
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog2.json")
 	visible = true
 	var testNode = get_node("DialogBox")
-	testNode.connect("hide_Dialog", self, "_back_to_scene")
+	testNode.disconnect("hide_Dialog", self, "_test_func")
+	#testNode.connect("hide_Dialog", self, "_test_func")
 
 func use_Video3():
 	dialog_box.set_dialog("res://Eunseo/Dialog/json/VideoDialog3.json")
 	visible = true
 	var testNode = get_node("DialogBox")
-	testNode.connect("hide_Dialog", self, "_back_to_scene")
+	testNode.disconnect("hide_Dialog", self, "_test_func")
+"""
