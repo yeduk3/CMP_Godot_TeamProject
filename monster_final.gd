@@ -16,12 +16,12 @@ var timer = Timer.new()
 var time_hit = 0
 
 func _ready():
-   $Timer2.connect("timeout", self, "update_pathfinding")
-   update_pathfinding()
+	$Timer2.connect("timeout", self, "update_pathfinding")
+	update_pathfinding()
 
 func update_pathfinding():
    #print("Path Update")
-   agent.set_target_location(player.global_position)
+	agent.set_target_location(player.global_position)
 
 func _physics_process(delta):
 	if agent.is_navigation_finished():
@@ -39,19 +39,13 @@ func _process(delta):
 
 	if attackk == true:
 		sprite.play("attack")
-   #else:
-   #   sprite.play("walk")
-
-
-	if player.position > position:
-		sprite.flip_h = false
-		sprite.play("walk")
-	elif player.position < position:
-		sprite.flip_h = true
-		sprite.play("walk")
 	else:
-		#sprite.stop()
-		sprite.play("attack")
+		if player.position > position:
+			sprite.flip_h = false
+			sprite.play("walk")
+		elif player.position < position:
+			sprite.flip_h = true
+			sprite.play("walk")
 
 
 
@@ -64,12 +58,13 @@ func Dash():
 	$Timer.start()
 
 func _on_Timer_timeout():
-	speed = 50
+	speed = 170
 
 func _on_Area2D_body_entered(body):
 	if "Map" in body.name:
 		return
 	print("entered")
+	attackk = true
 	# 3초 무적이면 3000, 5초 무적이면 5000......
 	if time_hit + 5000 > Time.get_ticks_msec():
 		print('super')
@@ -85,6 +80,7 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	print("exited")
 	play = null
+	attackk = false
 
 func _unbeatable_timer():
 	var health = $"../../Player/PlayerUI/HealthBarTest/Health"
