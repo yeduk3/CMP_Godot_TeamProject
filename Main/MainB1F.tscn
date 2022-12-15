@@ -1334,7 +1334,7 @@ shape = SubResource( 127 )
 
 [node name="Desk_front" parent="Map2/MachineRoom" instance=ExtResource( 11 )]
 position = Vector2( 437, 511 )
-get_item_list = [ "Rudolf’s nose", "Rudolf’s nose" ]
+get_item_list = [ "Rudolf’s nose", "Rudolf’s nose", "Study Note 2" ]
 placed_index = 24
 
 [node name="chair" type="Sprite" parent="Map2/MachineRoom/Desk_front"]
@@ -2166,7 +2166,7 @@ shape = SubResource( 140 )
 [node name="Locker" parent="Map2/Hall" instance=ExtResource( 32 )]
 position = Vector2( 2793, 473 )
 scale = Vector2( 0.813197, 0.906994 )
-get_item_list = [ "Poisoned pumpkin" ]
+get_item_list = [ "Poisoned pumpkin", "Study Note 4" ]
 placed_index = 31
 
 [node name="Exit" type="Node2D" parent="Map2"]

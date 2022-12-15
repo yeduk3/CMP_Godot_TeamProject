@@ -18,11 +18,13 @@ func _ready():
 
 func open_with(mode):
 	if states[mode] == 0:
+		current_state = mode
 		inventory.visible = true
 		#player_information.visible = true
 		making_table.visible = false
 		visible = true
 	elif states[mode] == 1:
+		current_state = mode
 		inventory.visible = true
 		#player_information.visible = false
 		making_table.visible = true

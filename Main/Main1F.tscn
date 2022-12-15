@@ -1499,7 +1499,7 @@ shape = SubResource( 99 )
 
 [node name="Flower2" parent="Map2/Lounge" instance=ExtResource( 30 )]
 position = Vector2( -125.833, -56.8333 )
-get_item_list = [ "Rudolf’s nose" ]
+get_item_list = [ "Rudolf’s nose", "Study Note 1" ]
 placed_index = 8
 
 [node name="Flower3" parent="Map2/Lounge" instance=ExtResource( 30 )]
@@ -1553,7 +1553,7 @@ placed_index = 10
 
 [node name="Chemical4" parent="Map2/SanitizingRoom" instance=ExtResource( 33 )]
 position = Vector2( -130, -172.167 )
-get_item_list = [ "Dragon’s lump" ]
+get_item_list = [ "Dragon’s lump", "Study Note 3" ]
 placed_index = 11
 
 [node name="Chemical6" type="StaticBody2D" parent="Map2/SanitizingRoom"]

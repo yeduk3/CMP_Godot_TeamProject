@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CMP Godot Team2 Project"
-run/main_scene="res://Main/Main1F.tscn"
+run/main_scene="res://Eunseo/Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
