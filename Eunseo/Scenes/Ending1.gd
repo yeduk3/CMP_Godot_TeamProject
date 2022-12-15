@@ -74,11 +74,8 @@ func _process(delta):
 		fade_tweeen = create_tween()
 		var fade_node = get_node("Fade")
 		fade_tweeen.tween_property(fade_node, "color", Color(0, 0, 0, 1), 1.5)
-		
-		$Background2.visible = true
-		
-		yield(get_tree().create_timer(0.3),"timeout")
-		get_tree().change_scene("res://Eunseo/Scenes/Ending2Normal.tscn")
+		fade_tweeen.tween_callback($Background2, "set_visible", [true])
+		fade_tweeen.tween_callback(get_tree(), "change_scene", ["res://Eunseo/Scenes/Ending2Normal.tscn"])
 		
 	
 	if TimeText == 0:

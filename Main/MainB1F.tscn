@@ -1,6 +1,6 @@
 [gd_scene load_steps=169 format=2]
 
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Eunseo/Images/lab tileset finished transparent.png" type="Texture" id=2]
 [ext_resource path="res://Eunseo/Images/Box1.png" type="Texture" id=5]
 [ext_resource path="res://Eunseo/Scenes/Box.tscn" type="PackedScene" id=6]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Eunseo/Images/Locker4.png" type="Texture" id=31]
 [ext_resource path="res://Eunseo/Scenes/Locker.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Main/monster_final.tscn" type="PackedScene" id=39]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )

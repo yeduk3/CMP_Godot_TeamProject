@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=2]
+[gd_scene load_steps=157 format=2]
 
 [ext_resource path="res://Eunseo/Images/Fence2.png" type="Texture" id=2]
 [ext_resource path="res://Eunseo/Images/picture.png" type="Texture" id=3]
@@ -18,7 +18,7 @@
 [ext_resource path="res://Eunseo/Images/StoreUnopen.png" type="Texture" id=17]
 [ext_resource path="res://Eunseo/Images/Machine.png" type="Texture" id=18]
 [ext_resource path="res://Eunseo/Images/Machine2.png" type="Texture" id=19]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Main/Player.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Eunseo/Scenes/Desk_side.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Eunseo/Scenes/SubjectCylinder.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Eunseo/Scenes/Picture.tscn" type="PackedScene" id=26]
@@ -905,6 +905,9 @@ extents = Vector2( 64.5625, 70 )
 [sub_resource type="RectangleShape2D" id=93]
 extents = Vector2( 19, 18 )
 
+[sub_resource type="RectangleShape2D" id=128]
+extents = Vector2( 6.66666, 19.1667 )
+
 [sub_resource type="RectangleShape2D" id=94]
 extents = Vector2( 203, 27.5 )
 
@@ -1152,6 +1155,13 @@ texture = ExtResource( 14 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Computer"]
 position = Vector2( 157, -13 )
 shape = SubResource( 93 )
+
+[node name="VideoArea" type="Area2D" parent="Map2/Lab2/Computer"]
+position = Vector2( 156.5, -14.4997 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Lab2/Computer/VideoArea"]
+position = Vector2( 27.5, 2.5 )
+shape = SubResource( 128 )
 
 [node name="Desk_side8" parent="Map2/Lab2" instance=ExtResource( 24 )]
 position = Vector2( 338.333, -24.1666 )
@@ -2166,7 +2176,7 @@ shape = SubResource( 97 )
 [node name="Picture2" parent="Map2/Lobby" instance=ExtResource( 26 )]
 position = Vector2( -235, 73.3333 )
 scale = Vector2( 1.08185, 1.20664 )
-get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin" ]
+get_item_list = [ "Poisoned pumpkin", "Poisoned pumpkin", "Vision Cure", "Vision Cure" ]
 placed_index = 20
 
 [node name="Rock" type="StaticBody2D" parent="Map2/Lobby"]
@@ -2273,4 +2283,6 @@ position = Vector2( -10, -129 )
 
 [node name="VIdeo" parent="." instance=ExtResource( 49 )]
 
+[connection signal="body_entered" from="Map2/Lab2/Computer/VideoArea" to="Player" method="_on_VideoArea_body_entered"]
+[connection signal="body_entered" from="Map2/Lobby/MainGate" to="Player" method="_on_MainGate_body_entered"]
 [connection signal="body_entered" from="Map2/EVtoB1" to="Player" method="_on_EVtoB1_body_entered"]

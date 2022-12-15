@@ -1,26 +1,26 @@
 [gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=1]
-[ext_resource path="res://YongKyu/Asset/Blur/Blur2.png" type="Texture" id=2]
-[ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=3]
-[ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=4]
-[ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=5]
-[ext_resource path="res://YongKyu/Asset/Blur/Blur1.png" type="Texture" id=6]
-[ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=2]
+[ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Chaeyoon/CooltimeBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Chaeyoon/HealthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Chaeyoon/AbilityBar1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Chaeyoon/AbilityBar3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Eunsu/Scenes/Control.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Eunsu/Scenes/Bmusic.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Chaeyoon/AbilityBar1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://YongKyu/Scenes/IntegratedInventory.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Chaeyoon/AbilityBar2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Chaeyoon/CooltimeBar.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=15]
-[ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=16]
-[ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=17]
-[ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=18]
-[ext_resource path="res://YongKyu/Asset/Blur/Blur3.png" type="Texture" id=19]
-[ext_resource path="res://Eunseo/Dialog/Dialog.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Eunseo/Fonts/Planes_ValMore.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Chaeyoon/AbilityBar2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Chaeyoon/AbilityBar3.gd" type="Script" id=10]
+[ext_resource path="res://Chaeyoon/AbilityBar1.gd" type="Script" id=11]
+[ext_resource path="res://Chaeyoon/AbilityBar2.gd" type="Script" id=12]
+[ext_resource path="res://Eunseo/Script/PlayerMove.gd" type="Script" id=13]
+[ext_resource path="res://Eunseo/Fonts/Planes_ValMore.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Chaeyoon/Health.gd" type="Script" id=15]
+[ext_resource path="res://Eunsu/Scenes/Bmusic.gd" type="Script" id=16]
+[ext_resource path="res://Eunseo/Scenes/Gotcha.gd" type="Script" id=17]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur1.png" type="Texture" id=18]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur2.png" type="Texture" id=19]
+[ext_resource path="res://Eunseo/Images/New Piskel-1.png.png" type="Texture" id=20]
+[ext_resource path="res://YongKyu/Asset/Blur/Blur3.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 14.9204, 26.4514 )
@@ -141,14 +141,14 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="DynamicFont" id=120]
 size = 180
-font_data = ExtResource( 21 )
+font_data = ExtResource( 14 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
-script = ExtResource( 17 )
+script = ExtResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 5 )
+texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.45947, 0 )
@@ -163,17 +163,17 @@ scale = Vector2( 0.11, 0.11 )
 
 [node name="Blur0" type="Sprite" parent="PlayerUI/Blur"]
 scale = Vector2( 1.1, 1.1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 18 )
 
 [node name="Blur1" type="Sprite" parent="PlayerUI/Blur"]
 visible = false
 position = Vector2( -155, 47 )
-texture = ExtResource( 2 )
+texture = ExtResource( 19 )
 
 [node name="Blur2" type="Sprite" parent="PlayerUI/Blur"]
 visible = false
 position = Vector2( -155, 47 )
-texture = ExtResource( 19 )
+texture = ExtResource( 21 )
 
 [node name="StaminaBarTest" type="Control" parent="PlayerUI"]
 margin_left = -36.8915
@@ -183,9 +183,9 @@ margin_bottom = -50.717
 
 [node name="Stamina" type="Control" parent="PlayerUI/StaminaBarTest"]
 process_priority = 3
-script = ExtResource( 1 )
+script = ExtResource( 15 )
 
-[node name="CooltimeBar" parent="PlayerUI/StaminaBarTest" instance=ExtResource( 14 )]
+[node name="CooltimeBar" parent="PlayerUI/StaminaBarTest" instance=ExtResource( 4 )]
 margin_right = 60.0
 margin_bottom = 10.0
 custom_styles/fg = SubResource( 1 )
@@ -199,37 +199,37 @@ margin_bottom = -187.0
 
 [node name="Health" type="Control" parent="PlayerUI/HealthBarTest"]
 process_priority = 3
-script = ExtResource( 1 )
+script = ExtResource( 15 )
 
-[node name="HealthBar" parent="PlayerUI/HealthBarTest" instance=ExtResource( 7 )]
+[node name="HealthBar" parent="PlayerUI/HealthBarTest" instance=ExtResource( 5 )]
 custom_styles/fg = SubResource( 112 )
 custom_styles/bg = SubResource( 113 )
 
 [node name="Music" type="Node2D" parent="PlayerUI"]
 position = Vector2( 316, -177 )
 
-[node name="Bmusic" parent="PlayerUI/Music" instance=ExtResource( 10 )]
+[node name="Bmusic" parent="PlayerUI/Music" instance=ExtResource( 6 )]
 position = Vector2( -11.0674, 8.82056 )
 scale = Vector2( 0.3, 0.3 )
-script = ExtResource( 3 )
+script = ExtResource( 16 )
 
-[node name="VisionAbilityBar" parent="PlayerUI" instance=ExtResource( 11 )]
+[node name="VisionAbilityBar" parent="PlayerUI" instance=ExtResource( 7 )]
 margin_left = 199.0
 margin_top = -42.0
 margin_right = 319.0
 margin_bottom = -22.0
 custom_styles/fg = SubResource( 114 )
 custom_styles/bg = SubResource( 115 )
-script = ExtResource( 18 )
+script = ExtResource( 11 )
 
-[node name="HearingAbilityBar" parent="PlayerUI" instance=ExtResource( 13 )]
+[node name="HearingAbilityBar" parent="PlayerUI" instance=ExtResource( 9 )]
 margin_left = 199.0
 margin_top = -17.0
 margin_right = 319.0
 margin_bottom = 3.0
 custom_styles/fg = SubResource( 116 )
 custom_styles/bg = SubResource( 117 )
-script = ExtResource( 15 )
+script = ExtResource( 12 )
 
 [node name="SmellAbilityBar" parent="PlayerUI" instance=ExtResource( 8 )]
 margin_left = 199.0
@@ -238,9 +238,9 @@ margin_right = 319.0
 margin_bottom = 30.0
 custom_styles/fg = SubResource( 118 )
 custom_styles/bg = SubResource( 119 )
-script = ExtResource( 16 )
+script = ExtResource( 10 )
 
-[node name="IntegratedInventory" parent="PlayerUI" instance=ExtResource( 12 )]
+[node name="IntegratedInventory" parent="PlayerUI" instance=ExtResource( 3 )]
 visible = false
 margin_left = -303.739
 margin_top = -179.714
@@ -248,7 +248,7 @@ margin_right = -303.739
 margin_bottom = -179.714
 rect_scale = Vector2( 0.6, 0.6 )
 
-[node name="Option" parent="PlayerUI" instance=ExtResource( 9 )]
+[node name="Option" parent="PlayerUI" instance=ExtResource( 2 )]
 visible = false
 margin_left = -212.741
 margin_top = -114.664
@@ -277,7 +277,7 @@ position = Vector2( -370.144, -3463.09 )
 scale = Vector2( 1, 1.25 )
 color = Color( 0, 0, 0, 0.501961 )
 polygon = PoolVector2Array( 250.862, 2825.82, 250.862, 2892.28, 486.967, 2892.28, 486.967, 2825.82 )
-script = ExtResource( 4 )
+script = ExtResource( 17 )
 
 [node name="GotchaText" type="RichTextLabel" parent="Camera2D/Gotcha"]
 margin_left = 256.0
@@ -288,7 +288,7 @@ text = "abcde"
 
 [node name="Timer" type="Timer" parent="Camera2D/Gotcha"]
 
-[node name="Dialog" parent="Camera2D" instance=ExtResource( 20 )]
+[node name="Dialog" parent="Camera2D" instance=ExtResource( 1 )]
 visible = false
 position = Vector2( 0, 103 )
 scale = Vector2( 0.6, 0.6 )

@@ -5,6 +5,7 @@
 
 
 
+
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 115, 227, 480, 218, 485, 254, 118, 235 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]

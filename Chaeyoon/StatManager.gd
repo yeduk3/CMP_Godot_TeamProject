@@ -35,4 +35,13 @@ func _get_stat3():
 	
 func _set_stat3(value):
 	player_stat3 = value
-	
+
+func _get_stat_by_name(stat_name):
+	if stat_name == "Vision":
+		return _get_stat1()
+	elif stat_name == "Hearing":
+		return _get_stat2()
+	elif stat_name == "Smell":
+		return _get_stat3()
+	elif stat_name == "Health":
+		return _get_health()
