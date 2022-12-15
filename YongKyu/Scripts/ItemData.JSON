@@ -71,7 +71,7 @@
 	"Vision Cure" : {
 		"Name" : "Vision Cure",
 		"Type" : "Cure",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Vision Cure.png",
 		"Description" : "It cures your vision.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -83,7 +83,7 @@
 	"Hearing Cure" : {
 		"Name" : "Hearing Cure",
 		"Type" : "Cure",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Hearing Cure.png",
 		"Description" : "It cures your hearing.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -95,7 +95,7 @@
 	"Smell Cure" : {
 		"Name" : "Smell Cure",
 		"Type" : "Cure",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Smell Cure.png",
 		"Description" : "It cures your smell.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
@@ -107,7 +107,7 @@
 	"Monsterizing Cure" : {
 		"Name" : "Monsterizing Cure",
 		"Type" : "Cure",
-		"IconPath" : "Icon.png",
+		"IconPath" : "res://ItemIcon/Monsterizing Cure.png",
 		"Description" : "It cures the monsterized subject.",
 		"Number_of_Ingredients" : 3,
 		"Ingredients" : {
